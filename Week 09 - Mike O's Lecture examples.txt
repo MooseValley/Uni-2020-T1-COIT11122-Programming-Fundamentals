@@ -1,0 +1,22 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 09
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+LAST WEEK:
+* 
+* 
+
+THIS WEEK:
+* 
+* 
+
+
+
+
+EOF.
