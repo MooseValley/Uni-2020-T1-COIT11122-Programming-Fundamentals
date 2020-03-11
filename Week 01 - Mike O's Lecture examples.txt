@@ -9,10 +9,180 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
 THIS WEEK:
-* 
-* 
+* Week 01 - Mike O Intro slides
+* Course Web page
+* Do I NEED the textbook ? Spend $100+ ???
+* Assignment 1 spec, how to submit
+* Lecture and Tute times - split times= Ewwwww !
+* COIT11222_Week1.ppt
+* Job Stats ???
+* Good Comments VS Bad Comments ???
+
+* Do I NEED the textbook ? Spend $100+ ???
+NO.
+Any JAVA book will do ?  YES
+How old ?  Anything from last 10 years
+Do you need a physical book ?
+No .... but what about the Exam ?  YES
+Summary ?
+KEY: whatever book you buy, get used to it BEFORE the exam
 
 
+Object Oriented Programming (OOP)
+Reddit r/programming
+huge benefits
+everything - the data and methods- are grouped together into a single unit for each Object
+Resuse, testing, 
+
+
+Customer
+	name
+	phone
+	email
+	address
+	
+
+Customer mike = new Customer ("Mike", "123455", "m.omalley@cqu.edu.au", ....);
+Customer mary = new Customer ("Mary", .......);
+
+mike, mary are INSTANCES of Customer
+= Objects based on the Customer class
+= Examples of Customers
+
+
+ENCAPSULATION
+* Car
+* how to drive ?  key, steering wheel, gear stick, 2-3 pedals
+Controls are really simple
+* Do NOT need to understand or know about the mind boggling complexity
+
+Customer
+	create()
+	save()
+	display()
+
+INHERITANCE
+Build on top of related classes
+No reinventing the wheel
+No duplication
+People
+	-> Students
+		-> Undergrad
+		-> Postgrad
+	-> Teachers
+		-> Part time
+		-> Full time
+		-> professors
+		-> lecturers
+
+POLYMORPHISM
+many forms
+
+add (myLabel);
+arrayList.add ("Mike");
+menubar.add (menu);
+::::
+add
+
+Before OOP:
+addLabelToUI (myLabel);
+arrayList.addStingToArrayList ("Mike");
+menubar.addMenuToMenuBar (menu);
+
+
+
+JVM
+Java Runtime = JRE
+
+
+-----------------------------------------------------
+
+
+
+public class First
+{
+}
+
+
+aklajsldajladj
+
+-----------------------------------------------------
+
+
+...... 111ABC		// NO
+...... _$ABC1121	// YES, but avoid
+...... HelloWorld    
+...... H123121313ello_______World______1212121313   // OK, but horrible
+public class System // NO
+
+
+
+public class Customer
+{
+  public String name;
+}
+
+
+
+Naming Convention:
+Classes: Capitalise the first letter of each word.  e.g. MyFirstProgram
+
+
+
+
+Naming Convention:
+Every client has their own
+
+My_First_Program
+
+
+
+public class First
+{
+	public static void main(String[] args)
+	{
+		System.out.println ("Hello");
+	}
+}
+
+public class First{public static void main(String[] args){System.out.println ("Hello");}}
+
+
+public class First
+	First.java
+
+public class My_First_Program
+	My_First_Program.java
+
+Highly Case Sensitive
+
+
+
+
+
+report.PDF.exe
+report.PDF
+
+Explorer -> 
+
+
+Stack Trace
+
+First.java (4): invalid syntax ......
+
+
+
+
+Finding HELP
+* Course Forums
+* Course Coordinator
+* Me - quick answers
+* Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+* Java Help - on Oracle's web site: https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html
+* Haca Help - CHM (downloadable): https://javadoc.allimant.org/
+* Textbook
+* Lecture slides
+* Github: Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
 
 
 EOF.
