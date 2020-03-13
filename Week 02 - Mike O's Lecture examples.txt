@@ -9,12 +9,64 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
 LAST WEEK:
-* 
-* 
+*
+*
 
 THIS WEEK:
-* 
-* 
+* Good Comments Vs BAD Comments
+*
+
+Good Comments Vs BAD Comments
+
+*** "BAD" Comments:
+*** "GOOD" Comments:
+
+Comments in code are good
+Explain what you are doing and why.
+Be concise and clear
+Bullet points are great.
+Pseudo Code comments
+Little tables, ASCII diagrams, expected results, etc are GREAT.
+
+	/*
+	Customer --< Order >-- Product
+
+	Prompt user to select a contract
+	Validate customer meets all the requirements / criteria of the contract
+	If any special conditions:
+		Display any special conditions to the user (checkboxes).
+		Prompt user for confirmation of each condition
+	else
+		Prompt user for confirmation of new contract
+	Save new contract acceptance details to database.
+	Check details saved conrrectly.
+	Display final confirmation.
+
+	calculateHash ("test123")	returns $4ADE44512
+	*/
+
+
+*** "BAD" Comments:
+
+// Create integer count and initialise to 0.
+int count = 0;
+
+// Loop from 1 to 10 inclusive, increment 1
+for (count = 1; count <= 10; count++)
+{
+   // Output count to console screen followed by a comma.
+   System.out.println (count + ", ");
+}
+
+*** "GOOD" Comments:
+
+// Output 1, 2, 3, ... 10 to the console screen.
+int count = 0;
+
+for (count = 1; count <= 10; count++)
+{
+   System.out.print (count + ", ");
+}
 
 
 
