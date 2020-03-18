@@ -7,14 +7,28 @@ Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
 Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
+14+4
+
+https://www.youtube.com/watch?v=9AEMKudv5p0
+What Bill Gates is afraid of
+
 
 LAST WEEK:
-*
-*
+* Week 01 - Mike O Intro slides
+* Course Web page
+* Do I NEED the textbook ? Spend $100+ ???
+* Assignment 1 spec, how to submit
+* Lecture and Tute times - split times= Ewwwww !
+* COIT11222_Week1.ppt
 
 THIS WEEK:
+* Job Stats
 * Good Comments Vs BAD Comments
-*
+* COIT11222_Week2.ppt
+* Using Data
+
+
+**************************************
 
 Good Comments Vs BAD Comments
 
@@ -41,6 +55,7 @@ Little tables, ASCII diagrams, expected results, etc are GREAT.
 	Save new contract acceptance details to database.
 	Check details saved conrrectly.
 	Display final confirmation.
+	See section 5.4.1. of the User Spec
 
 	calculateHash ("test123")	returns $4ADE44512
 	*/
@@ -70,5 +85,334 @@ for (count = 1; count <= 10; count++)
 
 
 
+*** Primitive Types:
+int		32 bits (4)
+long		64 bits (8)
+byte		8 bits  (1)
+short		16 bits (2)
+
+char 'W'        8 bits (1)
+
+float		32 bits	 (4)
+double		64 bits  (8)
+
+boolean         8 bits (1)
+
+int k;
+
+double temp = 35.8;
+
+
+*** Reference Type:
+
+import java.util.Date;
+
+String name = "Mike";
+Date today = new Date();
+
+
+
+
+
+Digital CPU
+0  or 1
+
+
+
+
+Java
+
+int k;  // 0
+
+double temp; // 0.0
+
+boolean success; // false
+
+
+String name;  // null memory address
+
+System.out.println (name); // null
+
+
+double temp = 99.121312131;
+
+
+double temp;
+temp = 99.121312131;
+
+
+
+BODMAS / BOMDAS
+
+a = 4 + 5 * 4 / 2
+= 14
+
+/ integer
+/ float
+%
+
+a = 4 + (5 * 4 / 2)
+
+
+int myAge = 12, fred = 9, max = 5;
+
+int myAge = 12, fred, max = 5;
+
+
+public class Week02
+{
+    // Class Constants:
+    private static final int    MAX_TEMPERATURE     = 100;
+    private static final String AUTHOUR_NAME        = "Mike O";
+    private static final int    DEFAULT_ORDER_SIZE  = 5;
+
+
+}
+
+Error messages
+Threshold values
+Key values
+Default Values
+Program names, version numbers, etc
+File name
+
+
+
+*** SCOPE
+
+public class Week02
+{
+    // Class Constants:
+    public  static final int    MAX_TEMPERATURE     = 100;
+    public  static final String AUTHOUR_NAME        = "Mike O";
+    public  static final int    DEFAULT_ORDER_SIZE  = 5;
+    private static final String SECRET_PASSWORD     = "2783462876287624~"; // Private = ONLY this class
+
+    private int value1; // Class Scope
+    public  int value2; // GLOBAL Scope - any class can use, change, etc
+    
+
+    public static void main (String[] args)
+    {
+        int value3; // Method Scope
+        
+        
+        if (value3 < 5)
+        {
+            int value4 = 112; // Scope to next enclosing }
+            
+            for (...)
+            {
+               while (....)
+               {
+               
+                     String name ....
+                     Date today = ....
+                     
+                     
+               }
+            }
+            
+        }
+        S.o.p (value4); // Error
+        
+    }
+}
+
+
+JOptionPane.showMessageDialog (null, "Hello World");
+
+JOptionPane.showMessageDialog (null, "Hello World Title", "body of message", 
+  JOptionPane.ERROR_MESSAGE, ......);
+  
+
+
+int a = 4;
+int b = 99;
+int c = a;
+a = b
+b = c
+
+
+byte
+short
+int
+long
+
+million records
+ordersize int byte
+4 bytes -> 1
+3 million bytes
+
+
+
+if (age == 10) // Correct
+
+if (age = 10) // ERROR / Wrong
+
+boolean success = false;
+
+if (success = true) // ERROR / Wrong - but Java will NOT flag it as an Compile Error
+
+
+
+
+Big > 10^308
+BigNumber
+BigDecimal
+
+
+char
+single quotes
+char initial = 'M';
+
+if (initial == 87)
+
+char initial2; // 0 == null character
+
+
+
+String
+double quotes
+
+String name; // null memory address
+
+String name = "";
+
+
+Escape Chars
+\n
+\t
+
+\\ -> \
+\" -> \
+
+System.out.println ("\""); // "
+
+"'"
+
+
+
+*** User Input
+
+import java.util.Scanner;
+
+Scanner kb = new Scanner(System.in); // Keyboard
+
+hasNext()
+next()
+nextLine()
+nextInt()
+nextDouble()
+
+
+System.out.println ("Enter your name: ");
+String name = kb.nextLine();
+
+	System.out.println ("Enter your age: ");
+	int age = kb.nextInt();
+
+	// int -> String, or double -> String
+	kb.nextLine(); // Clear the Buffer
+
+System.out.println ("Enter your age: ");
+int age = Integer.parseInt (kb.nextLine());
+ 
+System.out.println ("Enter your address: ");
+String address = kb.nextLine();
+
+
+
+double d1 = Double.parseDouble (string);
+
+
+
+Wrapper Types / Auto-Boxing // AutoBoxing
+
+int k = 0;		// Primitive Type
+Integer k2 = 0;		// Reference Type // Double Hop
+
+double d1 = 0;
+Double d2 = 0;
+
+2 types of every data.
+
+
+ArrayLists - Reference Types only
+LinkedLists
+
+
+int age = Integer.parseInt (kb.nextLine());
+double d3 = Double.parseDouble (kb.nextLine());
+
+
+
+*** Confirm Dialogs
+
+int result = JOptionPane.showConfirmationDialog (null, "Delete All Files", "Are you mad ???", ....);
+
+if (result == JOptionPane.YES_OPTION)
+{
+}
+else if (result == JOptionPane.NO_OPTION)
+{
+}
+
+
+int k = 5 + 9;
+
+
+
+int k = 13 / 2;   // 6
+
+int total = 13;
+int count = 2;
+int avg = total / count;   // 6
+
+double avg = total / count;  // 6.0 - ERROR
+
+
+double avg = ((double) total) / count;  // 6.5   Typecasting
+
+double avg = (1.0 * total) / count;     // 6.5
+
+double avg = (double) (total / count);  // 6.0 = WRONG   Typecasting
+
+
+
+Module / Remainder
+
+int k = 25 % 10; // 5
+
+
+
+BODMAS
+Use brackets
+
+
+
+double d1 = 1.0 / 3.0;
+S.o.p (d1 * 3.0); // 2.99999......
+
+
+BigDecimal bigD = 1.0 / 3.0;
+S.o.p (bigD * 3.0); // 2.99999......
+
+
+if (d1 == 3.0)
+// Calculation
+
+if (  Math.abs (d1 - 3.0) < 0.000000001 ) // They are close enough to be equal.
+
+
+int k1 = 0;
+Integer k2 = 3;
+k1 = k2;
+
+int k1 = 0;
+double d1 = 3.3;
+k1 = d1;  // Error - loss of precision
+
+k1 = (int) d1; // 3
 
 EOF.
