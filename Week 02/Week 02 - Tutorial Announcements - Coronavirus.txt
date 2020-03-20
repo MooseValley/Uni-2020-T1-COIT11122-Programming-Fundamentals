@@ -1,0 +1,48 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 02
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+Coronavirus
+* Australia's Chief Medical Officer says BEST CASE is 5 million infected in Australia
+* US document says the pandemic could last for 6-9+ months
+* 50-75% of people don't show any symptoms
+* At least 2 more strains of Corona already appearing ...
+
+Week 02 - Tutorial Announcements - Coronavirus
+* VC's email of Wednesday, 18 March 2020 2:37 PM
+-> from Monday, 23 March, we will commence the transition of all of our face-to-face teaching to online, until the end of Term 1.
+-> Our campuses will remain open, and students can still access our full range of student support services including continued access to the Academic Learning Centre, computer labs and the library.
+* No more classes for 2020-T1 ...  
+* Maybe modified EXAM ?  Maybe NO EXAM ???? (TBC)
+* What do YOU want to do going forward ?
+-> Run ZOOM sessions during class times - video conferencing ?
+-> Upload videos of me working through questions from the tutorial / text book ?
+-> Upload videos of me working through questions you ask me to do ?
+-> Available on email ?
+-> IRC Chat ?
+
+
+ZOOM
+
+
+
+
+/*
+:::::
+:::::
+:::::
+:::::
+:::::
+:::::
+:::::
+:::::
+*/
+
+::::::::
+::::::::
