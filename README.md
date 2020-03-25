@@ -7,3 +7,6 @@ Will include:
 * partial or fully worked tutorial, textbook, etc questions,
 * hints, tips, information ... given in class,
 * etc.
+
+Mike O'Malley
+<br>Email: m.omalley@cqu.edu.au

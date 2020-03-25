@@ -7,16 +7,237 @@ Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
 Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
+https://cqu.zoom.us/j/887844138
 
 LAST WEEK:
-* 
-* 
+* Job Stats
+* Good Comments Vs BAD Comments
+* COIT11222_Week2.ppt
+* Using Data
 
 THIS WEEK:
-* 
-* 
+* Brave new world: ZOOM classes ...
+* Please Remember to MUTE your microphones  :)
+* Please use CHAT window if you need help   :)
+
+* OK, back again ...  :)
+
+* Having TONS of issues here - ZOOM keeps dropping out, reconnecting
+* Waiting for others to connect ...
+* Currently: 7 people (inc me)
+* Looks like a LOT of classes started at 10:00 AM
+and ZOOM had major issues.
+* Sorry about the ZOOM issues - there must have been many classes starting at 10:00 AM and ZOOM just could not handle it
 
 
 
+/*
+Open the file
+Read the customers
+Validate
+- Check ID is valid
+- check their name is not blank
+
+*/
+
+/*
+Get out of bed
+brush teeth
+have shower
+get dressed
+
+::::
+unlock car
+insert key into ignition
+turn it
+:::
+if car wont start
+   Call RACQ
+
+*/
+
+
+/*
+
+::::
+Is the express way backed up ?
+   take the alternate route
+
+else
+   take the main route
+
+::::
+*/
+
+
+
+int age = 10;
+
+if (age = 10) // ERROR - Syntax
+   System.out.println ("You are 10");
+
+if (age == 10); // ERROR - Logic
+   System.out.println ("You are 10");
+
+if (age == 10)  // OK  :)
+   System.out.println ("You are 10");
+
+
+String name = "Mike";
+if (name == "Mike") // Never be equal ???
+// Do NOT use == to compare strings
+// Do not use ==, <, <=, >, >=, != with strings or any reference types.
+e.g. Dates.
+
+boolean valid = true;
+if (valid = false) // No Compiler Error for this ?
+
+Use  =  for assignment
+    ==  for equality checking
+
+int age = 10;
+
+if (age <= 10)
+  :::
+
+if (age > 10)
+
+if (age != 10)  // Not equal to
+
+
+int age = 10;
+
+if (age <= 10)
+   S.o.p ("you are 10 or younger");
+   S.o.p ("Hello World"); // Not part of the if statement !
+else
+   S.o.p ("you are older than 10");
+::::
+
+// Use curly braces if you have more than one line of code
+// in an if ... else ... branch
+if (age <= 10)
+{
+   S.o.p ("you are 10 or younger");
+   S.o.p ("Hello World"); // This is now part of the if statement !
+}
+else
+{
+   S.o.p ("you are older than 10");
+}
+
+
+
+{
+	// SCOPE
+	int count = 0;
+
+	if (age <= 10)
+	{
+	   S.o.p ("you are 10 or younger");
+	   count++;
+	   S.o.p ("Hello World"); // This is now part of the if statement !
+	}
+	else
+	{
+	   S.o.p ("you are older than 10");
+	}
+
+	S.o.p (count);
+}
+
+S.o.p (count); // ERROR
+
+
+// Use curly brackets to prevent confusion
+if (age <= 10)
+{
+   if (postcode == 4700)
+	   S.o.p ("you are in Rocky and 10 or younger");
+   else
+	   S.o.p ("you are not in Rocky and 10 or younger");
+}
+else
+{
+   S.o.p ("you are older than 10");
+}
+
+
+&& 	AND
+||	OR
+
+if (age <= 10 && postcode == 2000)
+   S.o.p ("you are in Sydney and 10 or younger");
+
+if ((age <= 10) && (postcode == 2000))
+   S.o.p ("you are in Sydney and 10 or younger");
+
+if ((age <= 10) || (postcode == 3000))
+   S.o.p ("you are in Melboure or 10 or younger");
+
+
+if ((age <= 10) || (postcode == 3000) || (postcode == 2000))
+   S.o.p ("you are either in Melboure or Sydney or 10 or younger");
+
+
+// Mixed && and || - please use extra brackets
+
+if ((age <= 10) && ((postcode == 3000) || (postcode == 2000)) )
+   :::
+
+
+// Short Circuit - automatically done by Java's optimising compiler
+if ((age <= 10) || (postcode == 3000) || (siblings >5) || (........) )
+   :::
+
+// Putting the easiest conditions to evaluate first
+// Put the ones that are most common first - where you can rule out most of data.
+// Up to programmer - because they know the data
+// Java cannot help.
+
+
+if (::::::)
+{
+   ::::
+}
+else if (:::::::::::)
+{
+  :::::
+}
+else if (::::::::::::)
+{
+   :::::
+}
+else if (::::::::::::)
+{
+   :::::
+}
+
+:::::::
+else
+{
+   ::::
+}
+
+
+(age <= 10) ? 1 : 2;
+
+
+
+
+if (age <= 10)
+ :::
+
+if (!(age > 10))
+ :::
+
+
+
+// Recommend we start classes 30 min late
+10:30 lecture
+
+Fri Tue
+12 noon - start then and see how we go
+12:30 future weeks ????? maybe ?
 
 EOF.
