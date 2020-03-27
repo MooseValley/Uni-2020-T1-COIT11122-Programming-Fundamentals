@@ -1,0 +1,94 @@
+Mike O'Malley's Java Videos:
+http://tinyurl.com/MikesJavaVideos
+
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Three
+
+Question one
+
+Answer the following questions.
+Your answers should be concise; aim for two or three sentences.
+(a) What does the if selection statement allow a program to do?
+
+Conditions and branches.
+Different paths / different processing depending the values of
+data, date time,
+
+
+(b) What is an import declaration and where does it appear in a Java source code file?
+
+Why ?
+	Bring in extra functionality
+	Scanner, Date, JOptionPane
+	GUI labels, buttons
+
+Where ?
+	before the public class
+
+Comment header
+imports
+public class ...
+
+
+
+(c) Why does a semicolon cause a logic error if placed immediately after the right parenthesis of an if statement?
+
+if (age == 30); // Logic ERROR
+{
+   System.out.println ("You are 30");
+}
+
+
+Question two
+
+For each program segment, read the code, and write the output.
+Do not execute the programs on a computer.
+What is output by the following program for each of the input values
+5, 7, 100, -7 and 0?
+
+import java.util.Scanner;
+
+public class Output
+{
+	public static void main( String args[] )
+	{
+		int number;
+		Scanner input = new Scanner( System.in );
+		System.out.println( "Enter integer: " );
+		number = input.nextInt();
+		if ( number != 7 )
+			System.out.print( "Welcome " );
+		if ( ( number % 5 ) == 0 )
+			System.out.println( "To Java Programming" );
+	}
+}
+
+Welcome To Java Programming
+
+0 % 5
+5 goes into 0 0 times with 0 remainder
+
+
+
+Question Three
+
+Determine if there is are errors in this following program segment.
+If there is an error, specify whether it is a logic error or a compilation error,
+specify the line number in the program and write the corrected code.
+If the code does not contain an error, write "no error.”
+There may be more than one error in the program segment.
+
+1: int q = 100;
+2:
+3: System.out.print("q is");
+4:
+5: if (q = 100)
+6: System.out.print("equal to 100");
+7: if (q ! 100);
+8: System.out.print( "not equal to 100");
+
+Compilation error ! -> != and logic error - semi-colon at end.
+7: if (q != 100)
+
+Compilation = -> ==
+5: if (q == 100)
