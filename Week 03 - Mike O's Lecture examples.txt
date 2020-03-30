@@ -220,7 +220,17 @@ else
 }
 
 
-(age <= 10) ? 1 : 2;
+
+int x = 15;
+
+if (x == 15)
+   x = 2;
+else
+   x = 0;
+
+// We can achieve the same result with a compact if else structure in 1 line of code:
+x == 15 ? x = 2 : x = 0;
+
 
 
 
