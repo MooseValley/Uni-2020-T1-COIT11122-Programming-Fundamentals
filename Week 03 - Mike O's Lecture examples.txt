@@ -17,9 +17,12 @@ LAST WEEK:
 
 THIS WEEK:
 * Brave new world: ZOOM classes ...
+* COIT11222_Week3.ppt
+* Making Decisions
+
+
 * Please Remember to MUTE your microphones  :)
 * Please use CHAT window if you need help   :)
-
 * OK, back again ...  :)
 
 * Having TONS of issues here - ZOOM keeps dropping out, reconnecting
@@ -222,14 +225,15 @@ else
 
 
 int x = 15;
+in a = 0;
 
 if (x == 15)
-   x = 2;
+   a = 2;
 else
-   x = 0;
+   a = 5;
 
-// We can achieve the same result with a compact if else structure in 1 line of code:
-x == 15 ? x = 2 : x = 0;
+// We can achieve the same result with a Conditional Operator in 1 line of code:
+x == 15 ? a = 2 : a = 5;
 
 
 

@@ -7,15 +7,459 @@ Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
 Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
 
 LAST WEEK:
-* 
-* 
+* Brave new world: ZOOM classes ...
+* COIT11222_Week3.ppt
+* Making Decisions
 
 THIS WEEK:
-* 
-* 
+* COIT11222_Week4.ppt
+* Looping
 
+
+People still arriving => we will start in approx 1 minute.  :)
+
+
+From last week: Conditional Operator:
+
+int x = 15;
+in a = 0;
+
+if (x == 15)
+   a = 2;
+else
+   a = 5;
+
+if (x == 15) a = 2;
+else a = 5;
+
+if (x == 15) a = 2;  else a = 5;
+
+// We can chieve the same result with a Conditional Operator in 1 line of code:
+x == 15 ? a = 2 : a = 5;
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+}
+:::::
+:::::
+
+count
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    //lcv = lcv + 1;
+}
+
+while (1==1)
+{
+    S.o.p (lcv);
+}
+
+
+int lcv = 1;
+while (1==1)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+    if (lcv >= LIMIT)
+       break;
+}
+::::
+
+while (1==1) // Infinite Loop
+{
+
+}
+
+Int
+
+-2....... +2
+
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+}
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+    S.o.p (lcv);  // Warning: Loop ends at semi-colon.  Infinite Loop
+    lcv = lcv + 1;
+
+
+int lcv = 1;
+while (lcv < LIMIT); // Infinite Loop
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv + 1;
+
+
+// Can cause program crashes:
+while (1==1) // Infinite Loop
+{
+    reading a file and adding it into a data structure
+    creating a bitmap and asding data in data structure
+    appending data onto a data structure
+}
+
+// Heap Limit reached ...
+
+
+
+while (lcv < LIMIT); // Infinite Loop: empty body
+{
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv + 10;
+}
+
+while (lcv < LIMIT); // Infinite Loop
+{
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv * 4.51;
+}
+
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+while (num <= 100)
+{
+   total = total + num;
+   num   = num + 1;
+}
+
+total = 0;
+num   = 100;
+
+// total = 100 + 99 + 98 + .... 1
+while (num > 0)
+{
+   total = total + num;
+   num   = num - 1;
+}
+
+
+
+
+// Get user input
+boolean moreInput = true;
+
+while (moreInput == true)
+{
+   :::: get input from ???  user ? file ? database ?
+
+   if (dataRead.length() == 0)
+      moreInput = false;
+
+}
+
+
+total = 0;
+num   = 100;
+
+// total = 100 + 99 + 98 + ....
+while ((num > 0) && (total < 200) && (.........) && (......) ::::: )
+{
+   total = total + num;
+   num   = num - 1;
+}
+
+
+if (((age == 30) || (postcode => 2000) ) && (surname.equals ("Lee") == true) )
+
+if ((age == 30 || postcode => 2000 ) && surname.equals ("Lee") == true )
+
+
+while (((age == 30) || (postcode => 2000) ) && (surname.equals ("Lee") == true) )
+{
+   :::
+}
+
+
+// Postcode: must be 3xxx for Vistoria
+int postcode = 0;
+
+while ((postcode < 3000) || (postcode > 3999) )
+{
+   S.o.p ("Enter Vic postcode: "); // 3xxx
+   postcode = kb.nextInt();
+
+   if ((postcode < 3000) || (postcode > 3999) )
+   {
+     S.o.p ("Error: not a Vic postcode: 3000-3999. ");
+   }
+}
+
+Above has duplicate code and the magic numbers repeated everywhere.
+ Let's fix that:
+
+
+// Postcode: must be 3xxx for Vistoria
+int postcode = 0;
+boolean dataValid = false; // Assume data is invalid
+final int VIC_MIN_POSTCODE = 3000;
+final int VIC_MAX_POSTCODE = 3999;
+
+while (dataValid == false)
+{
+   S.o.p ("Enter Vic postcode: "); // 3xxx
+   postcode = kb.nextInt();
+
+   if ((postcode < VIC_MIN_POSTCODE) || (postcode > VIC_MAX_POSTCODE) )
+   {
+     S.o.p ("Error: not a Vic postcode: " + VIC_MIN_POSTCODE +
+            "-" + VIC_MAX_POSTCODE + ". ");
+   }
+   else
+   {
+      dataValid = true;
+   }
+}
+
+
+
+
+// Age: must 18 or over
+int age = 0;
+
+while (age < 18)
+{
+   S.o.p ("Enter Age: ");
+   age = kb.nextInt();
+   if (age < 18)
+      S.o.p ("Age must be 18 or over.");
+}
+:::::
+
+// Age: must 18 or over
+int age = 0;
+final int MIN_AGE = 18;
+
+dataValid = false; // Assume invalid
+
+while (dataValid == false)
+{
+   S.o.p ("Enter Age: ");
+   age = kb.nextInt();
+   if (age < MIN_AGE)
+      S.o.p ("Age must be " + MIN_AGE + " or over.");
+   else
+      dataValid = true;
+}
+:::::
+
+
+
+---------------------------------------------------------
+boolean dataValid = false; // Assume invalid
+
+while (dataValid == false)
+{
+   S.o.p ("Enter value no highher than " + LIMIT + ": ");
+   userEntry = input.nextInt();
+   if (userEntry <= LIMIT)
+       dataValid = true;
+   else
+      S.o.p ("Error ....");
+}
+
+dataValid = false; // Assume invalid
+while
+::::::::
+
+dataValid = false; // Assume invalid
+while
+::::::::
+
+
+-----------------------------------
+
+count = count + 10;
+count += 10;
+
+count = count * 120;
+count *= 120;
+
+count = count * 120 + 15 / factor - (22 + value); // Do not do this.
+count *= 120 + 15 / factor - (22 + value);        // Do not do this.
+count = (count * 120) + ((15 / factor) - (22 + value)); // Much better :)
+
+count = oount % 2;
+count%= 2;
+
+
+
+count = count + 1;
+count += 1;
+count++; // Post increment
+++count; // Pre-increment / prefix increment
+
+count = count - 1;
+count -= 1;
+count--; // Post decrement
+--count; // Prefix decrement / pre-decrement
+
+
+int value = 5;
+int count = 3;
+
+value = value + count;    // Value: 8, Count 3
+
+value = 5;
+count = 3;
+value = value + count++;   // Value: 8, Count 4
+
+value = 5;
+count = 3;
+value = value + ++count;   // Value: 9, Count 4
+
+
+value = 5;
+count = 3;
+value = count++ + value + count++;   // Value: 12, Count 5
+        3       + 5     + 4
+
+value = 5;
+count = 3;
+value = ++count + value + ++count;   // Value: 14, Count 5
+      = 4       + 5     + 5
+
+Do NOT write code like the above - it's HIDEOUS !
+Or the below:
+
+double enrcChar = ++count * (5 - --count) * ((4.23 / ++count) + count++);
+
+
+int countMinus1 = count - 1;
+int countPlus1  = count + 1;
+int countPlus2  = count + 2;
+
+double enrcChar = countPlus1 * (5 - countMinus1) ::::
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+while (num <= 100)
+{
+   total = total + num;
+   num   = num + 1;
+}
+
+for (int num = 1; num <= 100; num++)
+   total += num;
+
+for (int num = 1; num <= 100; num = num + 1)
+   total += num;
+
+for (int num = 1; num <= 100; ++num)
+   total += num;
+
+for (int num = 1; num <= 100; num += 1)
+   total += num;
+
+
+for (int num = 1; ; num += 1)
+   total += num;
+
+for (;;)
+   total += num;
+
+
+*****************************************************************
+
+Do While loop
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+do
+{
+   total = total + num;
+   num   = num + 1;
+} while (num <= 100);
+
+
+
+// Always want to prompt user for input
+// process input input or exit
+// Priming input / read
+
+
+for loop
+while loop
+do while loop
+
+
+
+do
+{
+  total = total + num;
+} while (num <= 100);
+
+
+
+for (:::::::)
+{
+   ::::
+   if ((name.equals ("Mike") == true) || (age > 30) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((age > 30) || (name.equals ("Mike") == true) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((name.equals ("Mike") == true) || (age > 30) || (postcode == 2000) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((postcode == 2000) || (age > 30) || (name.equals ("Mike") == true)  )
+     ::::
+}
+
+
+Tute
 
 
 

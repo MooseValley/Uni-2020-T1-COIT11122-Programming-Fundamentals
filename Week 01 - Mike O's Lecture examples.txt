@@ -18,21 +18,26 @@ THIS WEEK:
 * Job Stats ???
 * Good Comments VS Bad Comments ???
 
-* Do I NEED the textbook ? Spend $100+ ???
-NO.
-Any JAVA book will do ?  YES
-How old ?  Anything from last 10 years
+* Do I NEED the textbook ? Spend $180+ ???
+Probably not ...
+Any good JAVA book will do ?  YES
+How old ?  Anything from last 10 years should be fine.
 Do you need a physical book ?
 No .... but what about the Exam ?  YES
-Summary ?
-KEY: whatever book you buy, get used to it BEFORE the exam
+KEY:
+* Whatever book you use / buy, get used to it BEFORE the exam
+* Make sure you are 100% happy with the book, use it a lot, throughout term, before relying on it in an exam
 
+Java Summary ?
+Nothing beats your own summary of what you have learned.
+Code snippets, definitions, examples, etc
+(Show my Java summary).
 
 Object Oriented Programming (OOP)
 Reddit r/programming
 huge benefits
 everything - the data and methods- are grouped together into a single unit for each Object
-Resuse, testing, 
+Resuse, testing,
 
 
 Customer
@@ -40,7 +45,7 @@ Customer
 	phone
 	email
 	address
-	
+
 
 Customer mike = new Customer ("Mike", "123455", "m.omalley@cqu.edu.au", ....);
 Customer mary = new Customer ("Mary", .......);
@@ -111,7 +116,7 @@ aklajsldajladj
 
 ...... 111ABC		// NO
 ...... _$ABC1121	// YES, but avoid
-...... HelloWorld    
+...... HelloWorld
 ...... H123121313ello_______World______1212121313   // OK, but horrible
 public class System // NO
 
@@ -163,7 +168,7 @@ Highly Case Sensitive
 report.PDF.exe
 report.PDF
 
-Explorer -> 
+Explorer ->
 
 
 Stack Trace
