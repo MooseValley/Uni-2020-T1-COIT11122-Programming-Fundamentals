@@ -1,0 +1,82 @@
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Four
+
+Question One
+
+Answer the following questions. Your answers should be concise; aim for two or three sentences.
+
+(a) Describe the term "algorithm” and why pseudocode can help programmers develop algorithms.
+
+(b) Use pseudocode or a flow chart to give an example of an if...else selection statement.
+
+(c) Use pseudocode or a flow chart to give an example of sequence control statements.
+
+(d) Explain the difference between counter-controlled and sentinel-controlled repetition.
+
+(e) Use pseudocode to give an example of a looping construct in which the number of repetitions is not known in advance.
+
+
+Question Two
+
+For this question, read the code, and write the output. Do not execute the program on a computer.
+What will be the output if the following code is placed at line 8 of the class Value?
+a) x = 1; xLimit = 5;
+b) x = 10; xLimit = 5;
+
+1 public class Value
+2 {
+3    public static void main(String args[])
+4    {
+5       int x;
+6       int xLimit;
+7
+8       /* assign values to x and xLimit here */
+9
+10      while (x <= xLimit)
+11      {
+12         x++;
+13         System.out.printf("The value of x is %d\n", x);
+14      }
+15
+16      System.out.printf("The final value of x is %d\n", x);
+17    }
+18 }
+
+
+Question Three
+
+Determine if there is are errors in this following program segments. If there is an error, specify whether it is a logic error or a compilation error, specify the line number in the program and write the corrected code. If the code does not contain an error, write "no error.” There may be more than one error in the program segment.
+
+(a) The following while loop should print all the even integers between 0 and 20, inclusive.
+1: int i = 0;
+2: while (i <= 20)
+3: if (i % 2 == 0)
+4: System.out.printf( "%d ", i );
+5: i++;
+
+
+(b) The following while loop should compute the product of all the integers between 1 and 5, inclusive.
+1: int i = 1;
+2: int product = 1;
+3: while (i <= 5);
+4: product *= i;
+
+
+Question Four
+
+The process of finding the largest value (i.e., the maximum of a group of values) is used frequently in computer applications. For example, an application that determines the winner of a sales contest would input the number of units sold by each salesperson. The salesperson who sells the most units wins the contest. Write pseudo code and then a Java application which inputs a series of 10 integers and determines and prints the largest integer (assume the numbers will be positive). Your application should use at least the following three variables:
+
+a) counter: A counter to count to 10 (i.e., to keep track of how many numbers have been input and to determine when all 10 numbers have been processed).
+
+b) number: The integer most recently input by the user.
+
+c) largest: The largest number found so far.
+
+
+
+Week 04
+Review Questions 9th Edition (text p 321), Programming Exercises (text p 324) Q1 Q6 Q13
+Review Questions 8th Edition  (text p 344), Programming Exercises (text p 347) Q2 Q7 Q13
+
+
+.
