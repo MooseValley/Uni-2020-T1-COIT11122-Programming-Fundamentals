@@ -24,6 +24,77 @@ Teenie   ******
 Sam      ***************
 ------------------------------------------------------------
 */
+import java.util.Scanner;
+
 public class BarChart
 {
+
+   private static int getPlayerPoints (String name)
+   {
+      Scanner kb = new Scanner (System.in);
+
+      System.out.print ("Enter points for " + name + ": ");
+      int points = kb.nextInt();
+
+      // TODO: add validation: points must be >= 0 and <= 20.
+
+      return points;
+   }
+
+   private static void plotPlayerPoints (String name, int points)
+   {
+      System.out.printf ("%-10s", name);
+      for (int p = 0; p < points; p++)
+         System.out.print ("*");
+
+      System.out.println ();
+   }
+
+   public static void main (String[] args)
+   {
+
+      // Prompt for point scored for each player
+      /*
+      System.out.print ("Enter points for Moose: ");
+      int moosePoints = kb.nextInt();
+
+      System.out.print ("Enter points for Troy: ");
+      int troyPoints = kb.nextInt();
+
+      System.out.print ("Enter points for Byron: ");
+      int byronPoints = kb.nextInt();
+      */
+
+      int moosePoints   = getPlayerPoints ("Moose");
+      int troyPoints    = getPlayerPoints ("Troy");
+      int byronPoints   = getPlayerPoints ("Byron");
+      int waynePoints   = getPlayerPoints ("Wayne");
+
+
+
+      // Graph the points scored by each player:
+      System.out.println ("\nPoints Bar Graph:");
+
+      /*
+      System.out.print ("Moose");
+      for (int p = 0; p < moosePoints; p++)
+         System.out.print ("*");
+      System.out.println ();
+
+      System.out.print ("Troy");
+      for (int p = 0; p < troyPoints; p++)
+         System.out.print ("*");
+      System.out.println ();
+
+      System.out.print ("Byron");
+      for (int p = 0; p < byronPoints; p++)
+         System.out.print ("*");
+      System.out.println ();
+      */
+
+      plotPlayerPoints ("Moose",  moosePoints);
+      plotPlayerPoints ("Troy",   troyPoints);
+      plotPlayerPoints ("Byron",  byronPoints);
+      plotPlayerPoints ("Wayne",  waynePoints);
+   }
 }

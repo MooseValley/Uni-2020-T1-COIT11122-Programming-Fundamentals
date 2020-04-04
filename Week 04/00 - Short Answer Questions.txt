@@ -1,3 +1,8 @@
+Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
+https://cqu.zoom.us/j/471736829
+
+Starting soon ....  :)
+
 
 COIT11222 Programming Fundamentals Tutorial/Lab Week Four
 
@@ -6,14 +11,87 @@ Question One
 Answer the following questions. Your answers should be concise; aim for two or three sentences.
 
 (a) Describe the term "algorithm” and why pseudocode can help programmers develop algorithms.
+algorithm
+set of logical steps to solve a problem.
+SORT
+Encrypting
+Compressing
+Easier to understand something is, the less efficient.
+
+
 
 (b) Use pseudocode or a flow chart to give an example of an if...else selection statement.
 
+if carmodel = "Camry"
+   output "your drive a Toyota"
+else
+   output "your don't drive a Camry"
+
+if x is greater than 3 then print "Valid" to screen. Else print "invalid"
+
+if x is greater than 3 then
+	print "Valid" to screen.
+Else
+	print "invalid"
+
+
+Customer Name
+	cannot be blank
+	must be at leats 3 char long
+	must start with an alphabetic letter
+
+
 (c) Use pseudocode or a flow chart to give an example of sequence control statements.
+
+load customer data from file
+check each customer is valid
+	check their name is valid
+		:::
+	check their email is valid
+	::::
+generate report
+
+get number of items from user
+charge = number of items * cost of item
+display charge to user formatted as currency
+
 
 (d) Explain the difference between counter-controlled and sentinel-controlled repetition.
 
+sentinel - you've got a value that controls when a loop exits
+
+A Add a customer
+R Report customers
+Q Quit
+
+while ((userInputChar != 'Q') && (userInputChar != 'q'))
+//for (; ((userInputChar != 'Q') && (userInputChar != 'q')); )
+{
+   // Display the menu
+   // get user input
+   // act on user input
+
+}
+
+int total = 0;
+for (int num = 1; num <= 100; num++)
+	total += num;
+
+a loop that executes a set number of times bases on a counter
+based*
+
+
+
 (e) Use pseudocode to give an example of a looping construct in which the number of repetitions is not known in advance.
+
+while ((userInputChar != 'Q') && (userInputChar != 'q'))
+{
+   // Display the menu
+   // get user input
+   // act on user input
+
+}
+
 
 
 Question Two
@@ -43,6 +121,43 @@ b) x = 10; xLimit = 5;
 18 }
 
 
+Iter	x 	xLimit	is x <= xLimit		x++	Output
+BL	1	5	Y			2	The value of x is 2
+2	2	5	Y			3	The value of x is 3
+3	3	5	Y			4	The value of x is 4
+4	4	5	Y			5	The value of x is 5
+5	5	5	Y			6	The value of x is 6
+6	6	5	N				The final value of x is 6
+
+
+System.out.printf("%d\n", 100);
+System.out.printf("%s", "Hello");
+System.out.printf("%f", 3.5);
+System.out.printf("%,.2f", 31234567.111125); // 3,234,567.11
+System.out.printf("%20s", "Hello");
+System.out.printf("%-20s", "Hello");
+
+System.out.printf("%d \n%s \t%f", 100, "Hello", 3.5);
+
+
+Math.round();
+
+System.out.print( String.format ("%d\n", 100) );
+System.out.print( String.format ("%s", "Hello") );
+
+System.out.print( String.format ("%f", 3.5) );
+System.out.print( String.format ("%,.2f", 31234567.111125)  );
+
+
+
+
+
+
+
+
+
+
+
 Question Three
 
 Determine if there is are errors in this following program segments. If there is an error, specify whether it is a logic error or a compilation error, specify the line number in the program and write the corrected code. If the code does not contain an error, write "no error.” There may be more than one error in the program segment.
@@ -54,12 +169,35 @@ Determine if there is are errors in this following program segments. If there is
 4: System.out.printf( "%d ", i );
 5: i++;
 
+1: int i = 0;
+2: while (i <= 20)
+3:   if (i % 2 == 0)
+4:      System.out.printf( "%d ", i );
+5:   i++;
+
+Logic Error
+
+2A: {
+6:  }
+
 
 (b) The following while loop should compute the product of all the integers between 1 and 5, inclusive.
 1: int i = 1;
 2: int product = 1;
 3: while (i <= 5);
 4: product *= i;
+
+Logic Error: semi-colon
+3: while (i <= 5)
+
+Logic:
+5: i++;
+
+Logic:
+3A: {
+6:  }
+
+
 
 
 Question Four
@@ -72,11 +210,43 @@ b) number: The integer most recently input by the user.
 
 c) largest: The largest number found so far.
 
+LargestInteger.java
 
 
 Week 04
 Review Questions 9th Edition (text p 321), Programming Exercises (text p 324) Q1 Q6 Q13
-Review Questions 8th Edition  (text p 344), Programming Exercises (text p 347) Q2 Q7 Q13
+Review Questions 8th Edition (text p 344), Programming Exercises (text p 347) Q2 Q7 Q13
 
+
+UNARY
+
+++count;
+count++
+
+
+
+16
+
+
+1 4 2 3
+
+
+
+Q19.
+
+Outter	Inner
+Inter	Iter	f	g	Output
+1	1	0	0	0 0
+	2	0	1	0 1
+2	1	1	0	1 0
+	2	1	1	1 1
+
+0 0 0 1 1 0 1 1
+(A).
+
+
+
+20).
+NOTHING
 
 .

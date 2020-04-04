@@ -37,7 +37,7 @@ People still arriving => we will start in approx 1 minute.  :)
 From last week: Conditional Operator:
 
 int x = 15;
-in a = 0;
+int a = 0;  // Fixed typo.
 
 if (x == 15)
    a = 2;
@@ -49,7 +49,7 @@ else a = 5;
 
 if (x == 15) a = 2;  else a = 5;
 
-// We can chieve the same result with a Conditional Operator in 1 line of code:
+// We can achieve the same result with a Conditional Operator in 1 line of code:
 x == 15 ? a = 2 : a = 5;
 
 
