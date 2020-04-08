@@ -9,13 +9,410 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
 LAST WEEK:
-*
-*
+* COIT11222_Week4.ppt
+* Looping
+* Tute: methods, printf, String.format, ...
 
 THIS WEEK:
-* Next week - Mid-Term Break
-*
+* Week 5: Using Methods, Classes, and Objects
 
+NEXT WEEK:
+* Mid-term break - no classes
+* Recommend: use this time to catch up and get ahead with the course work to
+  give you a head start on the second half of term.
+* What we do is building on prior weeks - so you have to know and be comfortable
+  with everything we have covered so far moving forward.
+
+Week 6: in 2 weeks time
+* Week 6: More Object Concepts
+
+
+CHAT: Hey sir, I had a quick question about week 4's task on the assignment. For the program (Wood fire pizza) I have already created a loop that repeats the order N amount of times. My question was did I also need to make a code that determines the largest number in my student code and sets N to that value or am I just looking at my student number and assigning N to equal the largest number I found?
+
+Mike O: No, just create a constant called N and give it a value equal to the highest digit in your StudentID.  e.g. S58743.  8.
+
+CHAT: if you have a high number you can set N to something lower while you are coding and testing then change to the higher number for the final version
+
+Mike O: YES, for testing use N = 1 or 2 or 3
+
+
+
+Primitive Types: int, double, boolean,
+Reference types: String, Date, LOcalDate
+String name = "Mike";
+
+
+User Defined Data Types
+own classes to contain / work with objects
+
+
+main      // calling
+  method1 // called, invoked
+  method2
+
+main      // calling
+  method1 // called, invoked
+    method34 //
+  method2
+
+
+accessModifier returnType methodName (optionalParameters)
+{
+}
+
+accessModifier returnType displayAddress ()
+{
+}
+
+
+
+public class ClassName
+{
+   // Data here
+
+
+   // Methods here
+
+   public static void main(String[] args)
+   {
+   }
+
+
+   // Data here
+
+
+   // Methods here
+
+   // Data here
+
+
+   // Methods here
+}
+
+
+public class ClassName
+{
+   // Data here
+
+
+   // Methods here
+
+
+   public static void main(String[] args)
+   {
+
+
+   }
+
+   public static void displayAddress ()
+   {
+     S.o.p (::::);
+   }
+
+
+   public static void displayAddress1 ()
+   {
+     S.o.p (::::);
+
+     return ....; // ERROR
+   }
+
+   public static int displayAddress2 ()
+   {
+     S.o.p (::::);
+
+     // No return ==> ERROR
+   }
+
+}
+
+
+
+accessModifier returnType methodName (optionalParameters)
+{
+  // Implementation = code that makes up the body of a method
+}
+
+public
+
+Golden Rules:
+* Keep your methods private - unless they need to be invokable from outside the class
+* Keep your data private - unless there is very good reason for it to be public.
+
+
+public class MikeClass
+{
+   public static void main(String[] args)
+   {
+      First.displayAddress(); // OK because method is public
+
+   }
+}
+
+// Sorry - PC crash
+
+
+***************************************************************'
+Arguments VS Parameters
+***************************************************************'
+
+
+method1("Mike"); "Mike" is an argument
+
+
+public static void method1 (String name) // name is a parameter
+{
+   // Implementation
+}
+
+
+CHAT: if the method had a return type you'd have an = as part of the calling statement?
+
+Mike O: Maybe, optional.
+
+
+CHAT: Sir can you explain parameters again
+
+Mike O: explain again (and say don't worry we will do lots of examples)
+
+
+method1("Mike", 33);
+method1(theName, theScore);
+method1(33, "Mike");  // ERROR
+
+public static void method1 (String name, int score)
+{
+   // Implementation
+   if (score < 0)
+      System.out.println (name + " scored less than 0");
+   else
+      System.out.println (name + " scored 0 or more");
+}
+
+
+CHAT: If you were programming a math function, it would be done using a method right?
+
+Mike O: Yes
+
+int val = Math.abs (-44); // +44
+
+public static int abs (int val)
+{
+}
+
+
+
+********************************************************
+Encapsulation
+********************************************************
+i.e. Black Box
+
+Encapsulation
+Hiding the mind boggling complexity of what we need to use - cars or classes
+We just need to know the interface
+
+	Car
+		ignition / door locks
+		steering wheel
+		2/3 pedals
+		gear stick
+
+	Product
+		create a product
+			createProduct (name, price)
+		save product
+			save()
+		increase price of product
+			increasePrice (pct)
+		load product
+			load()
+
+GUI
+
+Label headingLabel = new Label ("My App v1.0");
+
+headingLabel.setText ("My App v1.1");
+
+
+Date today = new Date ();
+
+Scanner kb = new Scanner (System.in);
+nextLine(), nextInt()
+
+
+******************************************************
+
+double mikeSalary = 100.0;
+
+raiseSalary (mikeSalary);
+
+double wayneSalary = 120.45;
+raiseSalary (wayneSalary);
+
+raiseSalary (); // OK ?? NO - ERROR
+
+raiseSalary (5.5); // OK ?  All OK
+
+raiseSalary (5); // OK ? YES. Automically promotes int -> double, etc
+
+raiseSalary ("Mike"); // OK ? ERROR
+
+double d = "Mike"; // ERROR
+
+raiseSalary ("123"); // ERROR
+
+
+raiseSalary (Integer.parseInt ("123") ); // OK
+
+raiseSalary (Double.parseDouble ("123") ); // OK
+
+raiseSalary (Double.parseDouble ("123.45") ); // OK
+
+
+
+
+// Completely different variable to salary in method predictRaise ()
+double salary = 100.0;
+raiseSalary (salary);
+
+
+predictRaiseUsingRate (100, 0.10); //
+
+predictRaiseUsingRate (100, 5); // 6x 100 -> 600
+
+
+RETURN
+return data / results / ... from a method
+exit the method
+int, double, String, Date, ... class objects, arrays, ....
+
+
+double myNewSalary = predictRaise (100.0); // 110.00
+
+S.o.p (myNewSalary); // 110.00
+
+predictRaise (100.0);  // All OK, but the return value is throw away
+
+
+public static double predictRaise (double salary)
+{
+
+   /// calculations
+   return ....;
+
+   :::: // Unreachable
+}
+
+
+********************************************************
+Objects / Classes
+********************************************************
+Date today = new Date();
+today is an variable of type Date
+today is an Object of type Date
+today is an example of Date
+today is an instance of Date
+
+String name = "Mike";
+name is an variable of type String
+name is an Object of type String
+name is an example of String
+name is an instance of String
+
+Is-A
+today is a Date
+name is a String
+
+true or false:   today is a String    	FALSE
+true or false:   name is a Date		FALSE
+
+
+Reusability / not having to reinvent the wheel
+
+
+
+Scanner ....
+Date ...
+
+public class Employee
+{
+  // Instance fields / class data
+  private int empNum;
+  private String empName;
+  ::::
+
+  public void methodName (....)
+  {
+  }
+
+  public void method2Name (....)
+  {
+  }
+
+  public static void method3Name (....)
+  {
+  }
+}
+
+
+Employee mike = new Employee ();
+mike.methodName ...
+mike.empNum // ERROR data is private
+
+Employee bella = new Employee ();
+bella.methodName ...
+
+
+Employee.method3Name (....) // because static
+
+Accessor / Getter
+Mutator / Setter
+
+
+
+
+Employee mike = new Employee ();
+mike.setEmpNum(55);
+mike.setEmpFirstName("Mike");
+
+S.o.p (mike.getEmpFirstName() + " emp id is: " +
+       mike.getEmpNum() );
+
+String name = "Mike";
+String name = new String ("Mike");
+
+CHAT: is there a limit to the number of methods we can have in a class?
+
+Mike O: No, limited by memory
+
+
+Dot notation
+object . method
+mike.setEmpNum(55);
+mike.setEmpFirstName("Mike");
+
+
+Constructor
+code that is automatically run when you create a class object
+same name as class
+public
+no return type
+
+
+Method
+Objects
+Accessors
+Mutatators
+public / private
+
+
+Easter Friday
+
+CHAT: Sir, when can we have the recording of this lecture?
+
+Mike O: usually takes 3-4 days before get the video, and then I have 3-4 hours of editing to do for each video, I watch the entire video, trim the start / end, add popups / clarifications / etc, add table of contents (see description under video), etc, upload, email Bruce saying its ready, etc.
+
+YES - it takes more time to edit the video than it does to run the class !
 
 
 
