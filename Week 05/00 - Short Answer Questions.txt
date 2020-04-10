@@ -1,0 +1,235 @@
+Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
+https://cqu.zoom.us/j/471736829
+
+
+Starting soon ...  :)
+Only 6 people so far ... will wait a  few more minutes ... :)
+It is Easter Friday ... so not expecting everyone to make it ...
+
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Five
+
+Question One Answer the following questions. Your answers should be concise; aim for two or three sentences.
+
+(a) Define the term "method.”
+	something that can be called from somewhere else
+	header
+	paremeter
+	name for block of code
+
+
+(b) What are the three ways to call a method?
+
+method1(::::);
+
+Employee mike = new Employee ();
+
+mike.setSalary (100);
+
+Employee.method2(:::);
+
+
+
+
+
+
+Question Two
+
+For each of the given program segments, read the code, and write the output. Do not execute these programs on a computer. Assume that the following code segments are contained within the main method of a Java application. A method has been declared in the class:
+
+public static int method1(int x)
+{
+  if (x <= 10)
+    x += 10;
+  else
+    x -= 10;
+
+  return x;
+}
+
+(a) What is the output of the following code segment?
+
+int a = 15; int b = 5;
+System.out.println(method1(method1(a) + method1(b));
+                           method1 (15) + method1 (5)
+                           method1(5 + 15)
+                    S.o.p (10);
+
+CHAT: I'm struggling to understand, can you clarify how Question A is calling the method?
+
+
+a = 0;
+b = 0;
+System.out.println(method1(method1(a)) + method1(b));
+                           method1(10 + 10)
+                           method1(20)
+                    S.o.p (10);
+
+
+
+(b) What is the output of the following code segment?
+
+int a = 5;
+int b = -6;
+System.out.println(Math.max(Math.abs(b), a));
+
+System.out.println(Math.max(Math.abs(-6), 5));
+=> System.out.println(Math.max(6, 5) );
+=> 6
+
+abs = absolute value
+max
+
+
+
+(c) What is the output of the following code segment?
+
+int a = -6;
+System.out.println(Math.sqrt(Math.pow(Math.abs(a), 2)));
+=> System.out.println(Math.sqrt(Math.pow(Math.abs(-6), 2)));
+=> System.out.println(Math.sqrt(Math.pow(6, 2)));  // 6^2
+=> System.out.println(Math.sqrt(36));  // 6^2
+=> System.out.println(6);
+
+int a = 6;
+System.out.println(Math.sqrt(Math.pow(Math.abs(a), 2)));
+
+
+
+Question Three
+
+Determine if there is are errors in this following program segments. If there is an error, specify whether it is a logic error or a compilation error, specify the line number in the program and write the corrected code. If the code does not contain an error, write "no error.” There may be more than one error in the program segment.
+
+(a) The following code segment defines method maximum, which should return the largest of three integers.
+1  public int maximum(int x, int y, int z)
+2  {
+3    int max = x;
+4
+5    if (y > max)
+6      y = max;
+7
+8    if (z > max)
+9      z = max;
+10
+11   return max;
+12 } // end method maximum
+
+
+2 logic errors
+6      max = y;
+
+
+
+
+
+(b) The following segment of code should print five random integers in the range from 1 to 6.
+
+generator.nextInt(6) // 0 - 5
+
+1 Random generator = new Random();
+2
+3 for (int i = 1; i <= 5; i++)
+4    System.out.println(generator.nextInt(6) );
+
+
+Logic error:
+4    System.out.println(generator.nextInt(6) + 1);
+
+
+Question Four
+
+Write a method minimum3 that returns the smallest of three floating-point numbers. Use the Math.min() method to implement minimum3. Incorporate the method into an application Minimum3 that reads three values from the user, determines the smallest value and displays the result.
+
+
+Question Five
+
+Computers are playing an increasing role in education. Write a program that will help an elementary school student learn multiplication. Use a Random object to produce two positive one-digit integers. The program should then prompt the user with a question, such as How much is 6 times 7? The student then inputs the answer. Next, the program checks the student's answer. If it is correct, display the message "Very good!" and ask another multiplication question. If the answer is wrong, display the message "No. Please try again." and let the student try the same question repeatedly until the student finally gets it right. A separate method should be used to generate each new question. This method should be called once when the application begins execution and each time the user answers the question correctly. The program will terminate if the user enters a negative number.
+
+nextQuestion ()
+// generate the question
+// while (answer is wrong) AND (while answer >= 0)
+//    ask the user for an answer
+//    if the answer is wrong display "No. Please try again."
+//    if the answer is right display "Very good!"
+//    if answer is negative - terminate the program ...
+
+main
+// call nextQuestion ()
+// while (1==1)
+//    nextQuestion ()
+
+
+
+
+Customer
+
+
+Week 05
+Review Questions 9th Edition (text p 160), Programming Exercises (text p 163) Q1 Q2 Q3 Q4 Q11
+Review Questions 8th Edition (text p 171), Programming Exercises (text p 174) Q1 Q2 Q3 Q4 Q11
+
+
+1. Suppose that you have created a program with only the following variables.
+	int a = 5;
+	int b = 6;
+Suppose that you also have a method with the following header:
+
+	public static void mathMethod(int a)
+
+Which of the following method calls are legal?
+a. mathMethod(a);
+b. mathMethod(b);
+c. mathMethod(a + b);
+d. mathMethod(a, b); // ERROR
+e. mathMethod(2361);
+f. mathMethod(12.78);  // ERROR
+
+mathMethod((int) 12.78);
+
+g. mathMethod(29987L);
+
+double d = 4.5;
+float  f = 4.5; // Warning - possible lost of precision
+float  f = (float) 4.5;  // OK
+float  f = 4.5f;  // OK
+
+
+h. mathMethod(); // ERROR
+i. mathMethod(x); // ERROR
+j. mathMethod(a / b); // 0
+
+
+2. Suppose that you have created a program with only the following variables.
+int age = 34;
+int weight = 180;
+double height = 5.9;
+Suppose that you also have a method with the following header:
+public static void calculate(int age, double size)
+Which of the following method calls are legal?
+a. calculate(age, weight);
+b. calculate(age, height);
+c. calculate(weight, height);
+d. calculate(height, age);
+e. calculate(45.5, 120);
+f. calculate(12, 120.2);
+g. calculate(age, size);
+h. calculate(2, 3);
+i. calculate(age);
+j. calculate(weight, weight);
+
+
+3. Suppose that a class named Bicycle contains a private nonstatic integer named
+height, a public nonstatic String named model, and a public static integer named
+wheels. Which of the following are legal statements in a class named BicycleDemo
+that has instantiated an object as Bicycle myBike = new Bicycle();?
+a. myBike.height = 26;
+b. myBike.model = "Cyclone";
+c. myBike.wheels = 3;
+d. myBike.model = 108;
+e. Bicycle.height = 24;
+f. Bicycle.model = "Hurricane";
+g. Bicycle.int = 3;
+h. Bicycle.model = 108;
+i. Bicycle.wheels = 2;
+j. Bicycle yourBike = myBike;
+

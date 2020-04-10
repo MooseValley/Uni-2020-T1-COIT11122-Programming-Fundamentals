@@ -7,6 +7,8 @@ Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
 Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
+Github basics:
+https://www.youtube.com/watch?v=A30iwpDbkwc
 
 THIS WEEK:
 * Week 01 - Mike O Intro slides
