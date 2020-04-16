@@ -190,41 +190,41 @@ public class Week02
 
     private int value1; // Class Scope
     public  int value2; // GLOBAL Scope - any class can use, change, etc
-    
+
 
     public static void main (String[] args)
     {
         int value3; // Method Scope
-        
-        
+
+
         if (value3 < 5)
         {
             int value4 = 112; // Scope to next enclosing }
-            
+
             for (...)
             {
                while (....)
                {
-               
+
                      String name ....
                      Date today = ....
-                     
-                     
+
+
                }
             }
-            
+
         }
         S.o.p (value4); // Error
-        
+
     }
 }
 
 
 JOptionPane.showMessageDialog (null, "Hello World");
 
-JOptionPane.showMessageDialog (null, "Hello World Title", "body of message", 
+JOptionPane.showMessageDialog (null, "Hello World Title", "body of message",
   JOptionPane.ERROR_MESSAGE, ......);
-  
+
 
 
 int a = 4;
@@ -306,24 +306,37 @@ nextInt()
 nextDouble()
 
 
+// When you go from number input to String input, you need to clear the
+// input buffer BEFORE getting the String input.
+
 System.out.println ("Enter your name: ");
 String name = kb.nextLine();
 
-	System.out.println ("Enter your age: ");
-	int age = kb.nextInt();
+System.out.println ("Enter your age: ");
+int age = kb.nextInt();
 
-	// int -> String, or double -> String
-	kb.nextLine(); // Clear the Buffer
+// int -> String, or double -> String
+kb.nextLine(); // Clear the Buffer
+
+System.out.println ("Enter your Email: ");
+String email = kb.nextLine();
+
+
+// Or, can bypass the need for this by NOT using nextInt(), nextDouble(), etc
+// i.e. get all input as String and convert it to what you need.
 
 System.out.println ("Enter your age: ");
 int age = Integer.parseInt (kb.nextLine());
- 
+
 System.out.println ("Enter your address: ");
 String address = kb.nextLine();
 
+System.out.println ("Enter your temperature: ");
+double temp = Double.parseDouble (kb.nextLine());
 
+System.out.println ("Enter your Suburb: ");
+String address = kb.nextLine();
 
-double d1 = Double.parseDouble (string);
 
 
 
