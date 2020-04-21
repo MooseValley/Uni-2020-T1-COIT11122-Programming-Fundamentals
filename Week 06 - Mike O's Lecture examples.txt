@@ -8,6 +8,20 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts			<--- YOU ARE HERE !
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
 2 WEEKS AGO:
 * Week 5: Using Methods, Classes, and Objects
 * COIT11222_Week5.ppt
@@ -28,8 +42,9 @@ Week 5 Tutorial class video is missing
 THIS WEEK:
 * Week 6: More Object Concepts
 * COIT11222_Week6.ppt
-
-
-
+* New topics: Overloading, this, shadowing, Composition, has-a
+* Re-cover these topics: Blocks / Scope, Static, Math class, Imports, LocalDate, ...
+* Working on new video: Static Vs Instance to explain and show exactly what's going on.
+* Will be here soon: http://tinyurl.com/MikesJavaVideos
 
 EOF.
