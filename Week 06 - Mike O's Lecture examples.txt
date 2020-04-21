@@ -10,12 +10,15 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 
 2 WEEKS AGO:
 * Week 5: Using Methods, Classes, and Objects
+* COIT11222_Week5.ppt
+
 LAST WEEK:
 * Mid-term break - no classes
+* Recommendation: catch up and get ahead with the work.
 
 THIS WEEK:
-*
-*
+* Week 6: More Object Concepts
+* COIT11222_Week6.ppt
 
 
 
