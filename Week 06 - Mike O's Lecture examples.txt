@@ -8,13 +8,14 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+2 WEEKS AGO:
+* Week 5: Using Methods, Classes, and Objects
 LAST WEEK:
-* 
-* 
+* Mid-term break - no classes
 
 THIS WEEK:
-* 
-* 
+*
+*
 
 
 
