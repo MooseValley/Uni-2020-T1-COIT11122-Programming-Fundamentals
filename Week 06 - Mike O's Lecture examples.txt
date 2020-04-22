@@ -8,6 +8,11 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+
+STARTING SOON ...  :)
+
 Week 01 Creating Java Programs
 Week 02 Using Data
 Week 03 Making Decisions
@@ -32,7 +37,7 @@ LAST WEEK:
 
 Week 5 Tutorial class video is missing
 - CQUni Help Desk and ZOOM staff are investigating.
-- New functionality coming that allows recording locally and to the cloud at the same time/
+- ZOOM: New functionality coming that allows recording locally and to the cloud at the same time/
 - Alternate resources:
 --> Bruce Tutorial Week 5 video on the course web page
 --> My Week 5 Textbook questions: http://tinyurl.com/MikesJavaVideos
@@ -46,5 +51,538 @@ THIS WEEK:
 * Re-cover these topics: Blocks / Scope, Static, Math class, Imports, LocalDate, ...
 * Working on new video: Static Vs Instance to explain and show exactly what's going on.
 * Will be here soon: http://tinyurl.com/MikesJavaVideos
+
+
+if (........)
+{
+   // Code
+}
+
+for (.....)
+{
+   // Code
+}
+
+// Cannot be Overlapping
+for (.....)
+{
+   // Code
+   if (........)
+   {
+} // if statement ends here
+      // Code
+   }  // for loop ends here
+
+
+
+{
+   // Code
+}
+
+
+class Employee
+{
+
+   private int studId;
+   private String name:
+
+   :::
+
+   :::::
+
+
+}
+
+
+
+// OK:
+{
+   int aValue = 15;
+}
+
+{
+   int aValue = 23;
+}
+
+
+// ERROR:
+int aValue = 15;
+
+{
+   int aValue = 23;
+}
+
+
+
+private String name;
+
+public void setName (String aName)
+{
+   name = aName;
+}
+
+public void setName (String name)
+{
+   //name = name;
+   System.out.println (name);
+}
+
+
+
+Q: if aNumber was declared in the class, the result would be the same too?
+
+
+
+Primitive types:
+int, double, boolean, char, ....
+
+Reference types:
+* be very careful
+* if your pass them to a method, you pass the memory address
+so the method can change the data referred to and this affects the object
+in the called method.
+
+
+int aNumber = 22;
+
+changeNumber (aNumber);
+S.o.p (aNumber); // 22 - cannot be changed by a method
+
+public void changeNumber (int newNumber)
+{
+   newNumber = 34;
+}
+
+
+Q. String is a reference type?
+YES
+
+Employee mike = new Employee ();
+mike.setName ("Mike O");
+
+changeName (mike, "Frankie");
+S.o.p (mike.getName() );      // Frankie - so it can be changed by a method.
+
+
+public void (Employee emp, String newName)
+{
+   emp.setName (newName);
+}
+
+
+
+**********************************************
+Overloading / Polymorphism
+**********************************************
+Programmers BEST friend.
+Simpler code.
+Don't have to remember 1,000's of method names.
+
+// New Days: just remember a few method names.  e.g. "add".
+
+Label titleLabel = new Label ("My App v0.0001");
+
+add (titleLabel);
+
+add (titleLabel, BorderLayout.NORTH);
+
+Menu, menuitems, etc
+
+myMenu.add (menuItem);
+
+myList.add ("Mike");
+myList.add ("Frankie");
+
+All called "add"
+but all are completely different methods
+Java works out which call based on the context.
+
+
+
+// Old Days: before Overloading (Polymorphism)
+
+addLabelToUI (titleLabel);
+addLabelToUIRegion (titleLabel, BorderLayout.NORTH);
+
+myMenu.addMenuItemToMenu (menuItem);
+
+myList.addStringToArrayList ("Mike");
+myList.addStringToArrayList ("Frankie");
+
+
+
+calculateInterest (100);
+calculateInterest (100, 0.035);
+calculateInterest (100.0);
+calculateInterest (100.0, 0.035);
+
+
+public void simpleMethod (double d)
+{
+   S.o.p ("method takes a double: " + d);
+}
+
+public void simpleMethod (String s)
+{
+   S.o.p ("method takes a String: " + s);
+}
+
+public void simpleMethod (boolean b)
+{
+   S.o.p ("method takes a boolean: " + b);
+}
+
+// Overloading / Polymorphism in action:
+simpleMethod ("Mike");
+simpleMethod (45.45);
+simpleMethod (true);
+simpleMethod (45);
+simpleMethod ('A'); // Which method ?
+
+int, long, short, byte, char = 65 'A'
+
+
+Q. so if I set char chara = 65 and S.O.P(chara), would it say 'A'?
+YES
+
+
+Overloading: constructors
+Polymorphism: methods
+
+
+
+// ERROR: illegal / ambiguous
+public void myMethod (String s, double d)
+{
+   :::
+}
+
+public int myMethod (String name, double temp)
+{
+   :::
+}
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Default Constructor
+   public Employee ()
+   {
+       :::
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+       :::
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int id)
+   {
+       :::
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int id)
+   {
+       :::
+   }
+}
+
+Employee e1 = new Employee();
+Employee e2 = new Employee("Mike", 123);
+Employee e3 = new Employee(456);
+Employee e4 = new Employee("Frankie");
+
+Q. Why have multiple constructors ?
+Flexability
+Providing options for user of your class: other programers, other applications, end users
+
+
+Q. Is this valid:
+
+Employee e5 = new Employee(125, "Mike");
+
+
+GameObject newFloor   = new GameObject ("floor.png", 0);
+GameObject addPlayer  = new GameObject ("Mike", 100, 40, 40);
+GameObject addMonster = new GameObject ("Ripper", 1000, 15, false, ;;;;40, 40);
+
+
+Rule:
+* Java provides a Default Constructor automatically for your classes, unless you
+provide any type of Constructor.
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+
+   public void setName (:::)
+   :::
+
+   public String getName (:::)
+   :::
+
+}
+
+In the above class, Java would automatically provide a Default Constuctor for us.
+in the the .class file.
+numeric fields -> 0
+booleans -> false
+String -> null
+Reference Types -> null
+
+
+Rule:
+* Always provide your own Default Constuctor and at least one Parameterised Constuctor.
+* Provide what makes sense for your class and your class users.
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+       :::
+   }
+
+  }
+}
+
+Employee e4 = new Employee("Frankie"); // OK
+Employee e1 = new Employee(); // OK ????  Compilation Error
+
+
+
+// If Constructor is private, would this work:
+Employee e1 = new Employee();  // ERROR
+
+
+*********************************************
+this - "for the current class object"
+*********************************************
+
+public class Employee
+{
+   private String name;
+
+   /*
+   public void setName (String aName)
+   {
+      name = aName;
+   }
+   */
+
+   public void setName (String name)
+   {
+      this.name = name;
+   }
+}
+
+Q. What sort of method is getEmpNum() ?
+Accessor / Getter
+
+
+Accessor / Getter
+	getName()
+	getBalance()
+
+Mutator  / Setter
+	setname()
+	setBalance()
+	deposit()
+	withdraw()
+
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Default Constructor
+   public Employee ()
+   {
+      studId = 0;
+      name   = "";
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+      this.studId = 0;
+      this.name   = name;
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int studId)
+   {
+      this.studId = studId;
+      this.name   = "";
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int id)
+   {
+      // if studId > 100 and < 2000 and it hasn't been used before for any other student
+      this.studId = studId;
+
+      // if name is not blank, and it is 3 characters and starts with an alphabetic char
+      this.name   = name;
+   }
+}
+
+// Use this to invoke another constructor in the class:
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Default Constructor
+   public Employee ()
+   {
+      this ("TBA", -1);
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+      this (name, -1);
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int studId)
+   {
+      this ("TBA", studId);
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int id)
+   {
+      // if studId > 100 and < 2000 and it hasn't been used before for any other student
+      // -1 = TBA
+      this.studId = studId;
+
+      // if name is not blank, and it is 3 characters and starts with an alphabetic char
+      this.name   = name;
+   }
+}
+
+this for Constructor calls:
+* reduces complexity
+* reduces repeated code / validation
+* saves time
+
+
+Instance methods
+	public int getId()
+Instance fields
+	private int id;
+	private String name;
+
+Class Methods (Static methods)
+	System.out.print
+	public static void main(.....)
+	no this reference
+
+Class Fields (Static fields)
+	private static int studId;
+	shared by ALL class objects
+	like "global data" for all class objects
+
+
+Instance methods can access:
+	Instance fields
+	Class Methods (Static methods)
+	Class Fields (Static fields)
+
+Class Methods (Static methods) can access:
+	Class Fields (Static fields)
+
+
+
+final
+
+pubic class Employee
+{
+	final int MAX_EMP_ID = 99;
+
+}
+
+
+Q. There is more on Static fields in the text book
+
+
+
+
+// This tells us Math class methods are static methods:
+// Static / Class method: ClassName  . methodname
+int val = Math.abs (-5);
+
+// method header:
+public static int abs (int i)
+
+
+// If Math class methods were instance methods (hypothetical):
+// Instance method: object . methodname
+Math math = new Math();
+int val = math.abs (-5);
+
+
+// Option #1: BEST
+import java.util.Scanner;
+Scanner kb = new Scanner (System.in);
+
+// Option #2
+import java.util.*;
+Scanner kb = new Scanner (System.in);
+
+// Option #3: WORST
+java.util.Scanner kb = new java.util.Scanner (System.in);
+
+
+
+*********************************************
+Composition / Nested class
+*********************************************
+Resuing what we have done
+building more powerful data types
+
+
+Student TODO:
+* Create the NameAndAddress class
+
+
+// nested Classes:
+public class Employee
+{
+
+    private int id:
+    ::::
+
+
+
+    class Training
+    {
+       private int courseId;
+       :::
+
+    }
+}
 
 EOF.
