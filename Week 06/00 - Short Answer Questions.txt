@@ -2,6 +2,55 @@ Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
 https://cqu.zoom.us/j/471736829
 
 
-Starting soon ...  :)
+Assigment 1 due tonight - Friday, 24 April 2020, 11:59 PM
+* In Week 5 and 6, I sit with each student in class and check their assignments and see how things are going, see if there are any issues, etc.
+* Not possible this term - thanks to Coronavirus.
+* Any issues ?
+* Any questions ?
+* I cannot help you on your assignment, but I can explore / work on similar topics for other problems.
 
+From lecture:
+* SimpleMethodExamplesFromLecture.java
+
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Six
+
+Question One
+
+Answer the following questions. Your answers should be concise; aim for two or three sentences.
+
+(a) What are overloaded methods? Are methods with the same name which only differ in return type
+valid overloaded methods?
+
+(b) Why do identifiers have scope?
+
+
+Question Two
+
+a) Create a class Car which has two private instance variables: make (String) and price (double)
+
+b) Create the following constructors:
+A default constructor: make = null and price = 0.0
+Parameterised constructors:
+- Both make and price
+- Only make initialised
+- Only price initialised
+(use the default values for the other variables)
+
+c) Create get and set methods
+
+d) Create a toString method which will return a string representing the make and price.
+
+e) Create a main method within the Car class to instantiate objects of this class and to test all of the constructors and the get and set methods
+
+
+
+Week 06
+Review Questions 8th Edition (text p 221), Programming Exercises (text p 224) Q1 Q3 Q5 Q7
+Review Questions 8th edition (text p 236), Programming Exercises (text p 239) Q1 Q3 Q5 Q7
+
+	FormLetterWriter
+	FitnessTracker
+	Bread, Sandwich
+	MathTest
 
