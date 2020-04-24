@@ -1,6 +1,10 @@
+/*
+ Author: Mike O
+ File:   CarTester.java
+ Desc:   Week 06: Tutorial Question 2.  See Car.java.
+*/
 public class CarTester
 {
-
    public static void main (String[] args)
    {
       Car byronsCar  = new Car ();
@@ -49,5 +53,6 @@ public class CarTester
       //System.out.println ("Jarrod's Car: " + jarrodsCar.getMake() + ", price: $" + jarrodsCar.getPrice() );
       //System.out.println ("Liam's Car: "   + liamsCar.getMake()   + ", price: $" + liamsCar.getPrice()   );
 
-   }
-}
+   } // public static void main (String[] args)
+
+} // public class CarTester

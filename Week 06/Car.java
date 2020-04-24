@@ -1,4 +1,8 @@
 /*
+ Author: Mike O
+ File:   Car.java
+ Desc:   Week 06: Tutorial Question 2.
+
 Question Two
 
 a) Create a class Car which has two private instance variables: make (String) and price (double)
@@ -86,6 +90,4 @@ public class Car
       //return String.format ("%-25s $%,12.2f", make, price );
    }
 
-
-
-}
+} // public class Car
