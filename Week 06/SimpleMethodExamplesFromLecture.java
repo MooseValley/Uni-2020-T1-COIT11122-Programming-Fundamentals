@@ -31,6 +31,11 @@ public class SimpleMethodExamplesFromLecture
 
       char charA2 = 65;
       System.out.println (charA2);  // A
+
+      simpleMethod ("" + 'A');   // Which method ? "A"
+      simpleMethod ("" + 45.45); // Which method ? "45.45"
+      simpleMethod ("" + true);  // Which method ? "true"
+
    }
 
 }

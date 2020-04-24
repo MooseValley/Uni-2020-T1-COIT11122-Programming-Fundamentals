@@ -1,16 +1,37 @@
 Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
 https://cqu.zoom.us/j/471736829
 
+-------------------------------------------
+
+Week 06 - this week's Lecture video now on YouTube: http://tinyurl.com/MikesJavaVideos
+
+From lecture:
+* SimpleMethodExamplesFromLecture.java
 
 Assigment 1 due tonight - Friday, 24 April 2020, 11:59 PM
 * In Week 5 and 6, I sit with each student in class and check their assignments and see how things are going, see if there are any issues, etc.
-* Not possible this term - thanks to Coronavirus.
+* Not possible this term - thanks to Coronavirus.  :(
 * Any issues ?
 * Any questions ?
 * I cannot help you on your assignment, but I can explore / work on similar topics for other problems.
 
-From lecture:
-* SimpleMethodExamplesFromLecture.java
+Q. Hi mike, quick question about the assignment, would we get marked down for using try and catch in our program, since we didn't really cover it in weeks 1-5?
+
+Exception Handling
+try catch finally throw
+
+"Feature Creep"
+
+Q. How else would I validate an integer input, where the program would crash if I accidently input a letter?
+
+Perfectly OK - program wil crash if user enters ABC instead of a number.
+
+
+Q. cant we check if the input is a certain type of variable?
+Ass 1 => no
+We have done enough Java yet.
+
+-------------------------------------------
 
 
 COIT11222 Programming Fundamentals Tutorial/Lab Week Six
@@ -19,10 +40,36 @@ Question One
 
 Answer the following questions. Your answers should be concise; aim for two or three sentences.
 
-(a) What are overloaded methods? Are methods with the same name which only differ in return type
-valid overloaded methods?
+(a) What are overloaded methods?
+methods with the same name that can accept a variety of inputs?
+Also the context.
+
+Java works out which method to call based on context, and the arguments passed to the method.
+
+menu.add (menuitem);
+arrayList.add ("Frankie");
+
+
+Are methods with the same name which only differ in return type valid overloaded methods?
+Examples
+
 
 (b) Why do identifiers have scope?
+What is an identifier ?
+
+are identifiers the name we give a vairable
+Field, variable, identifier ....
+Constant = identifier as well
+A name for something that contains data
+
+What would happen if everything had GLOBAL / unlimited scope ?
+
+Any data or method is accessible / changeable (data) / corruptible (data)
+Disaster - wild west, anything goes, no rules, no integrity ==> CHAOS !
+
+
+
+
 
 
 Question Two
@@ -54,3 +101,54 @@ Review Questions 8th edition (text p 236), Programming Exercises (text p 239) Q1
 	Bread, Sandwich
 	MathTest
 
+Q. none of this is correct, but you can do it with shadowing between class variables and method variables right?
+
+
+private String name;
+
+public void ::::: (String name)
+{
+   // ERROR:
+   int val = 45;
+   int val = 34;
+
+   // OK: separate, non-pverlapping blocks within a method.
+   {
+     int val = 45;
+   }
+   {
+     int val = 34;
+   }
+
+}
+
+7
+Non ambigous, overloaded methods
+Must have same name
+Must have different ???
+parameters: order and type
+
+public void method (String, int)
+public void method (int, String)
+public void method (int)
+public void method (String)
+public void method ()
+
+public int method (int) // OK ???  ERROR - ambigouse method
+
+Q. Just a question, if the method accepts int and string, it would error if you input a double?
+
+method ("Frankie", 3.45); // ERROR
+
+method ("Frankie", (int) 3.45); // Typecasting.  :)
+method ("Frankie", (int) Math.round(3.45) );
+
+
+Q. okay, but the other way around it would promote the int to a double?
+YES.  :)
+
+
+
+11.
+
+Class Methods == Static Methods
