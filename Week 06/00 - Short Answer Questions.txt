@@ -13,6 +13,7 @@ Assigment 1 due tonight - Friday, 24 April 2020, 11:59 PM
 * Not possible this term - thanks to Coronavirus.  :(
 * Any issues ?
 * Any questions ?
+* Any errors you cannot fix ?
 * I cannot help you on your assignment, but I can explore / work on similar topics for other problems.
 
 Q. Hi mike, quick question about the assignment, would we get marked down for using try and catch in our program, since we didn't really cover it in weeks 1-5?
@@ -152,3 +153,83 @@ YES.  :)
 11.
 
 Class Methods == Static Methods
+
+
+
+private String name;
+
+public void setName (String aName)
+{
+   name      = aName;  // Implicit this
+   this.name = aName;  // Explicit this
+}
+
+
+
+14.
+
+object . methodName  // Instance methods => non-static methods
+
+Class . methodName   // Static methods
+
+
+Q. It might be late to ask this question, but about submission 1, are there any limits or conditions for the format or words of the report for Assignment 1?
+
+
+Q. I have a loop using Boolean and a couple of if statements where I've repeated code a couple of times to validate string data, can't really figure out how to remove the repeated code and make it work without it.
+
+
+for (int count = 0; count < N; .....)
+{
+
+	boolean dataValid = false; // Assume invalid
+	while (dataValid == false)
+	{
+	   // Get name from user
+	   // if name not valid display error
+	   // else dataValid = true;
+	}
+
+
+	dataValid = false; // Assume invalid
+	while (dataValid == false)
+	{
+	   // Get email address from user
+	   // if email not valid display error
+	   // else dataValid = true;
+	}
+
+
+	dataValid = false; // Assume invalid
+	while (dataValid == false)
+	{
+	   // Get DOB from user
+	   // if DOB not valid display error
+	   // else dataValid = true;
+	}
+
+	// All inputs are valid
+	// do your processing .....
+	// Do calculations
+	// generate the Receipt
+}
+
+// Generate Processing summary
+// Avg, totals
+
+
+Q. Right, I had an if, then a while, then an if again, and the two if's repeated the exact same code
+
+Send code now
+Not later today
+Not tonight
+
+
+
+For each class provide:
+* constructors
+* setters
+* getters
+* toString
+
+.
