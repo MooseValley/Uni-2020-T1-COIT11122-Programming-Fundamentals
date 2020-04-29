@@ -451,7 +451,7 @@ public class Employee
 {
 
    private int studId;
-   private String name:
+   private String name; // Fixed typo.
 
    // Default Constructor
    public Employee ()
@@ -472,7 +472,7 @@ public class Employee
    }
 
    // Parameterised Constructor #3
-   public Employee (String name, int id)
+   public Employee (String name, int studId)  // Fixed typo.
    {
       // if studId > 100 and < 2000 and it hasn't been used before for any other student
       // -1 = TBA
