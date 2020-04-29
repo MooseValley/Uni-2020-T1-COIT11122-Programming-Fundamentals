@@ -31,7 +31,7 @@ LAST WEEK:
 THIS WEEK:
 * Week 7: Arrays
 * COIT11222_Week7.ppt
-* Parrallel Arrays, Arrays of Objects, etc.
+* Arrays, Parrallel Arrays, Arrays of Objects, etc.
 * Methods: Pass by Value (primitive types), Pass by Reference, dangers, issues,
 
 
