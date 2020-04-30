@@ -1,0 +1,46 @@
+Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
+https://cqu.zoom.us/j/471736829
+
+-------------------------------------------
+
+Week 06 - this week's Lecture video now on YouTube:
+http://tinyurl.com/MikesJavaVideos
+
+From lecture:
+* PassByValuePassByReference.java
+* Employee.java
+
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Seven
+
+Question One Answer the following questions. Your answers should be concise; aim for two or three sentences.
+
+(a) What benefits does the enhanced for statement provide for array processing? What are its limitations?
+
+(b) What is an off-by-one error?
+
+(c) Why are command-line arguments passed to the main method as Strings? What problems would arise if command-line arguments were passed using an array of doubles?
+
+Question Two
+
+a. Declare and create an integer array called numbers with the following numbers in a class called MyArray 42, 56, 34, 27, 72, 12, 98, 85, 33, 67
+
+b. Write a for loop which traverses the array and outputs the numbers on a line separated by spaces
+
+c. Write an enhanced for loop which does the same as part b.
+
+d. Write a loop which adds the values in the array and also finds the minimum and maximum.
+
+e. Write a method which will accept the array as a parameter and an integer (key) as a parameter, the method will search the array for the key value and will return the index of the found value or -1 if the value is not found. Write code to test it.
+
+
+
+Week 07
+Review Questions 9th Edition (text p 406), Programming Exercises (text p 409) Q1 Q4 Q6
+Review Questions 8th Edition (text p 430), Programming Exercises (text p 433) Q1 Q4 Q6
+
+	TwelveInts.java
+	ArrayMethodDemo.java
+	Salesperson.java
+
+.
