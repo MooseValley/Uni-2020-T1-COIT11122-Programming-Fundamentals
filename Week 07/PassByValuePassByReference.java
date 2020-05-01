@@ -20,12 +20,15 @@ To Explore / to think about:
 
 * What does final mean ???
 
+   final int MAX = 5;
+   MAX = 6; // ERROR
+
    final Employee e2 = new Employee ("Mike", 123); // What is e2 ?
 
-   e2 = new Employee ("Bella", 789); // Is this allowed ???
+   e2 = new Employee ("Bella", 789); // Is this allowed ???  ERROR
 
-   e2.setName   ("Samuel");          // Is this allowed ???
-   e2.setStudId (555);
+   e2.setName ("Samuel");          // Is this allowed ???   YES
+   e2.setId   (555);
 
 
 Joshua Bloch's Effective Java:
@@ -33,6 +36,7 @@ advanced Java topics ....
 "Item 13 Override clone judiciously"
 * clone method / Cloneable, copying objects, Copy Constructor, etc
 http://books.google.com/books?id=ka2VUBqHiWkC&pg=PA55&lpg=PA55&dq=effective+java+clone&source=bl&ots=yXGhLnv4O4&sig=zvEip5tp5KGgwqO1sCWgtGyJ1Ns&hl=en&ei=CYANSqygK8jktgfM-JGcCA&sa=X&oi=book_result&ct=result&resnum=3#PPA54,M1
+For after you finish the follow on Java course.
 
 */
 import java.time.LocalDate;

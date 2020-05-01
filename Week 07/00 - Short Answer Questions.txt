@@ -18,9 +18,72 @@ and then click Record locally
 
 Week 07 - Arrays
 
-From lecture:
+Quick recap / review:
+
+int[] intsArray = new int[20];
+
+final int MAX_SIZE = 20;
+int[] intsArray = new int[MAX_SIZE];
+
+intsArray[0] = 3;
+intsArray[1] = 5;
+intsArray[19] = 999;
+intsArray[20] = 123; // ERROR: index out of bounds
+
+String[] names = new String [30]; // 0 to 29,  null
+
+Q. When you say [] anywhere means an array in java, does that also include
+   public static void main(String[] args)
+
+args.length
+for (int k = 0; k < args.length; k++)
+{
+   S.o.p (args[k]);
+}
+
+java MyClass 123 "hello world" 4.567
+
+
+
+Array of size N has: 0 ... (N-1)  index / storage locations.  Elements.
+
+If you need the size of the array (how many elements / locations) use the length property:
+arrayName.length
+
+int[] daysPerMonth = {31, 28, 31}; // 3, 0 ... 2
+
+String[] states = {"Qld", "NSW", "Vic"}; // 3: 0 ... 2
+
+for (int k = 0; k < states.length; k++)
+{
+   S.o.p (states[k]);
+}
+
+for (int k = 0; k < states.length; k++)
+{
+   S.o.p ("Enter state: ");
+   state[k] = kb.nextLine();
+}
+
+for (String s : states)
+{
+   S.o.p (s);
+}
+
+for (int val : daysPerMonth)
+{
+   S.o.p (val);
+}
+
+When you pass an array to a method you are passing the array reference - so the method has full access to the array - and can change, edit, corrupt the data.
+
+
+See these examples from lecture:
 * PassByValuePassByReference.java
 * Employee.java
+
+
+--------------------------------------------------------------------
 
 
 COIT11222 Programming Fundamentals Tutorial/Lab Week Seven
@@ -29,13 +92,73 @@ Question One Answer the following questions. Your answers should be concise; aim
 
 (a) What benefits does the enhanced for statement provide for array processing? What are its limitations?
 
+for (int k = 0; k < states.length; k++)
+{
+   S.o.p ("State " + (k + 1) + ": " + states[k]);
+}
+
+// Enhanced For Loop / Compact For Loop / For Each Loop
+int count = 0;
+for (String s : states)
+{
+   count++;
+   S.o.p ("State " + count + ": " + s);
+}
+
+Benefits:
+* simpler code, less code
+* guaranteed to loop through the whole array (unless you break out).
+
+Limitations:
+* cannot start part way through the array
+* don't get auto access to a loop index
+* you cannot go in reverse order through the array - only forwards
+
+
 (b) What is an off-by-one error?
 
+final int MAX_SIZE = 20;
+int[] intsArray = new int[MAX_SIZE];
+
+intsArray[0] = 3;
+intsArray[1] = 5;
+intsArray[19] = 999;
+intsArray[20] = 123; // ERROR: index out of bounds
+
+for (int k = 1; k <= states.length; k++) // 2 "off by 1 errors"
+{
+   S.o.p ("State " + (k + 1) + ": " + states[k]);
+}
+
+
 (c) Why are command-line arguments passed to the main method as Strings? What problems would arise if command-line arguments were passed using an array of doubles?
+
+java MyClass {123.5, 33.45, 66.78}
+
+
+args[0]: "{123.5,"
+args[1]: "33.45,"
+args[2]: "66.78}"
+
+public class MyClass
+{
+   public static void main (String[] args)
+   {
+      for (int k = 0; k < args.length; k++)
+      {
+         System.out.println ("args[" + k + "]: " + args[k]);
+      }
+   }
+}
+
+
+
 
 Question Two
 
 a. Declare and create an integer array called numbers with the following numbers in a class called MyArray 42, 56, 34, 27, 72, 12, 98, 85, 33, 67
+
+
 
 b. Write a for loop which traverses the array and outputs the numbers on a line separated by spaces
 
@@ -54,5 +177,25 @@ Review Questions 8th Edition (text p 430), Programming Exercises (text p 433) Q1
 	TwelveInts.java
 	ArrayMethodDemo.java
 	Salesperson.java
+
+Array of objects
+
+
+Class
+* Constructors
+* Accesssors
+* Mutators
+* toString
+
+Array of that class and call all of the methods.
+
+Derived / Calculated value
+-> store it in the class unless it is changes / changing a lot
+-> otherwise derive it whenever it is needed
+-> how often is it going to be needed ?
+
+For Ass 2 - it depends on the Ass 2 Spec.
+
+
 
 .
