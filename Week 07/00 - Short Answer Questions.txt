@@ -1,3 +1,13 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 07
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
 Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
 https://cqu.zoom.us/j/471736829
 
@@ -6,8 +16,7 @@ and then click Record locally
 
 -------------------------------------------
 
-Week 06 - this week's Lecture video now on YouTube:
-http://tinyurl.com/MikesJavaVideos
+Week 07 - Arrays
 
 From lecture:
 * PassByValuePassByReference.java
