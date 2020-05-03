@@ -9,12 +9,13 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
 LAST WEEK:
-* 
-* 
+*
+*
 
 THIS WEEK:
-* 
-* 
+* Week 8: Advanced Array Concepts
+* COIT11222_Week8.ppt
+* UML Class Digrams
 
 
 
