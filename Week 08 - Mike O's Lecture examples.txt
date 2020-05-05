@@ -8,15 +8,44 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts  	<--- YOU ARE HERE !
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
 LAST WEEK:
-*
-*
+* Week 7: Arrays
+* COIT11222_Week7.ppt
+* Arrays, Parrallel Arrays, Arrays of Objects, etc.
+* For each loop (Enhanced For Loop, Compact For Loop)
+* Methods: Pass by Value (primitive types), Pass by Reference, dangers, issues,
+*** GOLDEN RULE: Array of size N has N storage locations indexed from 0 to (N-1)
 
 THIS WEEK:
 * Week 8: Advanced Array Concepts
 * COIT11222_Week8.ppt
 * UML Class Digrams
 
+
+* UML Class Digrams
+Required for Ass 2
+A summary of your class: shows methods and data, and what is private / public
 
 
 
