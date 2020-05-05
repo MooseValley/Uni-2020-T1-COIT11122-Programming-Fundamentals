@@ -40,6 +40,12 @@ LAST WEEK:
 THIS WEEK:
 * Week 8: Advanced Array Concepts
 * COIT11222_Week8.ppt
+* Sorting,
+* 2D, 3D, ... arrays,
+* Ragged arrays
+* Arrays class
+* ArrayList class
+* Enums (Enumerated types)
 * UML Class Digrams
 
 
