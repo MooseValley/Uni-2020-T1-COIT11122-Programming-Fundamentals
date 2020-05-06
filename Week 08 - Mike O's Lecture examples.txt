@@ -11,6 +11,13 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 STARTING SOON.  :)
 
 
+(Q). Morning everyone
+anyone got their first assessment marks back yet?
+
+Ass marks: you get your marks 2 weeks after the due date or after the date you submitted,
+whichever is the latest.
+
+
 Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
 https://cqu.zoom.us/j/887844138
 
@@ -40,19 +47,473 @@ LAST WEEK:
 THIS WEEK:
 * Week 8: Advanced Array Concepts
 * COIT11222_Week8.ppt
+* UML Class Digrams
 * Sorting,
-* 2D, 3D, ... arrays,
-* Ragged arrays
-* Arrays class
-* ArrayList class
-* Enums (Enumerated types)
-* UML Class Digrams
+* 2D, 3D, 4D, ... arrays,
+* Rectangular VS Ragged arrays,
+* Arrays class,
+* ArrayList class,
+* Enums (Enumerated types),
 
 
+------------------------------------------
 * UML Class Digrams
+------------------------------------------
 Required for Ass 2
 A summary of your class: shows methods and data, and what is private / public
+Text VS beautiful diagram
+Accuracy of symbols, style
+
+Ass 2: follow the standards presented in your text book, follow what it says in the Ass 2 spec.
+
+Employee class: let's create a UML Class Digram
 
 
+
+
+------------------------------------------
+Sorting
+------------------------------------------
+
+Swapping: key part of sorting
+
+int i1 = 33;
+int i2 = 44;
+
+int temp = i1;
+i1 = i2;
+i2 = temp;
+
+String name1 = "Mike";
+String name2 = "Frankie";
+
+String temp = name1;
+name1 = name2;
+name2 = temp;
+
+
+Employee e1 = new Employee (:::::::);
+Employee e2 = new Employee (:::::::);
+
+Employee temp = e1;
+e1 = e2;
+e2 = temp;
+
+
+
+
+Bubble Sort
+very simple sort
+very easy to understand
+very easy to code
+horribly inefficient
+double the amount of data --> quadruple the amount of time
+
+1.	 	23, 12, 55, 5
+2.	 	12, 23, 55, 5
+3.		12, 23,  5, 55
+4.		12,  5, 23, 55
+		 5, 12, 23, 55
+
+// Bubble sort:  integer array
+
+int[] arr = {23, 12, 55, 5};
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++) // Very important
+   {
+      if (arr [k] > arr [k+1] )  // Ascending
+      {
+	int temp  = arr [k];
+	arr [k]   = arr [k+1];
+	arr [k+1] = temp;
+
+	swapped = true;
+      }
+   }
+}
+:::
+TODO: write the above code for yourself, explore.
+
+
+// Bubble sort:  String array
+
+String[] arr = {"Teenie", "Mike", "Frankie", "Bella", "Sam"};
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++)
+   {
+      if (arr [k].compareTo (arr [k+1]) > 0 )  // Ascending
+      {
+	String temp  = arr [k];
+	arr [k]   = arr [k+1];
+	arr [k+1] = temp;
+
+	swapped = true;
+      }
+   }
+}
+
+
+// Bubble sort:  Employee array - sort by name
+
+Employee[] arr = {new Employee ("Teenie",  ::::),
+                  new Employee ("Mike",    ::::),
+                  new Employee ("Frankie", ::::),
+                  new Employee ("Bella",   ::::),
+                  new Employee ("Sam",     ::::)  };
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++)
+   {
+      //if (arr [k].getName().compareTo (arr [k+1].getName()) > 0 ) // Ascending
+      //if (arr [k].getName().compareTo (arr [k+1].getName()) < 0 )   // Descending
+      if (arr [k].getId().compareTo (arr [k+1].getId()) > 0 ) // Ascending
+      //if (arr [k].getId() > arr [k+1].getId() ) // Ascending
+      {
+	Employee temp  = arr [k];
+	arr [k]        = arr [k+1];
+	arr [k+1]      = temp;
+
+	swapped = true;
+      }
+   }
+}
+
+Lots of very, very similar code.
+What can we do about it ?
+Nothing.
+Generic Methods - make the above code work for ALL data types.
+---> in the follow on Java course.  :)
+
+
+Q. What's the follow-on course? Is it the OOP course?
+COIT11134 Object Oriented Programming
+
+
+
+Bubble                  Really easy to understand and code, horribly efficient
+Insertion
+
+Merge
+Shell
+Hash Sort 		Really hard to understand and code, more efficient
+Tree Sort
+
+----> Follow on course
+
+Wayne:
+https://www.toptal.com/developers/sorting-algorithms
+
+
+
+
+------------------------------------------
+2D, 3D, 4D, ... arrays,
+------------------------------------------
+
+int[][] valuesArray = new int [5][10];     // 5 x 10
+
+// Row 1
+valuesArray [0][0] = 44;
+valuesArray [0][1] = 12;
+valuesArray [0][2] = :::;
+::::
+valuesArray [0][9] = :::;
+
+// Row 2
+valuesArray [1][0] = 4;
+valuesArray [1][1] = 3;
+valuesArray [1][2] = :::;
+::::
+valuesArray [1][9] = :::;
+
+// Row 5
+valuesArray [4][0] = 1;
+valuesArray [4][1] = 2;
+valuesArray [4][2] = :::;
+::::
+valuesArray [4][9] = :::;
+
+
+
+
+String[][] names    = new String [10][99]; // 10 x 99
+
+
+Employee[][] employees = new Employee [10][1000]; // 10 cities, up to 1000 employees in each city
+
+// Employees in Melbourne: city at index 0
+employees[0][0] = new Employee (::::::);
+employees[0][1] = new Employee (::::::);
+:::
+employees[0][999] = new Employee (::::::);
+
+
+// Employees in Rockhampton: city at index 1
+employees[1][0] = new Employee (::::::);
+employees[1][1] = new Employee (::::::);
+:::
+employees[1][999] = new Employee (::::::);
+
+
+int city = 0; // Melbourne
+int emp  = 0;
+// Employees in Melbourne: city at index 0
+employees[city][emp++] = new Employee (::::::);
+employees[city][emp++] = new Employee (::::::);
+:::
+employees[city][emp++] = new Employee (::::::);
+
+city = 1; // Rockhampton
+emp = 0;
+
+// Employees in Rockhampton: city at index 1
+employees[city][emp++] = new Employee (::::::);
+employees[city][emp++] = new Employee (::::::);
+:::
+employees[city][emp++] = new Employee (::::::);
+
+
+
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human"}  };
+
+
+namesAndAddresses.length	// 2: number of Rows    in the array.
+namesAndAddresses[0].length	// 3: number of Columns in the array (in 1st row)
+namesAndAddresses[1].length	// 3: number of Columns in the array (in 2nd row)
+
+
+
+sales[]		// Sales per sales person
+sales[0]  	// Sales for Mike
+sales[1]  	// Sales for Frankie
+
+sales[][]	// Sales per sales person by product
+sales[0][0]	// Sales for Mike for PC's
+sales[0][1]	// Sales for Mike for hard-drives
+sales[0][2]	// Sales for Mike for monitors
+
+sales[][][]	// Sales per sales person by product by year
+sales[0][0][0]	// Sales for Mike for PC's for 2020
+sales[0][0][1]	// Sales for Mike for PC's for 2021
+
+sales[sp][pr][ye][doy]	// Sales per sales person by product by year by day of year
+sales[0][0][0][0]	// Sales for Mike for PC's for 2020 for Jan 1
+sales[0][0][0][1]	// Sales for Mike for PC's for 2021 for Jan 2
+
+sales[][][][][]		// Sales per sales person by product by year by day of year by region
+
+sales[][][][][][]	// Sales per sales person by product by year by day of year by region
+			// by Scenario: actuals, forecasts for a great year, forecasts for bad year, ...
+
+Q. I rarely use the arrays with dimension of 4 or higher. I think things can usually be sorted with 2~3 arrays.
+
+Industry needs detailed data to survive - margins are getting squeezed, competitors are always moving in, etc - so a business really needs to know what's going on: compare scenarious, regions, sales people, products, years, quarters, etc, etc.
+
+
+Database table
+
+emId  prodId   RegId  Year  DOY  ScenId	   Sales
+
+
+
+Run out of memory
+Heap size exception ....
+64 Java on 64 bit OS --->>  huge upper limit
+
+
+------------------------------------------
+* Rectangular VS Ragged arrays,
+------------------------------------------
+
+// Rectangular 2D array: 2 rows x 3 columns:
+// Slice size does not change.
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human"}  };
+
+// Ragged array: Jagged, Scruffy
+// 2D: Columns per row changes in the array
+// Slice size changes.
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human", "Doggie", "8-Aug-2016"},
+                                 {"Wayne",    "45 Great Answers Rd"},
+                                 {"Teenie"},
+                                 {""},
+                                 null };
+
+
+String[][] namesAndAddresses = new String [5][];
+
+namesAndAddresses[0] = {"Mike",    "123 Smith St", "Human"};
+namesAndAddresses[1] = {"Frankie", "45 Barkie St", "Shitzu and Human", "Doggie", "8-Aug-2016"};
+::::
+
+
+String[][] namesAndAddresses = new String [5][];
+namesAndAddresses[0] = new String[3];
+namesAndAddresses[0][0] = "Mike";
+namesAndAddresses[0][1] = "123 Smith St";
+namesAndAddresses[0][2] = "Human";
+
+namesAndAddresses[1] = new String[5];
+
+
+
+------------------------------------------
+* Arrays class,
+------------------------------------------
+import java.util.Arrays;
+
+Linear Search
+- loop through the whole array until the data is found (or you get to the end of the array).
+- linear: if you double the amount of data, you double the time
+
+Binary Search
+- data must be sorted
+- divide the array in half, compare what you are searching for to the middle element
+- divide the top of bottom half of the array in half ... keep going
+* converges very quickly
+* if you double the amount of data, you barely increase the amount of time
+
+Big(O), efficiency
+--> follow on course
+
+
+
+
+------------------------------------------
+* ArrayList class,
+------------------------------------------
+import java.util.ArrayList;
+
+ArrayList<String> names = new ArrayList<String> ();
+
+names.add ("Wayne");
+names.add ("Sangin");
+names.add ("Jarrod");
+
+Wayne
+Sangin
+Jarrod
+
+names.add (1, "Frankie");  // Insert
+
+Wayne
+Frankie
+Sangin
+Jarrod
+
+
+names.remove (2); // Delete
+
+Wayne
+Frankie
+Jarrod
+
+
+size(): length of the ArrayList
+clear(): erases everything in the ArrayList
+
+S.o.p (names.get (1) ); // Frankie
+
+
+
+
+
+ArrayList<Employee> emps = new ArrayList<Employee> ();
+
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+
+size(): 6
+get(0) // first employee
+
+for (int k = 0; k < emps.size(); k++)
+{
+    S.o.p (emps.get(k).getName() );
+}
+
+
+
+Q. seems to be a much easier implementation than I remember from c++
+A. yes.
+
+Q. Is it better to use a database manager like SQL for bigger arrays?
+A. Depends
+
+Just need to download, search, update, etc: Definitely local in arrays - 1000's of times faster than DB
+multiple people changing it, accessing it, etc: Definitely database
+
+
+
+ArrayList
+add, get, remove, clear, size, set
+
+
+Optimisations, tricks and traps, etc
+----> follow on course
+
+
+------------------------------------------
+* Enums (Enumerated types),
+------------------------------------------
+
+enum GameStatus {GAME_OVER, IN_PROGRESS, GAME_WON, GAME_LOST, GAME_DRAWN};
+
+
+GameStatus status = GameStatus.GAME_OVER;
+
+status = GameStatus.IN_PROGRESS;
+
+status = 5; // ERROR
+
+status = GameStatus.FINISHED; // ERROR
+
+//while (status.equals (GameStatus.GAME_OVER) == true)
+while (status != GameStatus.GAME_OVER) // Java 7 onwards
+{
+  // Get user input
+  // Move player
+  // move the monsters
+  // check for collisions
+  // etc
+}
+
+
+GameStatus.java
+add static or instance fields
+Constructors
+Mutators
+Accessors
+toString
+::::
+
+
+Advanced Enums:
+--->> Follow on course
+
+------------------------------------------
+------------------------------------------
 
 EOF.
