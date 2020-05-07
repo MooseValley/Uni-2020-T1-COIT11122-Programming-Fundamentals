@@ -1,0 +1,78 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 08
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
+https://cqu.zoom.us/j/471736829
+
+STOP Recording to Cloud
+and then click Record locally
+
+-------------------------------------------
+* Week 8: Advanced Array Concepts
+
+
+Every instance class:
+It's like baking a cake, follow the recipe !
+- add constant static fields for: threshold values, maximums, minimums, etc
+- add private instance fields
+- Constructors - remember the "this" shortcut !
+- Mutators
+- Accessors
+- toString
+- any other methods you need
+
+
+
+COIT11222 Programming Fundamentals Tutorial/Lab
+Week Eight
+
+Question One Answer the following questions. Your answers should be concise; aim for two or three sentences.
+
+(a) Describe how two-dimensional arrays represent a table of data.
+
+(b) What is the main difference between an Array and an ArrayList? Give an example.
+
+
+Question Two
+a. Create a class called Dog which has two instance variables dogName as a string and dogAge as an integer.
+b. Add a default constructor and a parameterised constructor.
+c. Add get and set methods
+d. Create another class in the same folder called Dogs, in Dogs create an array of three Dog objects
+e. In the Dogs class's constructor populate the array (using new and the parameterised constructor) use: Fido, 3; Rover, 8 and Deefer, 2;
+f. Create a main method in Dogs and create an object of type Dogs.
+g. Create a method in Dogs displayDogs to display the three dogs.
+h. Call the method displayDogs in the main using the Dogs object you have created in section f.
+Mike O's extensions:
+-> Dog class: add toString()
+-> Dogs class: change Array -> ArrayList
+-> Dogs class: add methods: add (String, int), get (String), search (String), remove (String), ...
+-> Move main to DogsTester class: a 3 class project !
+-> Almost a mini-database !  (Add saveToFile, loadFromFile, etc and almost there !)
+-> Demo re-use - if we changed Console App to a GUI App, Web App, etc.
+
+
+Question Three
+a. Create a class called ArrayListTest within the main method create an ArrayList of strings called names
+b. Add the names Tom, Dick and Harry to the ArrayList (in main)
+c. Using the enhanced for loop print out these names (in main)
+d. Remove Dick from the list and then add George.
+e. Insert John into the beginning of the list
+f. Use a traditional for loop (counter controlled) to print out the updated list
+
+
+Week 08
+Review Questions 9th edition (text p 456), Programming Exercises (text p 460) Q2 Q5
+Review Questions 8th edition (text p 481), Programming Exercises (text p 484) Q2 Q5
+
+	Q2: MeanMedian
+	Q5: SalespersonDatabase
+
+
+.
