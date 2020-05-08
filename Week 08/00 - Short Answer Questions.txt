@@ -11,6 +11,7 @@ Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
 https://cqu.zoom.us/j/471736829
 
+*** NOTE ***
 STOP Recording to Cloud
 and then click Record locally
 
@@ -38,13 +39,53 @@ Question One Answer the following questions. Your answers should be concise; aim
 
 (a) Describe how two-dimensional arrays represent a table of data.
 
+2D - grid of rows and columns
+table of data
+a single 2D worksheet in spreadsheet
+
+
 (b) What is the main difference between an Array and an ArrayList? Give an example.
+
+Array VS ArrayList
+
+imports ?
+
+String[] names = new String [100];
+ArrayList<String> namesAL = new ArrayList<String> ();
+
+Array
+	not resizable
+	can contain primitive types and reference types
+	use square brackets to declare
+	Must know the size when you declare
+	use [] to access elements - no methods ...
+	arrayName.length for array size
+	no imports needed
+
+ArrayList
+	dynamically resizable
+	can only contain Reference types (objects)
+	use ArrayList<datatype> to declare
+	don't have to know the size when you declare
+	use size(), add() and delete(), etc methods
+	size(): number of items in the ArrayList
+	Must import java.util.Arraylist
+
+Andrew:
+Arrays can contain primitive and objects but arraylists can only have objects?
+Array lists use size(), add() and delete()
+Have to import java.util.Arraylist
+
+Byron:
+arrayName.length? for array size
+
 
 
 Question Two
 a. Create a class called Dog which has two instance variables dogName as a string and dogAge as an integer.
 b. Add a default constructor and a parameterised constructor.
 c. Add get and set methods
+
 d. Create another class in the same folder called Dogs, in Dogs create an array of three Dog objects
 e. In the Dogs class's constructor populate the array (using new and the parameterised constructor) use: Fido, 3; Rover, 8 and Deefer, 2;
 f. Create a main method in Dogs and create an object of type Dogs.
@@ -68,5 +109,14 @@ Review Questions 8th edition (text p 481), Programming Exercises (text p 484) Q2
 	Q2: MeanMedian
 	Q5: SalespersonDatabase
 
+
+*** NEXT WEEK:  GUI Development !!
+
+Labels
+Buttons
+Menus
+Checkboxes
+Data entry boxes
+TextFields
 
 .
