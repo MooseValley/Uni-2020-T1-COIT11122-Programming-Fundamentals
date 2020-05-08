@@ -19,8 +19,8 @@ and then click Record locally
 
 
 Every instance class:
-It's like baking a cake, follow the recipe !
-- add constant static fields for: threshold values, maximums, minimums, etc
+==> like baking a cake, follow the recipe !
+- add constant static fields for: threshold values, maximums, minimums, array sizes, etc
 - add private instance fields
 - Constructors - remember the "this" shortcut !
 - Mutators
@@ -29,6 +29,7 @@ It's like baking a cake, follow the recipe !
 - any other methods you need
 
 
+-------------------------------------------
 
 COIT11222 Programming Fundamentals Tutorial/Lab
 Week Eight
@@ -49,13 +50,6 @@ e. In the Dogs class's constructor populate the array (using new and the paramet
 f. Create a main method in Dogs and create an object of type Dogs.
 g. Create a method in Dogs displayDogs to display the three dogs.
 h. Call the method displayDogs in the main using the Dogs object you have created in section f.
-Mike O's extensions:
--> Dog class: add toString()
--> Dogs class: change Array -> ArrayList
--> Dogs class: add methods: add (String, int), get (String), search (String), remove (String), ...
--> Move main to DogsTester class: a 3 class project !
--> Almost a mini-database !  (Add saveToFile, loadFromFile, etc and almost there !)
--> Demo re-use - if we changed Console App to a GUI App, Web App, etc.
 
 
 Question Three
