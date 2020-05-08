@@ -19,9 +19,22 @@ Mike O's extensions:
 -> Dogs class: add methods: add (String, int), get (String), search (String), remove (String), toString(), ...
 -> Move main to DogsTester class: a 3 class project !
 -> Almost a mini-database !  (Add saveToFile, loadFromFile, etc and almost there !)
--> Demo re-use - if we changed Console App to a GUI App, Web App, etc.
 
-Review:
+
+   DogTester (UI, Console App)
+      |
+     Dogs (array)
+      |
+     Dog (data)
+
+Review:  Very Important
 - Where does the data for a Dog reside ?
-- If validation rules had to be applied for a Dog name and age, where would these be applied ?  i.e. which class would be responsible for validating Dog data ?
+- Where does the array reside ?
+- If validation rules had to be added for Dog name and age, where would these be added ?  i.e. which class would be responsible for validating Dog data ?
+- If error messages needed to be displayed to the user for any validation errors, which class would be responsible for displaying these errors ?
+- If we needed to save dog data to file / load data from file, where would we put the save() and load() methods ?
+- If we changed from a Console App to a GUI App, Web App, etc what class(es) would we need to change ?
+
+
+
 */
