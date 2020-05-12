@@ -1,4 +1,8 @@
 /*
+Author: Mike OMalley
+Source: TwelveInts.java
+
+Java - Basic Console App - Week 07
 4. Create an application containing an array that stores 10 integers. The application
 should call five methods that in turn
 (1) display all the integers,
