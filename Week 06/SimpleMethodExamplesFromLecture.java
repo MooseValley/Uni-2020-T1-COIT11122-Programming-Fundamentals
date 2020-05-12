@@ -1,3 +1,8 @@
+/*
+ Author: Mike O
+ File:   SimpleMethodExamplesFromLecture.java
+ Desc:   Week 06: Explore methods.
+*/
 public class SimpleMethodExamplesFromLecture
 {
    public static void simpleMethod (double d)
