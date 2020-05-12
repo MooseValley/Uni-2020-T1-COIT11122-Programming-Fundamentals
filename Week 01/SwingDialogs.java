@@ -1,3 +1,9 @@
+/*
+  Author: Mike O
+  Source: SwingDialogs.java
+  Descr:  Display a Swing Message Dialog.
+
+*/
 
 //import javax.swing.JOptionPane;
 import javax.swing.*;
