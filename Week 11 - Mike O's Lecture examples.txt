@@ -8,13 +8,36 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output	<--- YOU ARE HERE !
+Week 12 Revision
+
+
 LAST WEEK:
-* 
-* 
+*
+*
 
 THIS WEEK:
-* 
-* 
+*
+*
 
 
 

@@ -13,6 +13,8 @@ STARTING SOON.  :)
 
 Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
 https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
 
 ROAD MAP:
 Week 01 Creating Java Programs
