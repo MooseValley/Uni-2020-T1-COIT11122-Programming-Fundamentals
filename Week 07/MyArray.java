@@ -1,4 +1,8 @@
 /*
+Author: Mike OMalley
+Source: MyArray.java
+
+Java - Basic Console App - Week 07
 Question Two
 
 a. Declare and create an integer array called numbers with the following numbers in a class called MyArray 42, 56, 34, 27, 72, 12, 98, 85, 33, 67

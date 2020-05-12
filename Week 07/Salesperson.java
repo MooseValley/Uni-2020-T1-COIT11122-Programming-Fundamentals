@@ -1,4 +1,8 @@
 /*
+Author: Mike OMalley
+Source: Salesperson.java
+
+Java - Basic Console App - Week 07
 6. a. Create a class named Salesperson. Data fields for Salesperson include an integer
 ID number and a double annual sales amount.Methods include a constructor that
 requires values for both data fields, as well as get and set methods for each of the

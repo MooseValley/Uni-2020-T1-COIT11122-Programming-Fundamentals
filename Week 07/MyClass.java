@@ -1,3 +1,9 @@
+/*
+Author: Mike OMalley
+Source: MyClass.java
+
+Java - Basic Console App - Week 07
+*/
 public class MyClass
 {
    public static void main (String[] args)

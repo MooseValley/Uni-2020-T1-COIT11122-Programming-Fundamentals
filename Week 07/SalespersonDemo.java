@@ -1,5 +1,9 @@
 /*
-Write an application named DemoSalesperson that declares an array of
+Author: Mike OMalley
+Source: SalespersonDemo.java
+
+Java - Basic Console App - Week 07
+Q6b. Write an application named DemoSalesperson that declares an array of
 10 Salesperson objects. Set each ID number to 9999 and each sales value to zero.
 Display the 10 Salesperson objects.
 */
