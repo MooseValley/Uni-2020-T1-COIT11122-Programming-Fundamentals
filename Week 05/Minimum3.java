@@ -1,4 +1,8 @@
 /*
+ Author: Mike O
+ File:   Minimum3.java
+ Desc:   Week 05 - basic console apps
+
 Question Four
 Write a method minimum3 that returns the smallest of three floating-point numbers. Use the Math.min() method to implement minimum3. Incorporate the method into an application Minimum3 that reads three values from the user, determines the smallest value and displays the result.
 */

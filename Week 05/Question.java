@@ -1,3 +1,9 @@
+/*
+Author: Mike OMalley
+Source: Question.java
+
+Java - Basic Console App - Week 05
+*/
 import java.util.Random;
 import java.util.Scanner;
 

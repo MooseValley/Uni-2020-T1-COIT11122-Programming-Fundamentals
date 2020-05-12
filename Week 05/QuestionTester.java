@@ -1,3 +1,9 @@
+/*
+Author: Mike OMalley
+Source: QuestionTester.java
+
+Java - Basic Console App - Week 05
+*/
 public class QuestionTester
 {
    public static void main(String[] args)

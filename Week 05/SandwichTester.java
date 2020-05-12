@@ -1,3 +1,9 @@
+/*
+Author: Mike OMalley
+Source: SandwichTester.java
+
+Java - Basic Console App - Week 05
+*/
 public class SandwichTester
 {
    public static void main (String[] args)
