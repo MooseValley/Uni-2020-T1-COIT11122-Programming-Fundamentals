@@ -1,3 +1,9 @@
+/*
+Author: Mike OMalley
+Source: LargestInteger.java
+
+Java - Basic Console App - Week 04
+*/
 import java.util.Scanner;
 
 public class LargestInteger
