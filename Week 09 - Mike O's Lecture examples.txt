@@ -47,6 +47,11 @@ THIS WEEK:
 * COIT11222_Week9.ppt
 * GUI Programming
 
+
+*************************************************************
+Batch Programming  VS  Event Driven Programming
+*************************************************************
+
 Batch Programming / Console Apps
 * What we have been doing until today.
 * program runs until the end - sequence of instructions,
@@ -63,6 +68,10 @@ fires off (1st day of month processing or whatever).
 (For our programs anyway).
 * If a user enters an invalid input, you display an error and stop - wait for the user to chose another action (button, menu, whatever).
 
+
+*************************************************************
+AWT / Swing / JavaFX
+*************************************************************
 
 AWT
 	Abstract Windowed Toolkit
