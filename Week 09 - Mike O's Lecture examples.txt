@@ -45,8 +45,66 @@ LAST WEEK:
 THIS WEEK:
 * Week 9 : Introduction to Swing Components
 * COIT11222_Week9.ppt
+* GUI Programming
+
+Batch Programming / Console Apps
+* What we have been doing until today.
+* program runs until the end - sequence of instructions,
+* Program had full control.
+* User really has no control of what happens next.
+* If a user enters an invalid input, you display an error and ask them again (loop),
+before moving on to the next input.
+
+Event Driven Programming / GUI Programming
+* User Driven programming
+* Program sits there doing nothing until the user clicks a button, or a menu, or some event
+fires off (1st day of month processing or whatever).
+* User has full control over what happens next - they decide which button / menu / etc to click.
+(For out programs anyway).
+* If a user enters an invalid input, you display an error and stop - wait for the user to chose another action (button, menu, whatever).
 
 
+AWT
+	Abstract Windowed Toolkit
+	basic set GUI components, few options,
+Swing
+	More components, more options, better look and feel, etc
+	Still some AWT stuff
+JavaFX
+	More again ... Charts, Graphs, ....
+	Looks like it is slowly being phased out by Oracle.
+
+
+*************************************************************
+LayoutManagers
+*************************************************************
+FlowLayout
+	like words on a page
+BorderLayout
+	5 regions: North, South, East, West, Center
+	Default LM for JFrame
+GridLayout
+	Grid of rows and columns
+BoxLayout
+GridBagLayout
+
+
+
+Q. for borderlayout wouldn't you need to group the three labels into a single Frame/group to get them to show in the same region
+im just guessing from the way it works in Python's Tkinter module
+
+
+LectureGuiExample.java
+Students TODO:
+* Add validation of inputs - display error and return if error found.
+* Move set default values code a method and call in Constructor as well.
+* Neaten up the GUI (after this week's tutorial).
+
+
+
+** Tutorial this week:
+* We are going to "Slap a GUI" on the Dog, Dogs, DogTester classes -
+so make sure you understand and are familiar with the code in these classes.
 
 
 EOF.
