@@ -60,7 +60,7 @@ Event Driven Programming / GUI Programming
 * Program sits there doing nothing until the user clicks a button, or a menu, or some event
 fires off (1st day of month processing or whatever).
 * User has full control over what happens next - they decide which button / menu / etc to click.
-(For out programs anyway).
+(For our programs anyway).
 * If a user enters an invalid input, you display an error and stop - wait for the user to chose another action (button, menu, whatever).
 
 
