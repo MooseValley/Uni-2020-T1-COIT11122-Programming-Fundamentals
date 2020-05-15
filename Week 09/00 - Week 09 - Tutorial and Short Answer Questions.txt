@@ -8,13 +8,35 @@ Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT1112
 Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
 ******************************************************
 
+
+STARTING SOON.  :)
+
+
+
 Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
 https://cqu.zoom.us/j/471736829
 
 *** NOTE ***
-STOP Recording to Cloud
-and then click Record locally
+* Reboot PC before class - to ensure best microphone sound.
+* STOP Recording to Cloud and then click Record locally
 
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components	<--- YOU ARE HERE !
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
+*** Exception Handling
 
 -------------------------------------------
 From Week 09's Lecture Class:
@@ -31,6 +53,11 @@ Its key design goal is readability – that the language be readable as-is, withou
 Not in Java 8.
 Java is not mentioned on the wikipedia page (above).
 Don't know about latest Java: Java 14.
+
+Could write your own method to support it:
+(a bit advanced for us at this stage):
+
+	setMDtoHTMLLabelText (label, "**bold**, ~~strikethrough~~");
 
 
 
@@ -50,9 +77,13 @@ Answer the following questions. Your answers should be concise; aim for two or t
 
 (a) What is a GUI-based application? Give an example.
 
+most applications with a user interface that isn't text based
+nice fonts, buttons, labels, ... gui controls
 
 (b) Which package contains GUI components?
-
+swing
+AWT
+JavaFX
 
 
 Question Two
@@ -83,6 +114,22 @@ public class StudentDetails extends JFrame
    private JRadioButton pgRadioButton = new JRadioButton("Post-graduate ");
    private JButton addButton = new JButton("Add your details");
 
+/*
+--------------------------------------------------
+| Student Details                          _ O X |
+--------------------------------------------------
+| Enter your name: [                 ]           |
+| Enter your address: [                 ]        |
+| Enter your phone number: [                 ]   |
+| Select your education level: o TAFE            |
+|    o Under-graduate   o Post-graduate          |
+|                                                |
+|     [ Add your details ]                       |
+|                                                |
+|                                                |
+|                                                |
+--------------------------------------------------
+*/
    StudentDetails()
    {
       super("Student Details");
@@ -134,7 +181,7 @@ Question Three
 --------------------------------------------------
 
 
-(b) Create the code to respond to the button and calculate and display the BMI based on the user’s input. Formula for calculating Body Mass Index: BMI = weightkg / heightm 2
+(b) Create the code to respond to the button and calculate and display the BMI based on the user’s input. Formula for calculating Body Mass Index: BMI = weightkg / heightm^2
 
 
 
@@ -147,5 +194,21 @@ Review Questions 8th edition (text p 783), Programming Exercises (text p 785) Q1
 
 	JBookQuote.java
 	JPizza.java
+
+
+
+*** Exception Handling
+
+
+LectureGuiExample.java
+Students TODO:
+* Add validation of inputs - display error and return if error found.
+* Move set default values code a method and call in Constructor as well.
+* Neaten up the GUI (after this week's tutorial).
+
+
+** Tutorial this week:
+* We are going to "Slap a GUI" on the Dog, Dogs, DogTester classes -
+so make sure you understand and are familiar with the code in these classes.
 
 .

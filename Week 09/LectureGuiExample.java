@@ -5,11 +5,17 @@ Desc:   Develop a basic GUI user interface using the components as
         we cover them in the lecture class.
 
 Students TODO:
-* Add validation of inputs - display error and return if error found.
-* Move set default values code a method and call in Constructor as well.
+* Format Data: String.format
+
+DONE:
+* Add basic validation of inputs - display error and return if error found.
 * Neaten up the GUI (after this week's tutorial).
-
-
+* Move set default values code a method and call in Constructor as well.
+* Added scrollbars to the text area.
+* Add a confirm dialog to the clear
+* Added icons to buttons
+* Center all dialogs inside the application's frame.
+* Wayne: displayError method
 
 */
 import javax.swing.*;
@@ -19,7 +25,7 @@ import java.awt.event.*;
 public class LectureGuiExample extends JFrame
 {
    // Constants:
-   public static final String APP_NAME_AND_VERSION = "My First GUI v0.00001";
+   public static final String APP_NAME_AND_VERSION = "My First GUI v0.00003";
    public static final int    MAX_WIDTH            = 600;
    public static final int    MAX_HEIGHT           = 500;
 
@@ -42,9 +48,15 @@ public class LectureGuiExample extends JFrame
 
    JComboBox<String> planeTypeComboBox  = new JComboBox<String> (PLANE_TYPES);
 
-   JTextArea  outputTextArea    = new JTextArea  (20, 50);
-   JButton    addButton         = new JButton    ("Add");
-   JButton    clearButton       = new JButton    ("Clear");
+   JTextArea  outputTextArea    = new JTextArea  (); //20, 50);
+   JScrollPane outputScrollPane = new JScrollPane (outputTextArea,
+                                          ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS,
+                                          ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+
+   JButton    addButton         = new JButton    ("Add",   new ImageIcon("add.gif")   );
+   JButton    clearButton       = new JButton    ("Clear", new ImageIcon("reset.gif") );
+   JButton    exitButton        = new JButton    ("Exit" );
+
 
    // Class instance data:
 
@@ -60,35 +72,56 @@ public class LectureGuiExample extends JFrame
       // Add componets to UI:
 
       //setLayout (new FlowLayout(FlowLayout.LEFT) );
-      setLayout (new FlowLayout(FlowLayout.CENTER) );
-      add (headingLabel);
-      add (nameLabel);
-      add (nameTextField);
-      add (ageLabel);
-      add (ageTextField);
-      add (mealRequiredCheckBox);
-      add (extraLegRoomRequiredCheckBox);
+      //setLayout (new FlowLayout(FlowLayout.CENTER) );
+      setLayout (new BorderLayout() );
+
+      JPanel headingPanel   = new JPanel (new FlowLayout () );
+      JPanel namePanel      = new JPanel (new FlowLayout () );
+      JPanel agePanel       = new JPanel (new FlowLayout () );
+      JPanel extrasPanel    = new JPanel (new FlowLayout () );
+      JPanel paymentPanel   = new JPanel (new FlowLayout () );
+      JPanel planeTypePanel = new JPanel (new FlowLayout () );
+      JPanel topGridPanel   = new JPanel (new GridLayout (6, 1) );
+      JPanel buttonPanel    = new JPanel (new FlowLayout () );
+
+
+      headingPanel.add (headingLabel);
+      namePanel.add (nameLabel);
+      namePanel.add (nameTextField);
+      agePanel.add (ageLabel);
+      agePanel.add (ageTextField);
+
+      extrasPanel.add (new JLabel ("Extras: ") );
+      extrasPanel.add (mealRequiredCheckBox);
+      extrasPanel.add (extraLegRoomRequiredCheckBox);
 
       creditCardButtonGroup.add (visaCardRadioButton);
       creditCardButtonGroup.add (masterCardRadioButton);
       creditCardButtonGroup.add (amexCardRadioButton);
 
-      add (visaCardRadioButton);
-      add (masterCardRadioButton);
-      add (amexCardRadioButton);
+      paymentPanel.add (new JLabel ("Payment Type: ") );
+      paymentPanel.add (visaCardRadioButton);
+      paymentPanel.add (masterCardRadioButton);
+      paymentPanel.add (amexCardRadioButton);
 
-      add (planeTypeComboBox);
+      planeTypePanel.add (new JLabel ("Plane Type: ") );
+      planeTypePanel.add (planeTypeComboBox);
 
-      add (outputTextArea);
+      topGridPanel.add (headingPanel);
+      topGridPanel.add (namePanel);
+      topGridPanel.add (agePanel);
+      topGridPanel.add (extrasPanel);
+      topGridPanel.add (paymentPanel);
+      topGridPanel.add (planeTypePanel);
 
-      add (addButton);
-      add (clearButton);
+      buttonPanel.add (addButton);
+      buttonPanel.add (clearButton);
+      buttonPanel.add (exitButton);
 
-
-      // Set default values and setings:
-      mealRequiredCheckBox.setSelected (true);
-      visaCardRadioButton.setSelected  (true);
-      //if (mealRequiredCheckBox.isSelected() == true)
+      // Add items to the JFrame:
+      add (topGridPanel,      BorderLayout.NORTH);
+      add (outputScrollPane,  BorderLayout.CENTER);
+      add (buttonPanel,       BorderLayout.SOUTH);
 
       outputTextArea.setEditable (false);
       outputTextArea.setText ("Enter inputs please" + "\n");
@@ -101,6 +134,7 @@ public class LectureGuiExample extends JFrame
       addButton.addActionListener   (event -> addDetails() );
       clearButton.addActionListener (event -> clearDetails() );
       clearButton.setEnabled (false);
+      exitButton.addActionListener (event -> exit() );
 
       /*
       // WARNING: NO SPACES before the <html> !!!!!!!!!
@@ -112,57 +146,165 @@ public class LectureGuiExample extends JFrame
       //Font headingFont = new Font ("Courier New", Font.BOLD, 72);
       //headingLabel.setFont (headingFont);
 
+
+      // when the user pushes the system close (X top right corner)
+      addWindowListener( // override window closing method
+         new WindowAdapter()
+         {
+            public void windowClosing(WindowEvent e)
+            {
+               exit();           // Attempt to exit application
+            }
+         }
+      );
+
+
       // Size of show the UI:
       setTitle (APP_NAME_AND_VERSION);
       setSize  (MAX_WIDTH, MAX_HEIGHT);
       setLocation (250, 100);
-      setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+      //setDefaultCloseOperation (JFrame.EXIT_ON_CLOSE);
+      setDefaultCloseOperation (JFrame.DO_NOTHING_ON_CLOSE);
       //setDecoratedLookAndFeelDecorated (true);
       setVisible (true);
+
+      setDefaultValues();
    }
+
+   // Wayne: You could have made a displayError() method
+   private void displayError (String errormessageStr)
+   {
+      JOptionPane.showMessageDialog (LectureGuiExample.this,
+           errormessageStr, "Error:", JOptionPane.ERROR_MESSAGE);
+   }
+
 
    private void addDetails()
    {
       //System.out.println ("Add button clicked");
       //outputTextArea.append ("Add button clicked" + "\n");
 
-      String outStr = nameTextField.getText()  + "   " +
-                      ageTextField.getText()   + "   " +
-                      planeTypeComboBox.getSelectedItem()  + "   ";
+      /*
+      Validation:
+       * Proper was is to use a Booking data class which validates our data
+         and throws Exceptions when there is any errors, and our GUI class
+         should handle the Exceptions and display Swing Dialogs with error messages.
+         BUT we don't do Exception Handling in this course.
+       * So I'll show you the only way we can do it with the Java we have done so far.
+      */
 
-      if (mealRequiredCheckBox.isSelected() == true)
-         outStr += "Meal required" + "   ";
+      boolean inputsValid = true;
+      String nameStr = "";
+      int    age = 0;
 
-      if (extraLegRoomRequiredCheckBox.isSelected() == true)
-         outStr += "Extra leg room required" + "   ";
-
-      if (visaCardRadioButton.isSelected() == true)
-         outStr += "visa card" + "   ";
-      else if (masterCardRadioButton.isSelected() == true)
-         outStr += "master card" + "   ";
-      else if (amexCardRadioButton.isSelected() == true)
-         outStr += "amex card" + "   ";
-      else
-         outStr += "non-credit card" + "   ";
-
-      outputTextArea.append (outStr + "\n");
+      nameTextField.setBackground (Color.white);
+      ageTextField.setBackground  (Color.white);
 
 
+      nameStr = nameTextField.getText().trim();
+      if (nameStr.length() < 3) // TODO: make the 3 a constant.
+      {
+         nameTextField.requestFocus();
+         nameTextField.setBackground (Color.red);
+
+         displayError ("Error: name must be at least 3 chars long.");
+
+         inputsValid = false;
+      }
+
+      if (inputsValid == true)
+      {
+         age = Integer.parseInt (ageTextField.getText().trim() );
+
+         if (age < 18) // TODO: make 18 contants
+         {
+            ageTextField.requestFocus();
+            ageTextField.setBackground (Color.red);
+
+            displayError ("Error: your must be 18 or over to fly with CQUni airlines.");
+
+            inputsValid = false;
+         }
+
+      }
+
+      if (inputsValid == true)
+      {
+         // All inputs are valid:
+
+         String outStr = nameStr  + "   " +
+                         age      + "   " +
+                         planeTypeComboBox.getSelectedItem()  + "   ";
+
+         if (mealRequiredCheckBox.isSelected() == true)
+            outStr += "Meal required" + "   ";
+
+         if (extraLegRoomRequiredCheckBox.isSelected() == true)
+            outStr += "Extra leg room required" + "   ";
+
+         if (visaCardRadioButton.isSelected() == true)
+            outStr += "visa card" + "   ";
+         else if (masterCardRadioButton.isSelected() == true)
+            outStr += "master card" + "   ";
+         else if (amexCardRadioButton.isSelected() == true)
+            outStr += "amex card" + "   ";
+         else
+            outStr += "non-credit card" + "   ";
+
+         /*
+         Booking newBooking = new Booking (name, age, ........);
+
+         bookingArrayList.add (newBooking);
+
+         displayHeadings ();
+         displayBooking  (bookingArrayList.size() - 1);
+         */
+
+
+         outputTextArea.append (outStr + "\n");
+
+         setDefaultValues();
+
+         clearButton.setEnabled (true);
+      }
+   }
+
+   private void setDefaultValues()
+   {
       // Restore Default values:
-      nameTextField.setText("");
-      ageTextField.setText("");
-      planeTypeComboBox.setSelectedIndex (0);
-      mealRequiredCheckBox.setSelected   (true);
-      extraLegRoomRequiredCheckBox.setSelected   (false);
-      visaCardRadioButton.setSelected   (true);
-
-      clearButton.setEnabled (true);
+      nameTextField.setText ("");
+      ageTextField.setText  ("0");
+      planeTypeComboBox.setSelectedIndex        (0);
+      mealRequiredCheckBox.setSelected          (true);
+      extraLegRoomRequiredCheckBox.setSelected  (false);
+      visaCardRadioButton.setSelected           (true);
    }
 
    private void clearDetails()
    {
-      outputTextArea.setText ("");
-      clearButton.setEnabled (false);
+      int result = JOptionPane.showConfirmDialog(LectureGuiExample.this,
+                                    "Clear Everything - are you MAD ?????",
+                                    "Confirm Clear ??",
+                                    JOptionPane.YES_NO_OPTION);
+
+      if (result == JOptionPane.YES_OPTION)
+      {
+         outputTextArea.setText ("");
+         clearButton.setEnabled (false);
+      }
+   }
+
+   private void exit()
+   {
+      int result = JOptionPane.showConfirmDialog(LectureGuiExample.this,
+                                    "Exit Application - are you MAD ?????",
+                                    "Confirm Exit ??",
+                                    JOptionPane.YES_NO_OPTION);
+
+      if (result == JOptionPane.YES_OPTION)
+      {
+         System.exit(0); // All OK
+      }
    }
 
 

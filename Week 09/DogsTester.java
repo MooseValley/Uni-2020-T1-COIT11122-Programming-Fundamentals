@@ -14,6 +14,7 @@ public class DogsTester
       dogs.add ("Frankie", 4);
       dogs.add ("Bella",   6);
 
+
       dogs.remove ("Deefer");
 
       dogs.displayDogs ();

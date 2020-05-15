@@ -94,6 +94,8 @@ public class Dogs
 
    public void sort ()
    {
+      //dogsArrayList.sort (::::::::getDogName());
+
       boolean swapped = true;
 
       while (swapped == true)
