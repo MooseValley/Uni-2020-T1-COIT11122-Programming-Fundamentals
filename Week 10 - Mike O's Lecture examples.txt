@@ -33,14 +33,300 @@ Week 12 Revision
 
 
 LAST WEEK:
-*
-*
+* Week 9 : Introduction to Swing Components
+* COIT11222_Week9.ppt
+* Lots of GUI Programming - in lecture and tutorial classes
+* Virtually at the stage where you could develop assignment 2 from scratch.  :)
 
 THIS WEEK:
-*
-*
+* Week 10: Characters, Strings, and the StringBuilder
+* COIT11222_Week10.ppt
+* More GUI Development if you want ... :)
 
 
 
+*************************************************
+Character
+*************************************************
+
+Char: A single character enclosed in single quotes. ''
+
+Static methods = YES
+
+if (Character.isUpperCase ('m') == true)
+
+char myChar = Character.toUpperCase ('m');
+
+
+// If they were instance methods:
+Character myChar = new Character();
+char newChar = myChar.toUpperCase ('M');
+
+Math - static methods.
+Math.abs(-3);
+
+
+*************************************************
+String
+*************************************************
+zero, one or many chars enclosed in double quotes. ""
+
+Litteral Strings:
+
+String name = "Mike";
+
+JLabel headingLabel = new JLabel ("My App v1.0");
+
+// Immutable
+String name = "Mike";
+name = "Frankie"; // New memory location
+
+// LOGIC ERROR: comparing memory addresses NOT the string data
+if (name == "Frankie")
+if (name <= "Mike")
+
+compareTo
+equals
+compareToIgnoreCase
+equalsIgnoreCase
+
+if (name.equals ("Mike") == true)
+{
+   ::::
+}
+
+if (name.compareTo ("Bella") < 0)
+{
+   // name < bella
+}
+
+
+String name;
+
+S.o.p (name);  // null
+
+if (name.compareTo ("Bella") < 0)  // ERROR
+
+if ((name != null) && (name.compareTo ("Bella") < 0) ) // OK
+
+
+
+String name = "";
+
+if (name.compareTo ("Bella") < 0)  // OK
+
+name = "Mike";
+int index = name.indexOf ("ik"); // 1
+
+index = name.indexOf ("zx"); // negative number, < 0
+
+if (name.indexOf ("ik") >= 0) // name contains "ik"
+
+
+S.o.p (name.charAt (3) ); // e
+
+String city = "Rockhampton";
+
+if (city.startsWith ("Ro") == true) // True
+
+if (city.startsWith ("ro") == true)  // False
+
+if (city.toUpperCase().startsWith ("ro".toUpperCase()) == true)  // True
+
+
+city = "Rockhampton";
+city = city.replace ("ton", "vale"); // Rockhampvale
+
+city = "Rockhampton";
+city = city.replace ("ton", "");     // Rockhamp
+
+
+Employee emp = new Employee ();
+
+// if Employee class does NOT have a toString() method:
+S.o.p (emp); // Employee@32154
+
+// if Employee class does have a toString() method:
+S.o.p (emp); // name: , id:
+
+
+String outputStr = "This is my data " + 34 + emp;
+
+
+substring:  upto but excluding the endIndex
+
+      //01234567890
+city = "Rockhampton";
+S.o.p (city.substring (3, 5) ); // kh
+
+city = "Rockhampton";
+S.o.p (city.substring (3, 9999999) ); // khampton
+
+if (city.regionMatches (8, "aton", 1, 3) == true) // True
+
+ignore case --------------v
+if (city.regionMatches (false, 8, "ATON", 1, 3) == true) // True
+
+Mike OMalley
+
+Mike Winston Java Cplusplus OMalley
+
+
+
+String nameStr = "Mike,Frankie,Bella,Sam";
+
+String[] names = nameStr.split(",");
+
+
+String nameStr = "Mike\tFrankie\tBella\tSam";
+
+String[] names = nameStr.split("\t");
+
+REGEX - be careful, can get bizare results if you type in any Regex chars without knowing it.
+
+
+*************************************************
+Integer
+*************************************************
+
+Static method:
+
+int age = Integer.parseInt ("333");
+
+
+Q. Why isn't there something like Integer.isInt to test if a string is an integer before trying to parse?
+
+Exception Handling
+
+
+int age = Integer.parseInt ("abc");
+
+int age = 0;
+
+try
+{
+   age = Integer.parseInt ("abc");
+
+   :::
+
+   ::::
+}
+catch (Exception err)
+{
+   age = 0;
+   S.o.p ("Error: age was not valid integer");
+}
+
+
+Q. isn't it just try-catch
+isnt there a "then" block as well that plays regardless?
+so try-catch-then
+
+
+
+*************************************************
+Wrapper Classes / Autoboxing
+*************************************************
+Primitive types: int, double, char, ...
+Reference types: Integer, Double, Character, ....
+
+They wrap around the primitive type and provide a whole load of extra functionality.
+
+int k1 = 5;
+
+Integer k2 = 5;
+
+// Autoboxing:
+Integer k3 = k1; // OK: Java takes care of the conversion
+
+k1 = k2; // OK: Java takes care of the conversion
+
+
+
+int age = Integer.parseInt ("333");
+int age = int.parseInt ("333"); // ERROR
+
+Why ????
+
+ArrayList can only work with reference types:
+ArrayList<String> .....
+ArrayList<Employee> .....
+ArrayList<EmployeeArray> .....
+
+ArrayList<int> .....      // ERROR
+ArrayList<Integer> .....  // OK :)
+
+*************************************************
+*************************************************
+
+int age = Integer.valueOf ("abc"); // calls parseInt
+
+*************************************************
+StringBuilder / StringBuffer
+*************************************************
+
+
+StringBuilder sb = new StringBuilder ();
+StringBuilder sb = new StringBuilder ("My SB");
+
+sb.append ("\n" + "Hello World" + "\n");
+sb.append ("Hello World" + new Date() + 55 + " etxras");
+
+System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+
+append
+insert
+length
+	capacity
+
+
+// Preallocating if you know you need to store a lot of data:
+StringBuilder sb = new StringBuilder (100_000 * 60);
+
+
+
+      String city = "Rockhampton";
+      System.out.println(city.substring (3, 5) ); // kh
+
+      StringBuilder sb = new StringBuilder ("1234 Smith St, Rockahmpton");
+
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+      sb.setLength(10); // Warning: this truncates your data.
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+      System.out.println (sb.toString() );
+
+StringBuilder witll
+A. 3 seconds faster
+B. 10 seconds faster
+C. 15 seconds faster
+D. more than 50 seconds faster
+E. More than 5 mins <-------- THIS !!!
+
+If you are doing a lot of String concatenation, etc
+especially if it in a loop,
+use StringBuilder
+
+textArea.setText (sb.toString() );
+
+30 second
+< 1 sec
+
+
+Q. is it too late to change my bet?
+
+LOOL !!
 
 EOF.
