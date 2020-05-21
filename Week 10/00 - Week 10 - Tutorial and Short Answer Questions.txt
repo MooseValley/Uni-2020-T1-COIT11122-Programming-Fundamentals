@@ -1,0 +1,165 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 10
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+
+STARTING SOON.  :)
+
+
+
+Rockhampton tutorial Friday 12 pm - 2 pm Mike O'Malley
+https://cqu.zoom.us/j/471736829
+
+*** NOTE ***
+* Reboot PC before class - to ensure best microphone sound.
+* STOP Recording to Cloud and then click Record locally
+
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder	<--- YOU ARE HERE !
+Week 11 File Input and Output
+Week 12 Revision
+
+
+****************************************************
+
+COIT11222 Programming Fundamentals Tutorial/Lab Week Ten
+
+Question One
+
+Answer the following questions. Your answers should be concise; aim for two or three sentences.
+(a) What is a string in Java?
+
+(b) What is the use of a string? Give an example.
+
+(c) List a string method which can compare two strings.
+
+
+Question Two
+
+For each of the given program segments, read the code, and write the output. Do not execute these programs on a computer.
+
+(a) What is output by the following lines of code?
+
+1 // CompareStrings.java
+2
+3 import java.util.Scanner;
+4
+5 public class CompareStrings
+6 {
+7     public static void main( String args[] )
+8     {
+9        // get two strings
+10       String firstString = “Java”;
+11       String secondString = “java”;
+12       // compare two strings
+13       int value = firstString.compareTo( secondString );
+14
+15       // display result
+16       System.out.println( "\nCompare Result:" );
+17
+18       if ( value == 0 )
+19          System.out.printf("%s == %s\n", firstString, secondString );
+20       else if ( value > 0 )
+21          System.out.printf( "%s > %s\n", firstString, secondString );
+22       else
+23          System.out.printf( "%s < %s\n", firstString, secondString );
+24    } // end main
+25 } // end class CompareStrings
+
+
+(b) What is output by the following lines of code?
+1 // Exercise Sentences.java
+2
+3 import java.util.Random;
+4
+5 public class Sentences
+6 {
+7     public static void main( String args[] )
+8     {
+9        String article[] = { "the ", "a ", "some ", "any " };
+10       String noun[] = { "boy", "girl", "town", "car" };
+11       String verb[] ={ " drove", " jumped", " ran", " walked"};
+12       String preposition[] ={" to ", " from ", " over ", " under "};
+13       // create sentence
+14       for ( int j = 0; j < 2; j++ )
+15       {
+16          int article1 = j;
+17          int noun1 = j;
+18          int verb1 = j;
+19          int preposition1 = j;
+20          int article2 = j;
+21          int noun2 = j+2;
+22
+23          StringBuilder buffer = new StringBuilder();
+24
+25          // concatenate words and add period
+26          buffer.append( article[ article1 ] + noun[ noun1 ] +
+27          verb[ verb1 ] + preposition[ preposition1 ] +
+28          article[ article2 ] + noun[ noun2 ] + ".\n" );
+29
+30          // capitalize first letter and display
+31          buffer.setCharAt(
+32             0, Character.toUpperCase( buffer.charAt( 0 ) ) );
+33          System.out.println( buffer.toString() );
+34       } // end for
+35    } // end main
+36 } // end class Sentences
+
+
+Question Three
+Modify the application in Exercise 2(a) so that it compares two strings input by the user. The application should output whether the first string is less than, equal to or greater than the second.
+
+
+Question Four
+Modify the application in Exercise 2(b) so that it generates and displays 10 random sentences. The application should use random number generator.
+
+
+Question Five
+Write an application that reads a line of text and prints a table indicating the number of occurrences of each letter of the alphabet in the text.
+
+
+Question Six
+Write an application that reads a line of text and prints a table indicating the number of occurrences of each different word in the text. The application should include the words in the table in the same order in which they appear in the text.
+
+
+****************************************************
+
+Week 10
+Review Questions 9th edition (text p 359), Programming Exercises (text p 362) Q2 Q8
+Review Questions 8th edition (text p 383), Programming Exercises (text p 385) Q2 Q8
+
+Q2	BabyNameComparison.java
+Q8	PigLatin.java
+
+
+****************************************************
+
+
+LectureGuiExample.java
+Students TODO:
+* Add validation of inputs - display error and return if error found.
+* Move set default values code a method and call in Constructor as well.
+* Neaten up the GUI (after this week's tutorial).
+
+
+** Tutorial this week:
+* "Slap a GUI" on the Dog, Dogs, DogTester classes -
+so make sure you understand and are familiar with the code in these classes.
+
+.
