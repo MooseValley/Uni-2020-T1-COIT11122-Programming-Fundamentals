@@ -31,7 +31,7 @@ Week 06 More Object Concepts
 Week 07 Arrays
 Week 08 Advanced Array Concepts
 Week 09 Introduction to Swing Components
-Week 10 Characters, Strings, and the StringBuilder	<--- YOU ARE HERE !
+Week 10 Characters, Strings, and the StringBuilder	   <--- YOU ARE HERE !
 Week 11 File Input and Output
 Week 12 Revision
 
@@ -44,10 +44,36 @@ Question One
 
 Answer the following questions. Your answers should be concise; aim for two or three sentences.
 (a) What is a string in Java?
+0, 1, or many characters
+object
+Reference variable / field
+If it is not initialised to something, it has the value null memory address
+Cannot look at it, cannot call methods for it, you cannot change it.
+
+
 
 (b) What is the use of a string? Give an example.
 
+String name = "Mike";
+storing names
+suburbs, country names, addresses, emails, etc ...
+
 (c) List a string method which can compare two strings.
+
+compareTo()
+equals()
+
+compareToIgnoreCase()
+equalsIgnoreCase()
+
+startsWith()
+endWith()
+contains()
+
+
+
+
+
 
 
 Question Two
@@ -82,6 +108,10 @@ For each of the given program segments, read the code, and write the output. Do 
 24    } // end main
 25 } // end class CompareStrings
 
+Compare Result:
+Java < java
+
+
 
 (b) What is output by the following lines of code?
 1 // Exercise Sentences.java
@@ -107,11 +137,11 @@ For each of the given program segments, read the code, and write the output. Do 
 21          int noun2 = j+2;
 22
 23          StringBuilder buffer = new StringBuilder();
-24
+24//
 25          // concatenate words and add period
 26          buffer.append( article[ article1 ] + noun[ noun1 ] +
-27          verb[ verb1 ] + preposition[ preposition1 ] +
-28          article[ article2 ] + noun[ noun2 ] + ".\n" );
+27                         verb[ verb1 ] + preposition[ preposition1 ] +
+28                         article[ article2 ] + noun[ noun2 ] + ".\n" );
 29
 30          // capitalize first letter and display
 31          buffer.setCharAt(
@@ -120,6 +150,14 @@ For each of the given program segments, read the code, and write the output. Do 
 34       } // end for
 35    } // end main
 36 } // end class Sentences
+
+Output (exclude ---):
+----------------------------------------
+The boy drove to town.
+
+A girl jumped from a car.
+
+----------------------------------------
 
 
 Question Three
