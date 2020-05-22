@@ -1,3 +1,12 @@
+/*
+Author: Mike OMalley
+Source: CharCounter.java
+
+Question Three
+Modify the application in Exercise 2(a) so that it compares two strings
+input by the user. The application should output whether the first string
+is less than, equal to or greater than the second.
+*/
 import java.util.*;
 
 public class CompareStringsWithUserInput

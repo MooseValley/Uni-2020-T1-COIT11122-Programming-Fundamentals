@@ -1,4 +1,7 @@
 /*
+Author: Mike OMalley
+Source: CharCounter.java
+
 Question Five
 Write an application that reads a line of text and prints a table indicating
 the number of occurrences of each letter of the alphabet in the text.

@@ -1,10 +1,11 @@
 /*
-Exercise Sentences10Random.java
+Author: Mike OMalley
+Source: Sentences10Random.java
 
 Question Four
 Modify the application in Exercise 2(b) so that it generates and displays 10
 random sentences. The application should use random number generator.
-Extrast:
+Extras:
 * Capitalise each sentence.
 
 Math.random()  // Horrible random numbers

@@ -1,4 +1,8 @@
 /*
+Author: Mike OMalley
+Source: WordCounter.java
+Desc:   Word, Words, WordCounter classes - all in one java file.
+
 Question Six
 Write an application that reads a line of text and prints a table indicating
 the number of occurrences of each different word in the text. The application
@@ -11,13 +15,14 @@ Extras:
 Collections / Iterators
 * very powerful
 * we could sort the array by name or count with 1 line of code
-* outside the scope of this course.
-
+* outside the scope of this course.  :(
+* we cover these in the follow on course.  :)
 
 Outside the scope:
- Model - data classes
- Brains - processsing - Words
- Views / Interface - main
+MVC
+* Model - data classes - Word
+* Controller / Brains - processsing - Words
+* Views / Interface - WordCounter / main
 
 TODO:
 * Adapt CharCounter.java to work for words.
