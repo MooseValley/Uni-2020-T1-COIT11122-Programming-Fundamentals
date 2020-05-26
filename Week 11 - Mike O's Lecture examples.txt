@@ -27,18 +27,23 @@ Week 07 Arrays
 Week 08 Advanced Array Concepts
 Week 09 Introduction to Swing Components
 Week 10 Characters, Strings, and the StringBuilder
-Week 11 File Input and Output	<--- YOU ARE HERE !
+Week 11 File Input and Output									<--- YOU ARE HERE !
 Week 12 Revision
 
 
 LAST WEEK:
-*
-*
+* Week 10: Characters, Strings, and the StringBuilder
+* COIT11222_Week10.ppt
 
 THIS WEEK:
-*
-*
+* Week 11: File Input and Output (I/O)
+* Sequential and Random Access files
+* COIT11222_Week11.ppt
+* Assignment 2: due on Friday @ 11:59 PM.
 
+
+Many ways to read and write files in Java.
+Find the way you like best and stick with that.
 
 
 
