@@ -41,10 +41,180 @@ THIS WEEK:
 * COIT11222_Week11.ppt
 * Assignment 2: due on Friday @ 11:59 PM.
 
+NEXT WEEK:
+* Week 12 - the Final Week of term.
+* Was going to work through past exams ...
+* NO Exam.
+* Not needed.  No exam this term.
+NO:	* Revision: Past Exams
+NO:	* NO solutions given.  But we can work through the most recent past exam(s) together.
+NO:	* Attempt as many questions as possible prior to class.
+NO:	* Will be seeking your inputs to help work out the answers.
+* Next Week: we will work through any issues, questions, problems you have.
+* Please bring your issues, questions, problems to next week's classes.
+
+
+Q. Hey Mike, Im really struggling with this java programming assignment and wanted to see if i would be able to have just 15 minutes of your time after our lecture today to ask a few questions or get some advice. This is my last assessment piece, and due to this being my first time ever doing coding i am incredibly stuck and have no idea whats wrong or how to fix it. I've tried to re-watch lectures and read textbooks to no avail.
+
+Q. Mr.O'malley, about the assignment 2, what should be the maximum number of pizza a customer can order?
+10
+
+
+How to create a pizza
+How to the array
+How to check if there is still room in the array
+
+
+
+
+
+
+
+File I/O.
 
 Many ways to read and write files in Java.
 Find the way you like best and stick with that.
 
+
+Text Files
+
+Many ways to read and write files in Java.
+Find the way you like best and stick with that.
+:::
+
+Mike	415	4-May-1995	......
+:::
+
+
+
+Binary files:
+video, pictures, sounds, icons, zip,
+EXE, .class, jar,
+
+
+c:\
+
+\
+
+c:\Java\Week 11\
+
+
+Create a path if it doesn't exist
+
+
+\n   \t
+\\
+
+// Absolute path:
+c:\data\chapter 13\data.txt
+
+c:/data/chapter 13/data.txt
+
+
+// Relative path:
+"data/abc.dat"
+
+
+"c:/java/Week 11/data/abc.dat"
+
+System.out.println ("Hello");
+System.err.println ("Error");
+
+java helloworld >out.txt
+
+Error
+
+
+
+// Slide 25: Write an ArrayList of data to a file
+try
+{
+  output = new .....
+
+  for (int k = 0; k < emsArrayList.size(); k++)
+  {
+    byte[] data = emsArrayList.get(k).toString() + "\n";
+    output.write (data);
+  }
+
+  output.flush();
+  output.close();
+
+  S.o.p (emsArrayList.size() + " records written to file " + ....);
+}
+catch(......)
+{
+   e.printStackTrace();
+}
+
+
+
+// Slide 27: read an arrayList of strings from a file.
+
+try
+{
+   input = .....
+   BufferedReader reader = ......
+
+   // How do you know how much data is there ????
+   // 2 options:
+   // * keep reading until you no more data
+   // * when you write the file, write the number of records count as the 1st line
+   //   and then read that count in here to work out how long to loop.
+
+   /*
+   for (int k = 0; k < ????; k++)
+   {
+       String s = reader.readLine();
+		 ???? split
+       Employee emp = new Employee (.......);
+       arrayList.add (emp);
+   }
+   */
+
+   String s = reader.readLine();
+	while (s != null)
+   {
+		 ???? split
+       Employee emp = new Employee (.......);
+       arrayList.add (emp);
+
+       s = reader.readLine();
+   }
+
+   input.close();
+}
+catch (....)
+{
+}
+
+
+
+
+// Random Access Files
+// For what we are doing ..... Big sparse file
+
+00001,Mike,13.59
+::::
+
+::::
+00015,Frankie,19.50
+::::
+
+:::::
+00099
+
+::::::
+98999
+
+
+00001,Mike,13.59                                                                           00015,Frankie,19.50
+
+XYZ
+::::
+XYZ
+::::
+XYZ
 
 
 EOF.
