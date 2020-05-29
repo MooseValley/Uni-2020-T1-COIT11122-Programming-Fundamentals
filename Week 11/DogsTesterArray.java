@@ -1,10 +1,10 @@
 /*
 Author: Mike OMalley
-Source: DogsTester.java
+Source: DogsTesterArray.java
 
-See Dog.java and Dogs.java.
+See Dog.java.
 */
-public class DogsTester
+public class DogsTesterArray
 {
    static final int MAX_SIZE = 20;
 

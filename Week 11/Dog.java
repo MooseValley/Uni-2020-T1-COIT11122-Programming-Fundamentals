@@ -69,6 +69,18 @@ Students TODO:
 * Dogs.toString()
 * Week 11 File I/O: add Dogs saveToFile and loadFromFile methods and call these from the main in Console App or the Constructor in the GUI
 
+
+----------------------
+Dog
+----------------------
+-dogName: String
+-dogAge: int
+----------------------
+<<constructor>>Dog()
+<<constructor>>Dog(String dogName, int dogAge)
+:::
+
+
 */
 public class Dog
 {
@@ -100,6 +112,12 @@ public class Dog
    public int getDogAge()
    {
       return dogAge;
+   }
+
+   public static String toStringHeadings ()
+   {
+      return String.format ("%-15s", "Dog Name")        + "  " + String.format ("%8s", "Dog Age") + "\n" +
+             String.format ("%-15s", "---------------") + "  " + String.format ("%8s", "--------");
    }
 
    public String toString()

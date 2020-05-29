@@ -12,6 +12,10 @@ g. Create a method in Dogs displayDogs to display the three dogs.
 h. Call the method displayDogs in the main using the Dogs object you have created in section f.
 
 See Dog.java.
+
+Dogs d = new Dogs ();
+Dogs doggies = new Dogs ();
+
 */
 
 import java.util.*;  // Special thanks to Andrew !! :)
@@ -21,19 +25,23 @@ public class Dogs
    //public static final int MAX_SIZE      = 3;
 
    //private Dog[] dogsArray = new Dog [MAX_SIZE];
-   ArrayList<Dog> dogsArrayList = new ArrayList<Dog>();
+   ArrayList<Dog> dogsArrayList;
 
 
    public Dogs ()
    {
+
+      dogsArrayList = new ArrayList<Dog>();
+
       /*
       dogsArray[0] = new Dog ("Fido",   3);
       dogsArray[1] = new Dog ("Rover",  8);
       dogsArray[2] = new Dog ("Deefer", 2);
-      */
+
       dogsArrayList.add (new Dog ("Fido",   3) );
       dogsArrayList.add (new Dog ("Rover",  8) );
       dogsArrayList.add (new Dog ("Deefer", 2) );
+      */
    }
 
 
@@ -68,20 +76,48 @@ public class Dogs
       return indexLocation;
    }
 
-   // Special thanks to Andrew !! :)
-   public void displayDogs()
+   public String toStringLatestDog()
    {
+      //String outputStr = "";
+      StringBuilder outputSB = new StringBuilder ();
+
+      outputSB.append (Dog.toStringHeadings() + "\n");
+
+      if (dogsArrayList.size() > 0)
+         outputSB.append (dogsArrayList.get(dogsArrayList.size() - 1).toString() + "\n");
+
+      outputSB.append ("\n" + dogsArrayList.size() + " dogs listed." + "\n");
+
+      return outputSB.toString();
+   }
+
+
+   // Special thanks to Andrew !! :)
+   public String toString()
+   {
+      //String outputStr = "";
+      StringBuilder outputSB = new StringBuilder ();
+
       /*
       for (int i = 0; i < dogsArray.length; i++)
       {
          System.out.println (dogsArray[i].toString() );
       }
       */
+
+      outputSB.append (Dog.toStringHeadings() + "\n");
+
       for (int i = 0; i < dogsArrayList.size(); i++) // Thanks Andrew and Byron !!
       {
-         System.out.println (dogsArrayList.get(i).toString() );
+         //System.out.println (dogsArrayList.get(i).toString() );
+         //outputStr += dogsArrayList.get(i).toString() + "\n";
+         outputSB.append (dogsArrayList.get(i).toString() + "\n");
       }
 
+      outputSB.append ("\n" + dogsArrayList.size() + " dogs listed." + "\n");
+
+      //return outputStr;
+      return outputSB.toString();
    }
 
 
