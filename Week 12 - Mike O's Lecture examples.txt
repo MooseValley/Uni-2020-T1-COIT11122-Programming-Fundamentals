@@ -33,12 +33,21 @@ Week 12 Revision		<--- YOU ARE HERE !
 
 
 LAST WEEK:
-*
-*
+* Week 11: File Input and Output (I/O)
+* Sequential and Random Access files
+* COIT11222_Week11.ppt
+* Assignment 2: due on Friday @ 11:59 PM.
 
 THIS WEEK:
-*
-*
+* Week 12 - the Final Week of term.
+* NO Exam.
+* Was going to work through past exams ... Not needed.  No exam this term.
+NO:	* Revision: Past Exams
+NO:	* NO solutions given.  But we can work through the most recent past exam(s) together.
+NO:	* Attempt as many questions as possible prior to class.
+NO:	* Will be seeking your inputs to help work out the answers.
+* We will work through any issues, questions, problems you have.
+* Please bring your issues, questions, problems to next week's classes.
 
 
 
