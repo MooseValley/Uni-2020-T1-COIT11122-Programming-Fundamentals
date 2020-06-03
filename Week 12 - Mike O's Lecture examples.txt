@@ -49,7 +49,206 @@ NO:	* Will be seeking your inputs to help work out the answers.
 * We will work through any issues, questions, problems you have.
 * Please bring your issues, questions, problems to next week's classes.
 
+LectureGuiExample.java
+* Continue work on this ...
+
+** Tutorial this week:
+* Dog, Dogs, DogGUI classes: continue work on this ...
 
 
+DVD Collection
+Figurines
+Figurine database
+  name, type, rarity, set, condition, value
+  add, search, display all, delete, edit
+
+Favourite Movies
+Favourite TV Ads
+Music
+Video Games
+checkboxes, combobox
+Week 4
+GUI
+Cats
+Rabbits
+File I/O
+* Constructor - load from file
+* Exit -> save to file
+
+Solar Power
+Wind Energy
+Solar / Wind farm
+Solar production by day on your house roof
+-> 9 KW
+-> cloudless blue skies all daye
+Yesterday
+-> 5 KW
+-> cloudy and windy all day
+Work out the frequency and length of TV ad breaks
+* how many ads, topics, how long,
+* total length of the add break
+* start / end time for the ad break
+
+
+Q. I wanted to create a program which would allow me to store the name of a band, name of the song and song duration. I also wanted to place in a Tap Tempo. Where you could tap the spacebar along with the beat of the song. The program would save the time between each tap and divide by the amount of elements placed into the array to find the beats per minute. I would also be able to display all songs, search songs by name or bpm, sort, etc. I was wondering if this would be okay, and if that would be possible and within the scope of what we’ve learned so far?
+
+Start Tempo
+ set counter to 0
+ get datetime
+Stop Tempo
+ get datetime
+ work out seconds
+ work out bpm
+Click: Click a button repeatedly
+-> add 1 to a count
+
+LocalDateTime
+DateTime
+
+
+Q. Are we allowed to use the functions of Java which we haven't learned?
+
+A. Only limited, within reason
+Don't go way beyond what we have learnt.
+Limited time - focus on other exams as well
+LocalDateTime
+DateTime
+
+
+Q. Are we allowed to use GUI Builder applications to help build the GUI or are we required to build it manually?
+GUI Builders (Netbeans)
+-> produce horrible code.
+-> pollute your beautiful code with horrible code
+-> Build the GUI manually
+
+
+Q. In future courses do we learn about using API's to access data for our programs?
+JSON
+Web Apis
+SQL Server
+Mongo DB
+MySQL
+XML
+
+Encapsulation
+Overloading
+Polymorphism
+Inherritance
+OOP // OOD
+
+Project Work
+* Database courses: Elizabeth Tansley, Access, SQL Server
+* Connecting Java to SQL Server
+
+
+Mike's Java Videos:
+http://tinyurl.com/MikesJavaVideos
+
+
+20 year
+Could could not teach you everything
+We might have covered all of Java ...
+
+Software Development / Computer programming
+-> life-time of learning
+-> life-time of challenge
+
+
+Q. What would be helpful to me I think would be if we could spend some time covering developing the spec. After the tap-tap if you like...
+
+Systems Analysis and Design
+User specs, ...
+Everybody hated
+woffly, vague, so much buzzwords ...
+
+"I absolutely despise systems analysis".
+"Super Boring"
+"OMG I hate this class"
+everyone in my class of 1984.
+
+
+Analysis
+* ask / explore every relevant question
+* document all relevant information / answers in concise, clear notes / diagrams
+
+Design
+Development
+Testing
+
+Analysis / Business analysts / Systems Analysts
+* Trend: should not be programmers
+* Disater
+* Unless you go through the whole Systems Dev lifecycle a few times, you will not know what questions to ask, or how important it is to turn over every stone, and open every pandora's box / can of worms, this question is going to start fights ... I don't want to ask it. These are These are the questions you REALLY need to ask.
+
+
+
+Spec
+Code
+
+Spec
+Code
+
+
+The Analysis Spec
+Rocky DVD Store needs a new application to store their DVD rentals.
+Inputs:
+* Renter name
+* Rented date/time
+* cost per night
+* type of rental: classic movies, latest releases, etc
+* different prices based on type of rental ?
+* Number of nights rented
+* Scheduled Return date/time
+
+Story board in power point or similar
+Screen shots of your app
+
+Validation Rules:
+ Renter name cannot be blank
+ cost / night must be >= 2.50
+
+Late Fees Rules:
+  if returned after scheduled Return date/time
+  Late fees = extra hours * $1.25
+
+GUI
+  Screen shot
+Display late returners report
+  Screen shot
+Display all rentals report
+  Screen shot
+Marking Scheme
+GUI
+Code
+Does it work
+
+Spec length
+2-3 pages + title page
+Not 20+ pages.
+
+
+Spec + Marking Guide
+Code
+
+
+Q. Unrelated question to the assignments and stuff. But I was just wondering if you have elective suggestions for someone who wants to heavily focus on programming. I found coding fundamentals, but I wasn't sure what then even covers.
+
+	Database					Elizabeth Tansley: 	e.tansley@cqu.edu.au
+	Web Dev
+	Mobile Development	Ron Balsys:	r.balsys@cqu.edu.au
+	Games Dev
+
+	Systems Analysis and Design
+	Maths - stats, calculus, matrices and vectors, etc
+
+Operating Systems ... gone
+Basic AI ... gone
+Dev and Mobile Games Dev
+
+
+
+Lily Li 			l.li@cqu.edu.au
+Andrew Chiou	a.chiou@cqu.edu.au
+Ron Balsys		r.balsys@cqu.edu.au
 
 EOF.
