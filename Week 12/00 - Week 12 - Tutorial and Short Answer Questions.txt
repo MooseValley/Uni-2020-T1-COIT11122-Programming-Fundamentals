@@ -41,8 +41,295 @@ Week 12 Revision			   <--- YOU ARE HERE !
 Week 12 Revision
 
 
+Exam Alternative:
+	Week 4 / Ass 1 level at least
+	GUI, plus more = bonus marks
+	couple of radio buttons
+	checkboxes
+	combobox
+	textfield
+	buttons: add, display all, clear, exit ...
 
+Don't do / Don't go overboard:
+	Graphs = NO
+	Multiple JFrames in their project = NO
+	Keep it simple.  1 GUI class and 1 data class
+	Don't worry about arrays / arraylists (unless you want to)
+	Just do the basics plus a GUI if you want the bonus marks.
+
+
+Q. I started writing my program yesterday and went down a few rabbit holes
+Trying to put too much in
+
+Feature creep / trying to do too much !  A real TRAP.
+
+
+Q. I have main GUI class, one other GUI class to open a metronome feature and data-class, I simplified it a bit.
+
+JTabbedPane tabs = new JTabbedPane ();
+
+tabs.add (myPanel,      "Main", ....);
+tabs.add (mySetupPanel, "Settings", ....);
+
+==> but even this is way way too much.
+
+Put everything in one single JFrame ...  one GUI class.
+
+
+Q. I also have another issue where I'm using Thread.sleep(interval); to create a beeping sound according to the BPM. But it's causing the program to hang.
+
+
+      try
+      {
+         Thread.sleep (50); // Pause for 50 milliseconds.
+      }
+      catch (InterruptedException e)
+      {
+      }
+
+
+		try
+		{
+			/*
+			int bpm = Integer.parseInt(bpmField.getText());
+			int interval = 60000 / bpm;
+
+			while(play == true)
+			{
+				java.awt.Toolkit.getDefaultToolkit().beep();
+				Thread.sleep(interval);
+				System.out.println("Beep!");
+			}
+			*/
+
+			java.awt.Toolkit.getDefaultToolkit().beep();
+			System.out.println("Beep!");
+		}
+
+		catch (Exception ex)
+		{
+			//System.out.println("Beep!");
+		}
+}
+
+Q. it works correctly, it just causes issues with the buttons
+A. the sleep is also sleeping the UI - all in one thread.
+
+Time bptTimer;
+
+private void startSleeper(int bpm)
+{
+	bptTimer = new Timer (60000 / bpm, event -> sleeper() );
+	bptTimer.start();
+}
+
+private void stopSleeper()
+{
+	if (bptTimer != null)
+		bptTimer.stop();
+}
+
+private void sleeper()
+{
+	java.awt.Toolkit.getDefaultToolkit().beep();
+	System.out.println("Beep!");
+}
+
+
+Any issues - remove the metronome ticking.
+Interesting project.
+
+
+
+==> I think I can handle it, I like the challenge
+
+
+
+Exams
+	Don't get exams back
+	Tick or cross
+	RTQ
+	DNAQ
+
+
+
+Q. If no one else has questions, I have more to throw lmao
+
+
+File I/O
+GUI
+
+
+Q. How to have a 2nd GUI appear within the window of the main GUI similar to how a showMessageDialong would by using this.whatever
+
+MainGUI
+SubGUI
+
+Pseudo Code:
+	Way more complex than we want to this little project
+	MainGUI.getLocation().getX() + (MainGUI.getWidth() - SubGUI.getWidth() / 2
+
+
+
+Student Moodle
+	Portfolios
+	Ass 2 + this project - you came up with the idea, you wrote the spec,
+	you wrote the evaluation guide, and you wrote all the code.
+
+
+Questions about anything ?
+Want me to go over anything ?
+
+
+
+Q. I'm not sure this this is too complex either, but what about a radio button which would appear beside each entry that appears into the text area.
+
+
+A. Damn everything that's cool is just a little too complex, RIP ):
+
+
+JTable
+columns
+headings
+type of data in each cell.
+
+
+Q. ComboBox inside a JOptionPane / swing dialog
+
+JOptionPane.showMessageDialog( FlightManager.this, desPortsComboBox, "Select destination Airport", JOptionPane.QUESTION_MESSAGE);
+
+
+Create a 2nd Combobox and use that for the Dialog and read it to synchronise or whatever:
+
+   private void selectPlane()
+   {
+      JOptionPane.showMessageDialog( LectureGuiExample.this, planeTypeDialogComboBox, "Select destination Airport", JOptionPane.QUESTION_MESSAGE);
+      System.out.println ("Selected: " + planeTypeDialogComboBox.getSelectedItem() );
+
+      planeTypeComboBox.setSelectedItem(planeTypeDialogComboBox.getSelectedItem() );
+   }
+
+===> Way, way, way more than is needed for the Alternate Exam.
+
+
+Q. I'm actually looking to do something similar with the comboboxes, but I'm struggling to retrieve the information from the array which is in my main class
+
+JFrame with combo
+
+// Main GUI Class
+private void displayGUI ()
+{
+   // Setup the Combobox, ....
+   otherGUI.setupComboBox (array);
+
+   // Display the other GUI .... dialog .. .whatever
+   otherGui.show(); // setVisible ...
+}
+
+
+// otherGUI class:
+
+public void setupComboBox (Planes[] array)
+{
+   myComboBox.removeAllItems();
+
+   for (int k = 0 ; ...... )
+   {
+       myComboBox.addItem (array[k].getPlaneName() );
+   }
+}
+
+
+===> Way, way, way more than is needed for the Alternate Exam.
+
+Ass
+
+Reduce.  Reduce.  :)  Think something about the level of Ass 1 Week 4 with a GUI - to get the bonus marks.  (That's what the spec says).
+
+Simplify.  Reduce.  3 or 4 inputs - 1 textfield, a couple of radiobuttons, a JComboBox, ...  and some simple calculations / processing and a TextArea for output - add, clear, display all, exit buttons ... maybe a sort if you want.
+
+Get it done.
+Add the bells and whistles LATER ... during mid-term break, during next term, etc.
+
+OMG !!!!
+You're HIRED !!!!
+
+
+
+Q. If no one else has anything, I was hoping you could give us some topics to do extra reading on before the next term?
+
+Database: SQL
+SELECT * FROM CUSTOMER
+SELECT * FROM CUSTOMER WHERE Name = 'Mike'
+SELECT * FROM CUSTOMER WHERE Name LIKE 'M%'
+
+Java next term ....
+try not to let your skills rust too much ....
+Take a look at some Java to keep your mind refreshed
+
+Think about what you want to do ... study ...
+
+
+Java
+
+
+https://www.mediafire.com/file/dpk59wchfu715to/Mike_O%27s_Programming_Practice_Questions_-_v0.008.pdf/file
+
+eBook Download:
+
+    Mike O's Programming Practice Questions - v0.008.pdf (39 pages, PDF, 513 KB)
+
+License: This document is FREEWARE - free for any person, any company, any school, any university, etc to use.
+
+The document currently contains these problems to explore / solve (more to be added):
+
+    Visualising data - a simple Bar Chart tool
+    Euler's number - e
+    Pi Calculator - Dart Board method
+    Google's Recruitment Billboard (2004) - Wanna Work for Google ??? (Expired)
+    Cable Car - Position and Velocity
+    Radioactive Decay of Thorium
+    Gravity: Planets, Stars, and Black Holes
+    Gravity: Escape Velocity and Event Horizons
+    Rocket Ship - Take Off and Landing
+    Space Race: 3 Spaceships to Alpha Centauri
+    Visualising Data - Interference Pattern
+    Factorials - Stirling's Approximation
+    Pi Calculator - Trapezoids and Circles
+    Trend Line by Method of Least Squares
+    Graph of Current in Circuit
+    Isothermal Metal Plate - Temperature Distribution in Metal Plate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Videos and MP3s of ocean sounds with or without piano:
+https://rebrand.ly/MoosesSoftware
+
+
+
+
+
+
+
+
+
+
+
+
+****************************************************
 Parting words:
+****************************************************
 
 (1).  Look back and see how far you have come this term.
 The tutorial questions
