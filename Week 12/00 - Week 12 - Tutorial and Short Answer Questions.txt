@@ -1,6 +1,6 @@
 ******************************************************
 COIT11122 Programming Fundamentals (2020-T1)
-Week: 11
+Week: 12
 Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
 Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
 Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
@@ -32,267 +32,34 @@ Week 07 Arrays
 Week 08 Advanced Array Concepts
 Week 09 Introduction to Swing Components
 Week 10 Characters, Strings, and the StringBuilder
-Week 11 File Input and Output			   <--- YOU ARE HERE !
+Week 11 File Input and Output
+Week 12 Revision			   <--- YOU ARE HERE !
+
+
+****************************************************
+
 Week 12 Revision
 
 
-****************************************************
 
-COIT11222-Programming Fundamentals
-
-Week 11, Lab Exercises
-
-1. Answer the following questions. Your answers should be concise; aim for two or three sentences.
-
-(a) Why is file processing useful for storing data?
-
-(b) What is the purpose of implementing interface serializable in a new class?
-
-(c) Why are sequential-access files inappropriate for so-called “instant access” applications, in which a particular record must be located immediately?
-
-(d) What are the three predefined stream objects that you can use in a program and what is the purpose of each?
-
-(e) Describe how you would read lines of text from a text file. Specify the class(es) you would use to accomplish this task.
-
-
-2. Determine if there is an error in each of the following program segments. If there is an error, specify whether it is a logic error or a compilation error, circle the error in the program and write the corrected code. If the code does not contain an error, write “no error.” There may be more than one error in each program segment.
-
-(a) The following code segment should open a file for object output.
-1 ObjectOutputStream output =
-2 new ObjectOutputStream( new FileOutput( "file.dat" ) );
-
-(b) The following code segment should open a file for object input.
-1 FileInputStream input = new FileInputStream( "file.dat" );
-
-(c) The following code segment should write the object named record into a file. Assume that output is a properly defined object of class ObjectOutputStream.
-1 output.writeObject( record );
-
-(d) The following code segment should open a text file for reading with a Scanner.
-1 Scanner input = new Scanner( "myfile.txt" );
-
-
-3. Create a simple sequential-access file-processing program that might be used by professors to help manage their student records. For each student, the program should obtain an ID number, the student’s first name, the student’s last name and the student’s grade. The data obtained for each student constitutes a record for the student and should be stored in an object of a class called Student. The program should save the records in a file specified by the user.
-
-
-4. Create a simple sequential-access file-processing program to complement the program in previous exercise (Exercise 3). This program should open the file created by the Exercise 3 program and read and display the grade information for each student. The program should also display the class average.
-
-
-****************************************************
-
-Week 11
-Text Book Review Questions
-None suggested. but plenty of good questions there !
-
-
-
-Ass 2 due this week.
-* Tackle issues students are having.
-* Bring along specific questions / issues.
-
-A. I do
-
-Q. I am not sure what 3 mutator methods I need to make. Accessors has been made
-
-
-Instance Class - follow the recipe "Skake N' Bake" (Alien 2)
-* Default and Param Constructors
-* Mutators
-* Accessors
-* toString()
-::::
-Later on / follow on course:
-* compareTo
-
-
-Q. I made only 1 mutator method. The way assignment sheet suggested to uses only 1 mutator method
-
-
-Q. Does any data related to a pizza need to be capable of being changed after a pizza has been created?
-
-
-
-Text Tools - generate a class from:
-
-class Pizza
-String name;
-int size;
-
-
-
-/*
- Author: Mike O'Malley
- Source: Pizza.java
-Descrtn: TBA ... :)
-
-Ammendment History
-Ver   Date        Author    Details
------ ----------- --------  ---------------------------------------------------
-0.001 29-May-2020 Mike O    Created.
-
-*/
-public class Pizza
-{
-
-   // Class Data:
-   private String  name;
-   private int     size;
-
-   // Default Constructor:
-   public Pizza ()
-   {
-      name = "";
-      size = 0;
-   }
-
-   // Parameterised Constructor:
-   public Pizza (String name, int size)
-   {
-      this.name = name;
-      this.size = size;
-   }
-
-   // Accessors / Getters:
-
-   public String getName ()
-   {
-      return name;
-   }
-
-   public int getSize ()
-   {
-      return size;
-   }
-
-   // Mutators / Setters:
-
-   public void setName (String name)
-   {
-      this.name = name;
-   }
-
-   public void setSize (int size)
-   {
-      this.size = size;
-   }
-
-   @Override
-   public String toString ()
-   {
-      return
-         name + "\t" +
-         size + "\t" +
-         "";
-   }
-
-   public String toStringWithLabels ()
-   {
-      return
-         "Name: " + name + "\n" +
-         "Size: " + size + "\n" +
-         "";
-   }
-
-} // Pizza
-
-
-
-Q. Does the outcome need to look exactly same as the descriptions on task sheet, or can I make additional features so I can make some more mutator methods to have 3 mutators in total?
-
-Typo in Ass 2 spec: should be "3 Mutators and 3 Accessors".
-
-Can add extra methods, such as:
-* toString () -> Pizza
-* displayPizza (int index) -> PizzaGui
-
-Additional features
--> No.
--> Please stick to the Ass 2 spec as closely as possible.
--> Feature creep - clear extra features with the client before adding.  Email trail.  Make sure you estimate the timescales and report these.
-
-
-Q. You only need one mutator for each class variable. There are three class variable so there should be three mutators.
-A. YES
-set customer name, set toppings, set pizza size...three mutators
-
-We don't use the 3 mutators for this assignment.
-But get it in the habbit of following the "Snake N' Bake" recipe.
-
-
-Q. There's a Kevin Bacon movie where he plays basketball, he has a signature move called the shake and bake lol
-
-
-Q. I think everyone is busy with their assignments
-A. Fair enough, hope they don't discover issues after class.
-
-
-LectureGuiExample.java
-Students TODO:
-* Add validation of inputs - display error and return if error found.
-* Move set default values code a method and call in Constructor as well.
-* Neaten up the GUI (after this week's tutorial).
-
-
-** Tutorial this week:
-* "Slap a GUI" on the Dog, Dogs, DogTester classes -
-so make sure you understand and are familiar with the code in these classes.
-
-
-Q. Just a small recommendation, usually it is better to connect to a wired network instead of wireless network in terms of stability
-
-
-
-Q. Still not sure what number should be the maximum number of Pizza
-10
-
-
-Q. And a word document needs to contain UML, screenshots and review?
-
-Word table = perfect
-ASCII table at top of your Dog class = perfect
-PowerPoint => perfect as well
-Hand drawn -> photo -> report ==> perfect
-
-
-
- By 9 AM Monday morning
- => No late penalty.
-
- Next Week
- * Revision Week
- * No point working through past Exams - uness you want to
- * Bruce is setting an Exam Alternative
- -> keep an eye on Course Forums and Bruce's emails
-
- -> See Moodle / Course Web Site
-
-
-
-Final Project Specification
--> Final Project Specification
-
-
-Create a Spec and Java code
-you write the spec and the code.
-The Spec must be clear and concise -- bullet points, pseudo code, etc are GOOD
-The Java code must do exactly what the spec says.
-
-Part of your portfolio - show employers in interviews
-Have fun
-be creative.
-
-
-Analysis, Design, Development, testing ....
-
-Due in 3 weeks
-
-Week 12
--> Final Project
-click link to submit !
-
-
-Week 12
-* anything you like
-* bring along problems, issues, questions, etc
+Parting words:
+
+(1).  Look back and see how far you have come this term.
+The tutorial questions
+Ass 1
+Ass 2
+They might have all seemed hard, look back and them, try and do Ass 1 now, and see how easy it is.
+You have come a long way.
+Well done !
+Your hard work has paid off !!
+
+(2). Very special thanks to Wayne, Jarrod, Sangin, Byron.
+For joining in and making the classes so much more interesting.
+
+(3). Good luck with your future studies and future careers.
+Find what you love doing ...
+make that your career ...
+you will never "work" a day in your life !
 
 
 .
