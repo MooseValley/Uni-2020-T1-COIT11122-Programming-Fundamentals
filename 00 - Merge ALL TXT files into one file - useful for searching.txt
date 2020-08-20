@@ -1,0 +1,4293 @@
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 01
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+Github basics:
+https://www.youtube.com/watch?v=A30iwpDbkwc
+
+THIS WEEK:
+* Week 01 - Mike O Intro slides
+* Course Web page
+* Do I NEED the textbook ? Spend $100+ ???
+* Assignment 1 spec, how to submit
+* Lecture and Tute times - split times= Ewwwww !
+* COIT11222_Week1.ppt
+* Job Stats ???
+* Good Comments VS Bad Comments ???
+
+* Do I NEED the textbook ? Spend $180+ ???
+Probably not ...
+Any good JAVA book will do ?  YES
+How old ?  Anything from last 10 years should be fine.
+Do you need a physical book ?
+No .... but what about the Exam ?  YES
+KEY:
+* Whatever book you use / buy, get used to it BEFORE the exam
+* Make sure you are 100% happy with the book, use it a lot, throughout term, before relying on it in an exam
+
+Java Summary ?
+Nothing beats your own summary of what you have learned.
+Code snippets, definitions, examples, etc
+(Show my Java summary).
+
+Object Oriented Programming (OOP)
+Reddit r/programming
+huge benefits
+everything - the data and methods- are grouped together into a single unit for each Object
+Resuse, testing,
+
+
+Customer
+	name
+	phone
+	email
+	address
+
+
+Customer mike = new Customer ("Mike", "123455", "m.omalley@cqu.edu.au", ....);
+Customer mary = new Customer ("Mary", .......);
+
+mike, mary are INSTANCES of Customer
+= Objects based on the Customer class
+= Examples of Customers
+
+
+ENCAPSULATION
+* Car
+* how to drive ?  key, steering wheel, gear stick, 2-3 pedals
+Controls are really simple
+* Do NOT need to understand or know about the mind boggling complexity
+
+Customer
+	create()
+	save()
+	display()
+
+INHERITANCE
+Build on top of related classes
+No reinventing the wheel
+No duplication
+People
+	-> Students
+		-> Undergrad
+		-> Postgrad
+	-> Teachers
+		-> Part time
+		-> Full time
+		-> professors
+		-> lecturers
+
+POLYMORPHISM
+many forms
+
+add (myLabel);
+arrayList.add ("Mike");
+menubar.add (menu);
+::::
+add
+
+Before OOP:
+addLabelToUI (myLabel);
+arrayList.addStingToArrayList ("Mike");
+menubar.addMenuToMenuBar (menu);
+
+
+
+JVM
+Java Runtime = JRE
+
+
+-----------------------------------------------------
+
+
+
+public class First
+{
+}
+
+
+aklajsldajladj
+
+-----------------------------------------------------
+
+
+...... 111ABC		// NO
+...... _$ABC1121	// YES, but avoid
+...... HelloWorld
+...... H123121313ello_______World______1212121313   // OK, but horrible
+public class System // NO
+
+
+
+public class Customer
+{
+  public String name;
+}
+
+
+
+Naming Convention:
+Classes: Capitalise the first letter of each word.  e.g. MyFirstProgram
+
+
+
+
+Naming Convention:
+Every client has their own
+
+My_First_Program
+
+
+
+public class First
+{
+	public static void main(String[] args)
+	{
+		System.out.println ("Hello");
+	}
+}
+
+public class First{public static void main(String[] args){System.out.println ("Hello");}}
+
+
+public class First
+	First.java
+
+public class My_First_Program
+	My_First_Program.java
+
+Highly Case Sensitive
+
+
+
+
+
+report.PDF.exe
+report.PDF
+
+Explorer ->
+
+
+Stack Trace
+
+First.java (4): invalid syntax ......
+
+
+
+
+Finding HELP
+* Course Forums
+* Course Coordinator
+* Me - quick answers
+* Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+* Java Help - on Oracle's web site: https://docs.oracle.com/javase/7/docs/api/javax/swing/JOptionPane.html
+* Haca Help - CHM (downloadable): https://javadoc.allimant.org/
+* Textbook
+* Lecture slides
+* Github: Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 02
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+14+4
+
+https://www.youtube.com/watch?v=9AEMKudv5p0
+What Bill Gates is afraid of
+
+
+LAST WEEK:
+* Week 01 - Mike O Intro slides
+* Course Web page
+* Do I NEED the textbook ? Spend $100+ ???
+* Assignment 1 spec, how to submit
+* Lecture and Tute times - split times= Ewwwww !
+* COIT11222_Week1.ppt
+
+THIS WEEK:
+* Job Stats
+* Good Comments Vs BAD Comments
+* COIT11222_Week2.ppt
+* Using Data
+
+
+**************************************
+
+Good Comments Vs BAD Comments
+
+*** "BAD" Comments:
+*** "GOOD" Comments:
+
+Comments in code are good
+Explain what you are doing and why.
+Be concise and clear
+Bullet points are great.
+Pseudo Code comments
+Little tables, ASCII diagrams, expected results, etc are GREAT.
+
+	/*
+	Customer --< Order >-- Product
+
+	Prompt user to select a contract
+	Validate customer meets all the requirements / criteria of the contract
+	If any special conditions:
+		Display any special conditions to the user (checkboxes).
+		Prompt user for confirmation of each condition
+	else
+		Prompt user for confirmation of new contract
+	Save new contract acceptance details to database.
+	Check details saved conrrectly.
+	Display final confirmation.
+	See section 5.4.1. of the User Spec
+
+	calculateHash ("test123")	returns $4ADE44512
+	*/
+
+
+*** "BAD" Comments:
+
+// Create integer count and initialise to 0.
+int count = 0;
+
+// Loop from 1 to 10 inclusive, increment 1
+for (count = 1; count <= 10; count++)
+{
+   // Output count to console screen followed by a comma.
+   System.out.println (count + ", ");
+}
+
+*** "GOOD" Comments:
+
+// Output 1, 2, 3, ... 10 to the console screen.
+int count = 0;
+
+for (count = 1; count <= 10; count++)
+{
+   System.out.print (count + ", ");
+}
+
+
+
+*** Primitive Types:
+int		32 bits (4)
+long		64 bits (8)
+byte		8 bits  (1)
+short		16 bits (2)
+
+char 'W'        8 bits (1)
+
+float		32 bits	 (4)
+double		64 bits  (8)
+
+boolean         8 bits (1)
+
+int k;
+
+double temp = 35.8;
+
+
+*** Reference Type:
+
+import java.util.Date;
+
+String name = "Mike";
+Date today = new Date();
+
+
+
+
+
+Digital CPU
+0  or 1
+
+
+
+
+Java
+
+int k;  // 0
+
+double temp; // 0.0
+
+boolean success; // false
+
+
+String name;  // null memory address
+
+System.out.println (name); // null
+
+
+double temp = 99.121312131;
+
+
+double temp;
+temp = 99.121312131;
+
+
+
+BODMAS / BOMDAS
+
+a = 4 + 5 * 4 / 2
+= 14
+
+/ integer
+/ float
+%
+
+a = 4 + (5 * 4 / 2)
+
+
+int myAge = 12, fred = 9, max = 5;
+
+int myAge = 12, fred, max = 5;
+
+
+public class Week02
+{
+    // Class Constants:
+    private static final int    MAX_TEMPERATURE     = 100;
+    private static final String AUTHOUR_NAME        = "Mike O";
+    private static final int    DEFAULT_ORDER_SIZE  = 5;
+
+
+}
+
+Error messages
+Threshold values
+Key values
+Default Values
+Program names, version numbers, etc
+File name
+
+
+
+*** SCOPE
+
+public class Week02
+{
+    // Class Constants:
+    public  static final int    MAX_TEMPERATURE     = 100;
+    public  static final String AUTHOUR_NAME        = "Mike O";
+    public  static final int    DEFAULT_ORDER_SIZE  = 5;
+    private static final String SECRET_PASSWORD     = "2783462876287624~"; // Private = ONLY this class
+
+    private int value1; // Class Scope
+    public  int value2; // GLOBAL Scope - any class can use, change, etc
+
+
+    public static void main (String[] args)
+    {
+        int value3; // Method Scope
+
+
+        if (value3 < 5)
+        {
+            int value4 = 112; // Scope to next enclosing }
+
+            for (...)
+            {
+               while (....)
+               {
+
+                     String name ....
+                     Date today = ....
+
+
+               }
+            }
+
+        }
+        S.o.p (value4); // Error
+
+    }
+}
+
+
+JOptionPane.showMessageDialog (null, "Hello World");
+
+JOptionPane.showMessageDialog (null, "Hello World Title", "body of message",
+  JOptionPane.ERROR_MESSAGE, ......);
+
+
+
+int a = 4;
+int b = 99;
+int c = a;
+a = b
+b = c
+
+
+byte
+short
+int
+long
+
+million records
+ordersize int byte
+4 bytes -> 1
+3 million bytes
+
+
+
+if (age == 10) // Correct
+
+if (age = 10) // ERROR / Wrong
+
+boolean success = false;
+
+if (success = true) // ERROR / Wrong - but Java will NOT flag it as an Compile Error
+
+
+
+
+Big > 10^308
+BigNumber
+BigDecimal
+
+
+char
+single quotes
+char initial = 'M';
+
+if (initial == 87)
+
+char initial2; // 0 == null character
+
+
+
+String
+double quotes
+
+String name; // null memory address
+
+String name = "";
+
+
+Escape Chars
+\n
+\t
+
+\\ -> \
+\" -> \
+
+System.out.println ("\""); // "
+
+"'"
+
+
+
+*** User Input
+
+import java.util.Scanner;
+
+Scanner kb = new Scanner(System.in); // Keyboard
+
+hasNext()
+next()
+nextLine()
+nextInt()
+nextDouble()
+
+
+// When you go from number input to String input, you need to clear the
+// input buffer BEFORE getting the String input.
+
+System.out.println ("Enter your name: ");
+String name = kb.nextLine();
+
+System.out.println ("Enter your age: ");
+int age = kb.nextInt();
+
+// int -> String, or double -> String
+kb.nextLine(); // Clear the Buffer
+
+System.out.println ("Enter your Email: ");
+String email = kb.nextLine();
+
+
+// Or, can bypass the need for this by NOT using nextInt(), nextDouble(), etc
+// i.e. get all input as String and convert it to what you need.
+
+System.out.println ("Enter your age: ");
+int age = Integer.parseInt (kb.nextLine());
+
+System.out.println ("Enter your address: ");
+String address = kb.nextLine();
+
+System.out.println ("Enter your temperature: ");
+double temp = Double.parseDouble (kb.nextLine());
+
+System.out.println ("Enter your Suburb: ");
+String address = kb.nextLine();
+
+
+
+
+Wrapper Types / Auto-Boxing // AutoBoxing
+
+int k = 0;		// Primitive Type
+Integer k2 = 0;		// Reference Type // Double Hop
+
+double d1 = 0;
+Double d2 = 0;
+
+2 types of every data.
+
+
+ArrayLists - Reference Types only
+LinkedLists
+
+
+int age = Integer.parseInt (kb.nextLine());
+double d3 = Double.parseDouble (kb.nextLine());
+
+
+
+*** Confirm Dialogs
+
+int result = JOptionPane.showConfirmationDialog (null, "Delete All Files", "Are you mad ???", ....);
+
+if (result == JOptionPane.YES_OPTION)
+{
+}
+else if (result == JOptionPane.NO_OPTION)
+{
+}
+
+
+int k = 5 + 9;
+
+
+
+int k = 13 / 2;   // 6
+
+int total = 13;
+int count = 2;
+int avg = total / count;   // 6
+
+double avg = total / count;  // 6.0 - ERROR
+
+
+double avg = ((double) total) / count;  // 6.5   Typecasting
+
+double avg = (1.0 * total) / count;     // 6.5
+
+double avg = (double) (total / count);  // 6.0 = WRONG   Typecasting
+
+
+
+Module / Remainder
+
+int k = 25 % 10; // 5
+
+
+
+BODMAS
+Use brackets
+
+
+
+double d1 = 1.0 / 3.0;
+S.o.p (d1 * 3.0); // 2.99999......
+
+
+BigDecimal bigD = 1.0 / 3.0;
+S.o.p (bigD * 3.0); // 2.99999......
+
+
+if (d1 == 3.0)
+// Calculation
+
+if (  Math.abs (d1 - 3.0) < 0.000000001 ) // They are close enough to be equal.
+
+
+int k1 = 0;
+Integer k2 = 3;
+k1 = k2;
+
+int k1 = 0;
+double d1 = 3.3;
+k1 = d1;  // Error - loss of precision
+
+k1 = (int) d1; // 3
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 03
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+https://cqu.zoom.us/j/887844138
+
+LAST WEEK:
+* Job Stats
+* Good Comments Vs BAD Comments
+* COIT11222_Week2.ppt
+* Using Data
+
+THIS WEEK:
+* Brave new world: ZOOM classes ...
+* COIT11222_Week3.ppt
+* Making Decisions
+
+
+* Please Remember to MUTE your microphones  :)
+* Please use CHAT window if you need help   :)
+* OK, back again ...  :)
+
+* Having TONS of issues here - ZOOM keeps dropping out, reconnecting
+* Waiting for others to connect ...
+* Currently: 7 people (inc me)
+* Looks like a LOT of classes started at 10:00 AM
+and ZOOM had major issues.
+* Sorry about the ZOOM issues - there must have been many classes starting at 10:00 AM and ZOOM just could not handle it
+
+
+
+/*
+Open the file
+Read the customers
+Validate
+- Check ID is valid
+- check their name is not blank
+
+*/
+
+/*
+Get out of bed
+brush teeth
+have shower
+get dressed
+
+::::
+unlock car
+insert key into ignition
+turn it
+:::
+if car wont start
+   Call RACQ
+
+*/
+
+
+/*
+
+::::
+Is the express way backed up ?
+   take the alternate route
+
+else
+   take the main route
+
+::::
+*/
+
+
+
+int age = 10;
+
+if (age = 10) // ERROR - Syntax
+   System.out.println ("You are 10");
+
+if (age == 10); // ERROR - Logic
+   System.out.println ("You are 10");
+
+if (age == 10)  // OK  :)
+   System.out.println ("You are 10");
+
+
+String name = "Mike";
+if (name == "Mike") // Never be equal ???
+// Do NOT use == to compare strings
+// Do not use ==, <, <=, >, >=, != with strings or any reference types.
+e.g. Dates.
+
+boolean valid = true;
+if (valid = false) // No Compiler Error for this ?
+
+Use  =  for assignment
+    ==  for equality checking
+
+int age = 10;
+
+if (age <= 10)
+  :::
+
+if (age > 10)
+
+if (age != 10)  // Not equal to
+
+
+int age = 10;
+
+if (age <= 10)
+   S.o.p ("you are 10 or younger");
+   S.o.p ("Hello World"); // Not part of the if statement !
+else
+   S.o.p ("you are older than 10");
+::::
+
+// Use curly braces if you have more than one line of code
+// in an if ... else ... branch
+if (age <= 10)
+{
+   S.o.p ("you are 10 or younger");
+   S.o.p ("Hello World"); // This is now part of the if statement !
+}
+else
+{
+   S.o.p ("you are older than 10");
+}
+
+
+
+{
+	// SCOPE
+	int count = 0;
+
+	if (age <= 10)
+	{
+	   S.o.p ("you are 10 or younger");
+	   count++;
+	   S.o.p ("Hello World"); // This is now part of the if statement !
+	}
+	else
+	{
+	   S.o.p ("you are older than 10");
+	}
+
+	S.o.p (count);
+}
+
+S.o.p (count); // ERROR
+
+
+// Use curly brackets to prevent confusion
+if (age <= 10)
+{
+   if (postcode == 4700)
+	   S.o.p ("you are in Rocky and 10 or younger");
+   else
+	   S.o.p ("you are not in Rocky and 10 or younger");
+}
+else
+{
+   S.o.p ("you are older than 10");
+}
+
+
+&& 	AND
+||	OR
+
+if (age <= 10 && postcode == 2000)
+   S.o.p ("you are in Sydney and 10 or younger");
+
+if ((age <= 10) && (postcode == 2000))
+   S.o.p ("you are in Sydney and 10 or younger");
+
+if ((age <= 10) || (postcode == 3000))
+   S.o.p ("you are in Melboure or 10 or younger");
+
+
+if ((age <= 10) || (postcode == 3000) || (postcode == 2000))
+   S.o.p ("you are either in Melboure or Sydney or 10 or younger");
+
+
+// Mixed && and || - please use extra brackets
+
+if ((age <= 10) && ((postcode == 3000) || (postcode == 2000)) )
+   :::
+
+
+// Short Circuit - automatically done by Java's optimising compiler
+if ((age <= 10) || (postcode == 3000) || (siblings >5) || (........) )
+   :::
+
+// Putting the easiest conditions to evaluate first
+// Put the ones that are most common first - where you can rule out most of data.
+// Up to programmer - because they know the data
+// Java cannot help.
+
+
+if (::::::)
+{
+   ::::
+}
+else if (:::::::::::)
+{
+  :::::
+}
+else if (::::::::::::)
+{
+   :::::
+}
+else if (::::::::::::)
+{
+   :::::
+}
+
+:::::::
+else
+{
+   ::::
+}
+
+
+
+int x = 15;
+in a = 0;
+
+if (x == 15)
+   a = 2;
+else
+   a = 5;
+
+// We can achieve the same result with a Conditional Operator in 1 line of code:
+x == 15 ? a = 2 : a = 5;
+
+
+
+
+
+if (age <= 10)
+ :::
+
+if (!(age > 10))
+ :::
+
+
+
+// Recommend we start classes 30 min late
+10:30 lecture
+
+Fri Tue
+12 noon - start then and see how we go
+12:30 future weeks ????? maybe ?
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 04
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+LAST WEEK:
+* Brave new world: ZOOM classes ...
+* COIT11222_Week3.ppt
+* Making Decisions
+
+THIS WEEK:
+* COIT11222_Week4.ppt
+* Looping
+
+
+People still arriving => we will start in approx 1 minute.  :)
+
+
+From last week: Conditional Operator:
+
+int x = 15;
+int a = 0;  // Fixed typo.
+
+if (x == 15)
+   a = 2;
+else
+   a = 5;
+
+if (x == 15) a = 2;
+else a = 5;
+
+if (x == 15) a = 2;  else a = 5;
+
+// We can achieve the same result with a Conditional Operator in 1 line of code:
+x == 15 ? a = 2 : a = 5;
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+}
+:::::
+:::::
+
+count
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    //lcv = lcv + 1;
+}
+
+while (1==1)
+{
+    S.o.p (lcv);
+}
+
+
+int lcv = 1;
+while (1==1)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+    if (lcv >= LIMIT)
+       break;
+}
+::::
+
+while (1==1) // Infinite Loop
+{
+
+}
+
+Int
+
+-2....... +2
+
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+{
+    S.o.p (lcv);
+    lcv = lcv + 1;
+}
+
+
+int lcv = 1;
+while (lcv < LIMIT)
+    S.o.p (lcv);  // Warning: Loop ends at semi-colon.  Infinite Loop
+    lcv = lcv + 1;
+
+
+int lcv = 1;
+while (lcv < LIMIT); // Infinite Loop
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv + 1;
+
+
+// Can cause program crashes:
+while (1==1) // Infinite Loop
+{
+    reading a file and adding it into a data structure
+    creating a bitmap and asding data in data structure
+    appending data onto a data structure
+}
+
+// Heap Limit reached ...
+
+
+
+while (lcv < LIMIT); // Infinite Loop: empty body
+{
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv + 10;
+}
+
+while (lcv < LIMIT); // Infinite Loop
+{
+    S.o.p (lcv);     // This code is NOT part of the loop
+    lcv = lcv * 4.51;
+}
+
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+while (num <= 100)
+{
+   total = total + num;
+   num   = num + 1;
+}
+
+total = 0;
+num   = 100;
+
+// total = 100 + 99 + 98 + .... 1
+while (num > 0)
+{
+   total = total + num;
+   num   = num - 1;
+}
+
+
+
+
+// Get user input
+boolean moreInput = true;
+
+while (moreInput == true)
+{
+   :::: get input from ???  user ? file ? database ?
+
+   if (dataRead.length() == 0)
+      moreInput = false;
+
+}
+
+
+total = 0;
+num   = 100;
+
+// total = 100 + 99 + 98 + ....
+while ((num > 0) && (total < 200) && (.........) && (......) ::::: )
+{
+   total = total + num;
+   num   = num - 1;
+}
+
+
+if (((age == 30) || (postcode => 2000) ) && (surname.equals ("Lee") == true) )
+
+if ((age == 30 || postcode => 2000 ) && surname.equals ("Lee") == true )
+
+
+while (((age == 30) || (postcode => 2000) ) && (surname.equals ("Lee") == true) )
+{
+   :::
+}
+
+
+// Postcode: must be 3xxx for Vistoria
+int postcode = 0;
+
+while ((postcode < 3000) || (postcode > 3999) )
+{
+   S.o.p ("Enter Vic postcode: "); // 3xxx
+   postcode = kb.nextInt();
+
+   if ((postcode < 3000) || (postcode > 3999) )
+   {
+     S.o.p ("Error: not a Vic postcode: 3000-3999. ");
+   }
+}
+
+Above has duplicate code and the magic numbers repeated everywhere.
+ Let's fix that:
+
+
+// Postcode: must be 3xxx for Vistoria
+int postcode = 0;
+boolean dataValid = false; // Assume data is invalid
+final int VIC_MIN_POSTCODE = 3000;
+final int VIC_MAX_POSTCODE = 3999;
+
+while (dataValid == false)
+{
+   S.o.p ("Enter Vic postcode: "); // 3xxx
+   postcode = kb.nextInt();
+
+   if ((postcode < VIC_MIN_POSTCODE) || (postcode > VIC_MAX_POSTCODE) )
+   {
+     S.o.p ("Error: not a Vic postcode: " + VIC_MIN_POSTCODE +
+            "-" + VIC_MAX_POSTCODE + ". ");
+   }
+   else
+   {
+      dataValid = true;
+   }
+}
+
+
+
+
+// Age: must 18 or over
+int age = 0;
+
+while (age < 18)
+{
+   S.o.p ("Enter Age: ");
+   age = kb.nextInt();
+   if (age < 18)
+      S.o.p ("Age must be 18 or over.");
+}
+:::::
+
+// Age: must 18 or over
+int age = 0;
+final int MIN_AGE = 18;
+
+dataValid = false; // Assume invalid
+
+while (dataValid == false)
+{
+   S.o.p ("Enter Age: ");
+   age = kb.nextInt();
+   if (age < MIN_AGE)
+      S.o.p ("Age must be " + MIN_AGE + " or over.");
+   else
+      dataValid = true;
+}
+:::::
+
+
+
+---------------------------------------------------------
+boolean dataValid = false; // Assume invalid
+
+while (dataValid == false)
+{
+   S.o.p ("Enter value no highher than " + LIMIT + ": ");
+   userEntry = input.nextInt();
+   if (userEntry <= LIMIT)
+       dataValid = true;
+   else
+      S.o.p ("Error ....");
+}
+
+dataValid = false; // Assume invalid
+while
+::::::::
+
+dataValid = false; // Assume invalid
+while
+::::::::
+
+
+-----------------------------------
+
+count = count + 10;
+count += 10;
+
+count = count * 120;
+count *= 120;
+
+count = count * 120 + 15 / factor - (22 + value); // Do not do this.
+count *= 120 + 15 / factor - (22 + value);        // Do not do this.
+count = (count * 120) + ((15 / factor) - (22 + value)); // Much better :)
+
+count = oount % 2;
+count%= 2;
+
+
+
+count = count + 1;
+count += 1;
+count++; // Post increment
+++count; // Pre-increment / prefix increment
+
+count = count - 1;
+count -= 1;
+count--; // Post decrement
+--count; // Prefix decrement / pre-decrement
+
+
+int value = 5;
+int count = 3;
+
+value = value + count;    // Value: 8, Count 3
+
+value = 5;
+count = 3;
+value = value + count++;   // Value: 8, Count 4
+
+value = 5;
+count = 3;
+value = value + ++count;   // Value: 9, Count 4
+
+
+value = 5;
+count = 3;
+value = count++ + value + count++;   // Value: 12, Count 5
+        3       + 5     + 4
+
+value = 5;
+count = 3;
+value = ++count + value + ++count;   // Value: 14, Count 5
+      = 4       + 5     + 5
+
+Do NOT write code like the above - it's HIDEOUS !
+Or the below:
+
+double enrcChar = ++count * (5 - --count) * ((4.23 / ++count) + count++);
+
+
+int countMinus1 = count - 1;
+int countPlus1  = count + 1;
+int countPlus2  = count + 2;
+
+double enrcChar = countPlus1 * (5 - countMinus1) ::::
+
+
+
+
+/////////////////////////////////////////////////////////
+
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+while (num <= 100)
+{
+   total = total + num;
+   num   = num + 1;
+}
+
+for (int num = 1; num <= 100; num++)
+   total += num;
+
+for (int num = 1; num <= 100; num = num + 1)
+   total += num;
+
+for (int num = 1; num <= 100; ++num)
+   total += num;
+
+for (int num = 1; num <= 100; num += 1)
+   total += num;
+
+
+for (int num = 1; ; num += 1)
+   total += num;
+
+for (;;)
+   total += num;
+
+
+*****************************************************************
+
+Do While loop
+
+int total = 0;
+int num = 1;
+
+// total = 1 + 2 + 3 + ... + 100
+do
+{
+   total = total + num;
+   num   = num + 1;
+} while (num <= 100);
+
+
+
+// Always want to prompt user for input
+// process input input or exit
+// Priming input / read
+
+
+for loop
+while loop
+do while loop
+
+
+
+do
+{
+  total = total + num;
+} while (num <= 100);
+
+
+
+for (:::::::)
+{
+   ::::
+   if ((name.equals ("Mike") == true) || (age > 30) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((age > 30) || (name.equals ("Mike") == true) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((name.equals ("Mike") == true) || (age > 30) || (postcode == 2000) )
+     ::::
+}
+
+for (:::::::)
+{
+   ::::
+   if ((postcode == 2000) || (age > 30) || (name.equals ("Mike") == true)  )
+     ::::
+}
+
+
+Tute
+
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 05
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+LAST WEEK:
+* COIT11222_Week4.ppt
+* Looping
+* Tute: methods, printf, String.format, ...
+
+THIS WEEK:
+* Week 5: Using Methods, Classes, and Objects
+
+NEXT WEEK:
+* Mid-term break - no classes
+* Recommend: use this time to catch up and get ahead with the course work to
+  give you a head start on the second half of term.
+* What we do is building on prior weeks - so you have to know and be comfortable
+  with everything we have covered so far moving forward.
+
+Week 6: in 2 weeks time
+* Week 6: More Object Concepts
+
+
+CHAT: Hey sir, I had a quick question about week 4's task on the assignment. For the program (Wood fire pizza) I have already created a loop that repeats the order N amount of times. My question was did I also need to make a code that determines the largest number in my student code and sets N to that value or am I just looking at my student number and assigning N to equal the largest number I found?
+
+Mike O: No, just create a constant called N and give it a value equal to the highest digit in your StudentID.  e.g. S58743.  8.
+
+CHAT: if you have a high number you can set N to something lower while you are coding and testing then change to the higher number for the final version
+
+Mike O: YES, for testing use N = 1 or 2 or 3
+
+
+
+Primitive Types: int, double, boolean,
+Reference types: String, Date, LOcalDate
+String name = "Mike";
+
+
+User Defined Data Types
+own classes to contain / work with objects
+
+
+main      // calling
+  method1 // called, invoked
+  method2
+
+main      // calling
+  method1 // called, invoked
+    method34 //
+  method2
+
+
+accessModifier returnType methodName (optionalParameters)
+{
+}
+
+accessModifier returnType displayAddress ()
+{
+}
+
+
+
+public class ClassName
+{
+   // Data here
+
+
+   // Methods here
+
+   public static void main(String[] args)
+   {
+   }
+
+
+   // Data here
+
+
+   // Methods here
+
+   // Data here
+
+
+   // Methods here
+}
+
+
+public class ClassName
+{
+   // Data here
+
+
+   // Methods here
+
+
+   public static void main(String[] args)
+   {
+
+
+   }
+
+   public static void displayAddress ()
+   {
+     S.o.p (::::);
+   }
+
+
+   public static void displayAddress1 ()
+   {
+     S.o.p (::::);
+
+     return ....; // ERROR
+   }
+
+   public static int displayAddress2 ()
+   {
+     S.o.p (::::);
+
+     // No return ==> ERROR
+   }
+
+}
+
+
+
+accessModifier returnType methodName (optionalParameters)
+{
+  // Implementation = code that makes up the body of a method
+}
+
+public
+
+Golden Rules:
+* Keep your methods private - unless they need to be invokable from outside the class
+* Keep your data private - unless there is very good reason for it to be public.
+
+
+public class MikeClass
+{
+   public static void main(String[] args)
+   {
+      First.displayAddress(); // OK because method is public
+
+   }
+}
+
+// Sorry - PC crash
+
+
+***************************************************************'
+Arguments VS Parameters
+***************************************************************'
+
+
+method1("Mike"); "Mike" is an argument
+
+
+public static void method1 (String name) // name is a parameter
+{
+   // Implementation
+}
+
+
+CHAT: if the method had a return type you'd have an = as part of the calling statement?
+
+Mike O: Maybe, optional.
+
+
+CHAT: Sir can you explain parameters again
+
+Mike O: explain again (and say don't worry we will do lots of examples)
+
+
+method1("Mike", 33);
+method1(theName, theScore);
+method1(33, "Mike");  // ERROR
+
+public static void method1 (String name, int score)
+{
+   // Implementation
+   if (score < 0)
+      System.out.println (name + " scored less than 0");
+   else
+      System.out.println (name + " scored 0 or more");
+}
+
+
+CHAT: If you were programming a math function, it would be done using a method right?
+
+Mike O: Yes
+
+int val = Math.abs (-44); // +44
+
+public static int abs (int val)
+{
+}
+
+
+
+********************************************************
+Encapsulation
+********************************************************
+i.e. Black Box
+
+Encapsulation
+Hiding the mind boggling complexity of what we need to use - cars or classes
+We just need to know the interface
+
+	Car
+		ignition / door locks
+		steering wheel
+		2/3 pedals
+		gear stick
+
+	Product
+		create a product
+			createProduct (name, price)
+		save product
+			save()
+		increase price of product
+			increasePrice (pct)
+		load product
+			load()
+
+GUI
+
+Label headingLabel = new Label ("My App v1.0");
+
+headingLabel.setText ("My App v1.1");
+
+
+Date today = new Date ();
+
+Scanner kb = new Scanner (System.in);
+nextLine(), nextInt()
+
+
+******************************************************
+
+double mikeSalary = 100.0;
+
+raiseSalary (mikeSalary);
+
+double wayneSalary = 120.45;
+raiseSalary (wayneSalary);
+
+raiseSalary (); // OK ?? NO - ERROR
+
+raiseSalary (5.5); // OK ?  All OK
+
+raiseSalary (5); // OK ? YES. Automically promotes int -> double, etc
+
+raiseSalary ("Mike"); // OK ? ERROR
+
+double d = "Mike"; // ERROR
+
+raiseSalary ("123"); // ERROR
+
+
+raiseSalary (Integer.parseInt ("123") ); // OK
+
+raiseSalary (Double.parseDouble ("123") ); // OK
+
+raiseSalary (Double.parseDouble ("123.45") ); // OK
+
+
+
+
+// Completely different variable to salary in method predictRaise ()
+double salary = 100.0;
+raiseSalary (salary);
+
+
+predictRaiseUsingRate (100, 0.10); //
+
+predictRaiseUsingRate (100, 5); // 6x 100 -> 600
+
+
+RETURN
+return data / results / ... from a method
+exit the method
+int, double, String, Date, ... class objects, arrays, ....
+
+
+double myNewSalary = predictRaise (100.0); // 110.00
+
+S.o.p (myNewSalary); // 110.00
+
+predictRaise (100.0);  // All OK, but the return value is throw away
+
+
+public static double predictRaise (double salary)
+{
+
+   /// calculations
+   return ....;
+
+   :::: // Unreachable
+}
+
+
+********************************************************
+Objects / Classes
+********************************************************
+Date today = new Date();
+today is an variable of type Date
+today is an Object of type Date
+today is an example of Date
+today is an instance of Date
+
+String name = "Mike";
+name is an variable of type String
+name is an Object of type String
+name is an example of String
+name is an instance of String
+
+Is-A
+today is a Date
+name is a String
+
+true or false:   today is a String    	FALSE
+true or false:   name is a Date		FALSE
+
+
+Reusability / not having to reinvent the wheel
+
+
+
+Scanner ....
+Date ...
+
+public class Employee
+{
+  // Instance fields / class data
+  private int empNum;
+  private String empName;
+  ::::
+
+  public void methodName (....)
+  {
+  }
+
+  public void method2Name (....)
+  {
+  }
+
+  public static void method3Name (....)
+  {
+  }
+}
+
+
+Employee mike = new Employee ();
+mike.methodName ...
+mike.empNum // ERROR data is private
+
+Employee bella = new Employee ();
+bella.methodName ...
+
+
+Employee.method3Name (....) // because static
+
+Accessor / Getter
+Mutator / Setter
+
+
+
+
+Employee mike = new Employee ();
+mike.setEmpNum(55);
+mike.setEmpFirstName("Mike");
+
+S.o.p (mike.getEmpFirstName() + " emp id is: " +
+       mike.getEmpNum() );
+
+String name = "Mike";
+String name = new String ("Mike");
+
+CHAT: is there a limit to the number of methods we can have in a class?
+
+Mike O: No, limited by memory
+
+
+Dot notation
+object . method
+mike.setEmpNum(55);
+mike.setEmpFirstName("Mike");
+
+
+Constructor
+code that is automatically run when you create a class object
+same name as class
+public
+no return type
+
+
+Method
+Objects
+Accessors
+Mutatators
+public / private
+
+
+Easter Friday
+
+CHAT: Sir, when can we have the recording of this lecture?
+
+Mike O: usually takes 3-4 days before get the video, and then I have 3-4 hours of editing to do for each video, I watch the entire video, trim the start / end, add popups / clarifications / etc, add table of contents (see description under video), etc, upload, email Bruce saying its ready, etc.
+
+YES - it takes more time to edit the video than it does to run the class !
+
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 06
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+
+STARTING SOON ...  :)
+
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts			<--- YOU ARE HERE !
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
+2 WEEKS AGO:
+* Week 5: Using Methods, Classes, and Objects
+* COIT11222_Week5.ppt
+
+LAST WEEK:
+* Mid-term break - no classes
+* Recommendation: catch up and get ahead with the work.
+
+Week 5 Tutorial class video is missing
+- CQUni Help Desk and ZOOM staff are investigating.
+- ZOOM: New functionality coming that allows recording locally and to the cloud at the same time/
+- Alternate resources:
+--> Bruce Tutorial Week 5 video on the course web page
+--> My Week 5 Textbook questions: http://tinyurl.com/MikesJavaVideos
+
+
+
+THIS WEEK:
+* Week 6: More Object Concepts
+* COIT11222_Week6.ppt
+* New topics: Overloading, this, shadowing, Composition, has-a
+* Re-cover these topics: Blocks / Scope, Static, Math class, Imports, LocalDate, ...
+* Working on new video: Static Vs Instance to explain and show exactly what's going on.
+* Will be here soon: http://tinyurl.com/MikesJavaVideos
+
+
+if (........)
+{
+   // Code
+}
+
+for (.....)
+{
+   // Code
+}
+
+// Cannot be Overlapping
+for (.....)
+{
+   // Code
+   if (........)
+   {
+} // if statement ends here
+      // Code
+   }  // for loop ends here
+
+
+
+{
+   // Code
+}
+
+
+class Employee
+{
+
+   private int studId;
+   private String name:
+
+   :::
+
+   :::::
+
+
+}
+
+
+
+// OK:
+{
+   int aValue = 15;
+}
+
+{
+   int aValue = 23;
+}
+
+
+// ERROR:
+int aValue = 15;
+
+{
+   int aValue = 23;
+}
+
+
+
+private String name;
+
+public void setName (String aName)
+{
+   name = aName;
+}
+
+public void setName (String name)
+{
+   //name = name;
+   System.out.println (name);
+}
+
+
+
+Q: if aNumber was declared in the class, the result would be the same too?
+
+
+
+Primitive types:
+int, double, boolean, char, ....
+
+Reference types:
+* be very careful
+* if your pass them to a method, you pass the memory address
+so the method can change the data referred to and this affects the object
+in the called method.
+
+
+int aNumber = 22;
+
+changeNumber (aNumber);
+S.o.p (aNumber); // 22 - cannot be changed by a method
+
+public void changeNumber (int newNumber)
+{
+   newNumber = 34;
+}
+
+
+Q. String is a reference type?
+YES
+
+Employee mike = new Employee ();
+mike.setName ("Mike O");
+
+changeName (mike, "Frankie");
+S.o.p (mike.getName() );      // Frankie - so it can be changed by a method.
+
+
+public void (Employee emp, String newName)
+{
+   emp.setName (newName);
+}
+
+
+
+**********************************************
+Overloading / Polymorphism
+**********************************************
+Programmers BEST friend.
+Simpler code.
+Don't have to remember 1,000's of method names.
+
+// New Days: just remember a few method names.  e.g. "add".
+
+Label titleLabel = new Label ("My App v0.0001");
+
+add (titleLabel);
+
+add (titleLabel, BorderLayout.NORTH);
+
+Menu, menuitems, etc
+
+myMenu.add (menuItem);
+
+myList.add ("Mike");
+myList.add ("Frankie");
+
+All called "add"
+but all are completely different methods
+Java works out which call based on the context.
+
+
+
+// Old Days: before Overloading (Polymorphism)
+
+addLabelToUI (titleLabel);
+addLabelToUIRegion (titleLabel, BorderLayout.NORTH);
+
+myMenu.addMenuItemToMenu (menuItem);
+
+myList.addStringToArrayList ("Mike");
+myList.addStringToArrayList ("Frankie");
+
+
+
+calculateInterest (100);
+calculateInterest (100, 0.035);
+calculateInterest (100.0);
+calculateInterest (100.0, 0.035);
+
+
+public void simpleMethod (double d)
+{
+   S.o.p ("method takes a double: " + d);
+}
+
+public void simpleMethod (String s)
+{
+   S.o.p ("method takes a String: " + s);
+}
+
+public void simpleMethod (boolean b)
+{
+   S.o.p ("method takes a boolean: " + b);
+}
+
+// Overloading / Polymorphism in action:
+simpleMethod ("Mike");
+simpleMethod (45.45);
+simpleMethod (true);
+simpleMethod (45);
+simpleMethod ('A'); // Which method ?
+
+int, long, short, byte, char = 65 'A'
+
+
+Q. so if I set char chara = 65 and S.O.P(chara), would it say 'A'?
+YES
+
+
+Overloading: constructors
+Polymorphism: methods
+
+
+
+// ERROR: illegal / ambiguous
+public void myMethod (String s, double d)
+{
+   :::
+}
+
+public int myMethod (String name, double temp)
+{
+   :::
+}
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Default Constructor
+   public Employee ()
+   {
+       :::
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+       :::
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int id)
+   {
+       :::
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int id)
+   {
+       :::
+   }
+}
+
+Employee e1 = new Employee();
+Employee e2 = new Employee("Mike", 123);
+Employee e3 = new Employee(456);
+Employee e4 = new Employee("Frankie");
+
+Q. Why have multiple constructors ?
+Flexability
+Providing options for user of your class: other programers, other applications, end users
+
+
+Q. Is this valid:
+
+Employee e5 = new Employee(125, "Mike");
+
+
+GameObject newFloor   = new GameObject ("floor.png", 0);
+GameObject addPlayer  = new GameObject ("Mike", 100, 40, 40);
+GameObject addMonster = new GameObject ("Ripper", 1000, 15, false, ;;;;40, 40);
+
+
+Rule:
+* Java provides a Default Constructor automatically for your classes, unless you
+provide any type of Constructor.
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+
+   public void setName (:::)
+   :::
+
+   public String getName (:::)
+   :::
+
+}
+
+In the above class, Java would automatically provide a Default Constuctor for us.
+in the the .class file.
+numeric fields -> 0
+booleans -> false
+String -> null
+Reference Types -> null
+
+
+Rule:
+* Always provide your own Default Constuctor and at least one Parameterised Constuctor.
+* Provide what makes sense for your class and your class users.
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+       :::
+   }
+
+  }
+}
+
+Employee e4 = new Employee("Frankie"); // OK
+Employee e1 = new Employee(); // OK ????  Compilation Error
+
+
+
+// If Constructor is private, would this work:
+Employee e1 = new Employee();  // ERROR
+
+
+*********************************************
+this - "for the current class object"
+*********************************************
+
+public class Employee
+{
+   private String name;
+
+   /*
+   public void setName (String aName)
+   {
+      name = aName;
+   }
+   */
+
+   public void setName (String name)
+   {
+      this.name = name;
+   }
+}
+
+Q. What sort of method is getEmpNum() ?
+Accessor / Getter
+
+
+Accessor / Getter
+	getName()
+	getBalance()
+
+Mutator  / Setter
+	setname()
+	setBalance()
+	deposit()
+	withdraw()
+
+
+
+public class Employee
+{
+
+   private int studId;
+   private String name:
+
+   // Default Constructor
+   public Employee ()
+   {
+      studId = 0;
+      name   = "";
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+      this.studId = 0;
+      this.name   = name;
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int studId)
+   {
+      this.studId = studId;
+      this.name   = "";
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int id)
+   {
+      // if studId > 100 and < 2000 and it hasn't been used before for any other student
+      this.studId = studId;
+
+      // if name is not blank, and it is 3 characters and starts with an alphabetic char
+      this.name   = name;
+   }
+}
+
+// Use this to invoke another constructor in the class:
+public class Employee
+{
+
+   private int studId;
+   private String name; // Fixed typo.
+
+   // Default Constructor
+   public Employee ()
+   {
+      this ("TBA", -1);
+   }
+
+   // Parameterised Constructor #1
+   public Employee (String name)
+   {
+      this (name, -1);
+   }
+
+   // Parameterised Constructor #2
+   public Employee (int studId)
+   {
+      this ("TBA", studId);
+   }
+
+   // Parameterised Constructor #3
+   public Employee (String name, int studId)  // Fixed typo.
+   {
+      // if studId > 100 and < 2000 and it hasn't been used before for any other student
+      // -1 = TBA
+      this.studId = studId;
+
+      // if name is not blank, and it is 3 characters and starts with an alphabetic char
+      this.name   = name;
+   }
+}
+
+this for Constructor calls:
+* reduces complexity
+* reduces repeated code / validation
+* saves time
+
+
+Instance methods
+	public int getId()
+Instance fields
+	private int id;
+	private String name;
+
+Class Methods (Static methods)
+	System.out.print
+	public static void main(.....)
+	no this reference
+
+Class Fields (Static fields)
+	private static int studId;
+	shared by ALL class objects
+	like "global data" for all class objects
+
+
+Instance methods can access:
+	Instance fields
+	Class Methods (Static methods)
+	Class Fields (Static fields)
+
+Class Methods (Static methods) can access:
+	Class Fields (Static fields)
+
+
+
+final
+
+pubic class Employee
+{
+	final int MAX_EMP_ID = 99;
+
+}
+
+
+Q. There is more on Static fields in the text book
+
+
+
+
+// This tells us Math class methods are static methods:
+// Static / Class method: ClassName  . methodname
+int val = Math.abs (-5);
+
+// method header:
+public static int abs (int i)
+
+
+// If Math class methods were instance methods (hypothetical):
+// Instance method: object . methodname
+Math math = new Math();
+int val = math.abs (-5);
+
+
+// Option #1: BEST
+import java.util.Scanner;
+Scanner kb = new Scanner (System.in);
+
+// Option #2
+import java.util.*;
+Scanner kb = new Scanner (System.in);
+
+// Option #3: WORST
+java.util.Scanner kb = new java.util.Scanner (System.in);
+
+
+
+*********************************************
+Composition / Nested class
+*********************************************
+Resuing what we have done
+building more powerful data types
+
+
+Student TODO:
+* Create the NameAndAddress class
+
+
+// nested Classes:
+public class Employee
+{
+
+    private int id:
+    ::::
+
+
+
+    class Training
+    {
+       private int courseId;
+       :::
+
+    }
+}
+
+
+12:03 END class
+15 students still here - everyone stayed until the end.  :)  :)  :)
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 07
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays				<--- YOU ARE HERE !
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
+LAST WEEK:
+* Week 6: More Object Concepts
+* COIT11222_Week6.ppt
+* New topics: Overloading, this, shadowing, Composition, has-a, Nested classes,
+* Re-cover these topics: Blocks / Scope, Static, Math class, Imports, LocalDate, ...
+
+THIS WEEK:
+* Week 7: Arrays
+* COIT11222_Week7.ppt
+* Arrays, Parrallel Arrays, Arrays of Objects, etc.
+* Methods: Pass by Value (primitive types), Pass by Reference, dangers, issues,
+
+
+What is an Array ?
+
+Named group of something / some kind of data
+Used an index to acces each element in the array
+Index start at 0.
+
+int insArray[];
+int[] insArray; // Java way   // Declaring the array
+insArray = new int [100];     // Creating the array.
+
+
+// 100 integers, index are 0 to 99.
+int[] insArray = new int [100]; // Declaring and Creating the array.
+
+
+insArray[0] = 10; // First element in the array = 10
+:::
+insArray[99] = 456;
+
+insArray[100] = 22; // ERROR: index out of bounds.
+insArray[-1]  = 22; // ERROR: index out of bounds.
+
+
+*** GOLDEN RULE:
+Array of size N
+has N storage locations
+indexed from 0 to (N-1)
+
+
+int[] insArray; // Java way   // Declaring the array
+S.o.p (insArray);
+insArray = new int [100];     // Creating the array.
+S.o.p (insArray);
+
+numbers: int, double, ..... 0
+int val;
+S.o.p (val); // 0
+
+int[] insArray = new int [100]; // Declaring and Creating the array.
+S.o.p (insArray[0]); // 0
+S.o.p (insArray[1]); // 0
+S.o.p (insArray[2]); // 0
+
+char c;
+
+Date, String, Employee, Array, array of objects
+-> null
+
+String name;
+S.o.p (name); // null
+
+Employee e1;
+S.o.p (e1); // null
+
+int[] insArray;
+S.o.p (insArray); // null
+
+
+
+// Hard-coded Arrays / non-default array
+
+int[] maximums = {100, 200, 300}; // Array of size 3: indexes 0, 1, 2
+
+String[] names = {"Mike", "Frankie", "Bella"}; // Array of size 3: indexes 0, 1, 2
+
+S.o.p (names[1] ); // Frankie
+
+
+
+int[] insArray = new int [100]; // Declaring and Creating the array.
+
+insArray[0] = kb.nextInt();
+insArray[1] = kb.nextInt();
+insArray[2] = kb.nextInt();
+::::
+
+for (int k = 0; k < insArray.length; k++)
+{
+   S.o.p ("Enter integer " + (k + 1) + ": ");
+   insArray [k]= kb.nextInt(); // 0 to 99
+}
+
+
+// BAD Code - 100 is duplicated
+for (int k = 0; k < 100; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+// GOOD Code: use the length property of the array
+for (int k = 0; k < insArray.length; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+String name = "Mike";
+S.o.p (name.length() ); // 4
+
+
+total = total + 3;
+total += 3;
+
+
+
+final int MAX_SIZE = 100;
+
+int[] insArray = new int [MAX_SIZE];
+
+
+// GOOD Code: use the length property of the array
+for (int k = 0; k < insArray.length; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+// GOOD Code: use the MAX_SIZE constant
+for (int k = 0; k < MAX_SIZE; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+
+
+*** COMMON ERRORS:  <= instead of <
+
+for (int k = 0; k <= insArray.length; k++) // ERROR
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+for (int k = 0; k <= MAX_SIZE; k++)        // ERROR
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+
+
+*** Enhanced For Loop / Compact For Loop
+
+// GOOD Code: use the length property of the array
+for (int k = 0; k < insArray.length; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+// GOOD Code: use the MAX_SIZE constant
+for (int k = 0; k < MAX_SIZE; k++)
+{
+   S.o.p (insArray [k] ); // 0 to 99
+}
+
+
+for (int val : insArray)
+{
+   S.o.p (val);
+}
+
+
+
+String[] names = {"Mike", "Frankie", "Bella"}; // Array of size 3: indexes 0, 1, 2
+
+for (int k = 0; k < names.length; k++)
+{
+   S.o.p (names [k] );
+}
+
+for (String str : names)
+{
+   S.o.p (str);
+}
+
+
+
+// What if you need to access the element number / location ?
+
+for (int k = 0; k < names.length; k++)
+{
+   S.o.p ("Name " + (k + 1) + ": " + names [k] );
+}
+
+int count = 0;
+for (String str : names)
+{
+   count++
+   S.o.p ("Name " + count + ": " + str);
+}
+
+
+*** Arrays of Objects
+
+Employee e1;
+S.o.p (e1); // null
+e1 = new Employee ("Mike", 123);
+
+// Or using Scanner input from user:
+e1 = new Employee (kb.nextLine(), kb.nextInt() );
+
+S.o.p (e1.getName() + " (" + e1.getId() );
+
+
+
+
+
+final int MAX_SIZE = 100;
+
+Employee[] emps = new Employee [MAX_SIZE];
+
+S.o.p (emp[0] ); // null
+
+emps[0] = new Employee ("Mike",    123);
+emps[1] = new Employee ("Frankie", 456);
+
+// Or using Scanner input from user:
+emps[0] = new Employee (kb.nextLine(), kb.nextInt() );
+
+for (int k = 0; k < MAX_SIZE; k++)
+{
+   S.o.p ("Enter Employee " + (k + 1) + ": ");
+   emps[k] = new Employee (kb.next(), kb.nextInt() );
+}
+
+
+
+for (int k = 0; k < MAX_SIZE; k++)
+{
+   S.o.p ("Employee " + (k + 1) + ": " + emps[k].getName() + " (" + emps[k].getId()  + ")" );
+}
+
+
+Student TODO:
+* Adapt strategy on slide 14 to eliminate duplicate code: see Week 4/5.
+* Move constant MAX to top and use this to declare the array.
+* Adapt strategy to above code to enable user to enter just 5 or 10 or whatever employees.
+
+
+for (int k = 0; k < count; k++)
+{
+   S.o.p ("Employee " + (k + 1) + ": " + emps[k].getName() + " (" + emps[k].getId()  + ")" );
+}
+
+for (Employee e : emps)
+{
+   S.o.p (e.getName() + " (" + e.getId()  + ")" );
+}
+
+
+
+Slide 17:
+
+for (String str : deptNames)
+{
+   S.o.p (str);
+}
+
+
+
+101
+102
+103
+110
+
+int[] validValues = {101, 102, 103, 110};
+
+boolean validItem = false; /// Assume false and try and prove otherwise
+
+
+int itemOrdered = kb.nextInt(); // Scanner
+
+int index = -1;
+for (int k = 0; k < validValues.length; k++)
+{
+   if (itemOrdered == validValues [k])
+   {
+      validItem = true;
+      index     = k;
+      k = validValues.length;  // Exit loop !
+   }
+}
+
+if (validItem != true)
+   // Display error, etc
+
+
+int index = 0;
+while (validItem == false)
+{
+   if (itemOrdered == validValues [index])
+   {
+      validItem = true;
+   }
+   else
+   {
+      index++;
+   }
+}
+:::
+
+
+
+*** Parallel Arrays
+
+Multiple arrays containing related data.
+Everything must be kept in-line
+If you sort one array - the other arrays must have the same swap operations performed
+
+
+ProducCodes   101        102     103            110
+Product       Keyboard   Mouse   16 GB memory   32 GB memory
+
+
+                       // 0           1        2               3
+int[]    productCodes  = {101,        102,     103,            110};
+String[] productNames  = {"Keyboard", "Mouse", "16 GB memory", "32 GB memory"};
+double[] producePrices = {19.99,      14.99,   22.50,          31.45};
+int[]    stockQuantity = {5,          4,       1,              3};
+
+productCode   [2] // 103
+productNames  [2] // 16 GB memory
+producePrices [2] // 22.50
+
+
+// MUCH BETTER SOLUTION - use OOP !!
+
+class Product
+{
+  private int    code;
+  private String name;
+  private double price;
+  private int    quantityInStock;
+
+  // Constructors
+  // Mutators
+  // Accessors
+  // toString
+}
+
+final int MAX_SIZE = 10;
+
+Product[] products = new Product [MAX_SIZE};
+
+
+Product temp = products[0];
+products[0]  = products[4];
+products[4]  = temp;
+
+
+// Range searches:
+
+0 - 5   0%
+6 - 10  5%
+10 - 20 15%
+
+
+
+
+
+*** Methods - Pass by Value and Pass by Reference
+
+All primitive types are passed by value to a method
+if the method changes the value this has NO EFFECT on the value inside the caller
+Applies to all primitive types:
+* int, double, boolean, char, long, float, etc ...
+
+References types - String, Employee, Date, arrays, etc
+the memory address is passed to the the method
+And the method can change data pointed to at that memory address.
+BE CAREFUL !!!
+
+
+Solutions:
+* Copy of the object and pass the copy.
+* Restrict it so the object is a Constant
+* etc
+==> Outside the scope for us.
+
+
+
+Slide 27
+
+Student TODO:
+* Adapt this code to pass the array and chaneg the array
+and see if it changed back in the calling method (main).
+
+
+
+public String ::::::
+{
+  return "Hello";
+}
+
+public Date :::::::
+{
+   Date date = new Date();
+   ::::
+   return date;
+}
+
+public Employee getEmployee ()
+{
+   Employee e1 = new Employee (:::::):
+   ::::
+   // Get user input for each:
+   // Validations ...
+   empsArray[k].setId   ( kb.nextInt() );
+   empsArray[k].setName ( kb.next() );
+
+   return e1;
+}
+
+public int[] :::::::
+{
+   int[] nums = {5, 10, 22, 33, 44};
+
+   ::::
+   return nums;
+}
+
+
+public boolean getUserInput (Employee[] empsArray)
+{
+   // get user input for each employee ...
+   boolean allValid = true;
+
+   for (:::::::)
+   {
+	   empsArray[k] = getEmployee ();
+   }
+
+   return allValid;
+}
+
+Employee[] emps = new Employee [100];
+
+boolean isValid = getUserInput (emps);
+
+
+
+public Employee[] getArrayOfEmployee (:::::)
+{
+    Employee[] emps = new Employee [100];
+    ::::
+
+    return emps;
+}
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 08
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+STARTING SOON.  :)
+
+
+(Q). Morning everyone
+anyone got their first assessment marks back yet?
+
+Ass marks: you get your marks 2 weeks after the due date or after the date you submitted,
+whichever is the latest.
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts  	<--- YOU ARE HERE !
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
+LAST WEEK:
+* Week 7: Arrays
+* COIT11222_Week7.ppt
+* Arrays, Parrallel Arrays, Arrays of Objects, etc.
+* For each loop (Enhanced For Loop, Compact For Loop)
+* Methods: Pass by Value (primitive types), Pass by Reference, dangers, issues,
+*** GOLDEN RULE: Array of size N has N storage locations indexed from 0 to (N-1)
+
+THIS WEEK:
+* Week 8: Advanced Array Concepts
+* COIT11222_Week8.ppt
+* UML Class Digrams
+* Sorting,
+* 2D, 3D, 4D, ... arrays,
+* Rectangular VS Ragged arrays,
+* Arrays class,
+* ArrayList class,
+* Enums (Enumerated types),
+
+
+------------------------------------------
+* UML Class Digrams
+------------------------------------------
+Required for Ass 2
+A summary of your class: shows methods and data, and what is private / public
+Text VS beautiful diagram
+Accuracy of symbols, style
+
+Ass 2: follow the standards presented in your text book, follow what it says in the Ass 2 spec.
+
+Employee class: let's create a UML Class Digram
+
+
+
+
+------------------------------------------
+Sorting
+------------------------------------------
+
+Swapping: key part of sorting
+
+int i1 = 33;
+int i2 = 44;
+
+int temp = i1;
+i1 = i2;
+i2 = temp;
+
+String name1 = "Mike";
+String name2 = "Frankie";
+
+String temp = name1;
+name1 = name2;
+name2 = temp;
+
+
+Employee e1 = new Employee (:::::::);
+Employee e2 = new Employee (:::::::);
+
+Employee temp = e1;
+e1 = e2;
+e2 = temp;
+
+
+
+
+Bubble Sort
+very simple sort
+very easy to understand
+very easy to code
+horribly inefficient
+double the amount of data --> quadruple the amount of time
+
+1.	 	23, 12, 55, 5
+2.	 	12, 23, 55, 5
+3.		12, 23,  5, 55
+4.		12,  5, 23, 55
+		 5, 12, 23, 55
+
+// Bubble sort:  integer array
+
+int[] arr = {23, 12, 55, 5};
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++) // Very important
+   {
+      if (arr [k] > arr [k+1] )  // Ascending
+      {
+	int temp  = arr [k];
+	arr [k]   = arr [k+1];
+	arr [k+1] = temp;
+
+	swapped = true;
+      }
+   }
+}
+:::
+TODO: write the above code for yourself, explore.
+
+
+// Bubble sort:  String array
+
+String[] arr = {"Teenie", "Mike", "Frankie", "Bella", "Sam"};
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++)
+   {
+      if (arr [k].compareTo (arr [k+1]) > 0 )  // Ascending
+      {
+	String temp  = arr [k];
+	arr [k]   = arr [k+1];
+	arr [k+1] = temp;
+
+	swapped = true;
+      }
+   }
+}
+
+
+// Bubble sort:  Employee array - sort by name
+
+Employee[] arr = {new Employee ("Teenie",  ::::),
+                  new Employee ("Mike",    ::::),
+                  new Employee ("Frankie", ::::),
+                  new Employee ("Bella",   ::::),
+                  new Employee ("Sam",     ::::)  };
+
+boolean swapped = true;
+
+while (swapped == true)
+{
+   swapped = false;
+
+   for (int k = 0; k < arr.length - 1; k++)
+   {
+      //if (arr [k].getName().compareTo (arr [k+1].getName()) > 0 ) // Ascending
+      //if (arr [k].getName().compareTo (arr [k+1].getName()) < 0 )   // Descending
+      if (arr [k].getId().compareTo (arr [k+1].getId()) > 0 ) // Ascending
+      //if (arr [k].getId() > arr [k+1].getId() ) // Ascending
+      {
+	Employee temp  = arr [k];
+	arr [k]        = arr [k+1];
+	arr [k+1]      = temp;
+
+	swapped = true;
+      }
+   }
+}
+
+Lots of very, very similar code.
+What can we do about it ?
+Nothing.
+Generic Methods - make the above code work for ALL data types.
+---> in the follow on Java course.  :)
+
+
+Q. What's the follow-on course? Is it the OOP course?
+COIT11134 Object Oriented Programming
+
+
+
+Bubble                  Really easy to understand and code, horribly efficient
+Insertion
+
+Merge
+Shell
+Hash Sort 		Really hard to understand and code, more efficient
+Tree Sort
+
+----> Follow on course
+
+Wayne:
+https://www.toptal.com/developers/sorting-algorithms
+
+
+
+
+------------------------------------------
+2D, 3D, 4D, ... arrays,
+------------------------------------------
+
+int[][] valuesArray = new int [5][10];     // 5 x 10
+
+// Row 1
+valuesArray [0][0] = 44;
+valuesArray [0][1] = 12;
+valuesArray [0][2] = :::;
+::::
+valuesArray [0][9] = :::;
+
+// Row 2
+valuesArray [1][0] = 4;
+valuesArray [1][1] = 3;
+valuesArray [1][2] = :::;
+::::
+valuesArray [1][9] = :::;
+
+// Row 5
+valuesArray [4][0] = 1;
+valuesArray [4][1] = 2;
+valuesArray [4][2] = :::;
+::::
+valuesArray [4][9] = :::;
+
+
+
+
+String[][] names    = new String [10][99]; // 10 x 99
+
+
+Employee[][] employees = new Employee [10][1000]; // 10 cities, up to 1000 employees in each city
+
+// Employees in Melbourne: city at index 0
+employees[0][0] = new Employee (::::::);
+employees[0][1] = new Employee (::::::);
+:::
+employees[0][999] = new Employee (::::::);
+
+
+// Employees in Rockhampton: city at index 1
+employees[1][0] = new Employee (::::::);
+employees[1][1] = new Employee (::::::);
+:::
+employees[1][999] = new Employee (::::::);
+
+
+int city = 0; // Melbourne
+int emp  = 0;
+// Employees in Melbourne: city at index 0
+employees[city][emp++] = new Employee (::::::);
+employees[city][emp++] = new Employee (::::::);
+:::
+employees[city][emp++] = new Employee (::::::);
+
+city = 1; // Rockhampton
+emp = 0;
+
+// Employees in Rockhampton: city at index 1
+employees[city][emp++] = new Employee (::::::);
+employees[city][emp++] = new Employee (::::::);
+:::
+employees[city][emp++] = new Employee (::::::);
+
+
+
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human"}  };
+
+
+namesAndAddresses.length	// 2: number of Rows    in the array.
+namesAndAddresses[0].length	// 3: number of Columns in the array (in 1st row)
+namesAndAddresses[1].length	// 3: number of Columns in the array (in 2nd row)
+
+
+
+sales[]		// Sales per sales person
+sales[0]  	// Sales for Mike
+sales[1]  	// Sales for Frankie
+
+sales[][]	// Sales per sales person by product
+sales[0][0]	// Sales for Mike for PC's
+sales[0][1]	// Sales for Mike for hard-drives
+sales[0][2]	// Sales for Mike for monitors
+
+sales[][][]	// Sales per sales person by product by year
+sales[0][0][0]	// Sales for Mike for PC's for 2020
+sales[0][0][1]	// Sales for Mike for PC's for 2021
+
+sales[sp][pr][ye][doy]	// Sales per sales person by product by year by day of year
+sales[0][0][0][0]	// Sales for Mike for PC's for 2020 for Jan 1
+sales[0][0][0][1]	// Sales for Mike for PC's for 2021 for Jan 2
+
+sales[][][][][]		// Sales per sales person by product by year by day of year by region
+
+sales[][][][][][]	// Sales per sales person by product by year by day of year by region
+			// by Scenario: actuals, forecasts for a great year, forecasts for bad year, ...
+
+Q. I rarely use the arrays with dimension of 4 or higher. I think things can usually be sorted with 2~3 arrays.
+
+Industry needs detailed data to survive - margins are getting squeezed, competitors are always moving in, etc - so a business really needs to know what's going on: compare scenarious, regions, sales people, products, years, quarters, etc, etc.
+
+
+Database table
+
+emId  prodId   RegId  Year  DOY  ScenId	   Sales
+
+
+
+Run out of memory
+Heap size exception ....
+64 Java on 64 bit OS --->>  huge upper limit
+
+
+------------------------------------------
+* Rectangular VS Ragged arrays,
+------------------------------------------
+
+// Rectangular 2D array: 2 rows x 3 columns:
+// Slice size does not change.
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human"}  };
+
+// Ragged array: Jagged, Scruffy
+// 2D: Columns per row changes in the array
+// Slice size changes.
+String[][] namesAndAddresses = { {"Mike",    "123 Smith St", "Human"},
+                                 {"Frankie", "45 Barkie St", "Shitzu and Human", "Doggie", "8-Aug-2016"},
+                                 {"Wayne",    "45 Great Answers Rd"},
+                                 {"Teenie"},
+                                 {""},
+                                 null };
+
+
+String[][] namesAndAddresses = new String [5][];
+
+namesAndAddresses[0] = {"Mike",    "123 Smith St", "Human"};
+namesAndAddresses[1] = {"Frankie", "45 Barkie St", "Shitzu and Human", "Doggie", "8-Aug-2016"};
+::::
+
+
+String[][] namesAndAddresses = new String [5][];
+namesAndAddresses[0] = new String[3];
+namesAndAddresses[0][0] = "Mike";
+namesAndAddresses[0][1] = "123 Smith St";
+namesAndAddresses[0][2] = "Human";
+
+namesAndAddresses[1] = new String[5];
+
+
+
+------------------------------------------
+* Arrays class,
+------------------------------------------
+import java.util.Arrays;
+
+Linear Search
+- loop through the whole array until the data is found (or you get to the end of the array).
+- linear: if you double the amount of data, you double the time
+
+Binary Search
+- data must be sorted
+- divide the array in half, compare what you are searching for to the middle element
+- divide the top of bottom half of the array in half ... keep going
+* converges very quickly
+* if you double the amount of data, you barely increase the amount of time
+
+Big(O), efficiency
+--> follow on course
+
+
+
+
+------------------------------------------
+* ArrayList class,
+------------------------------------------
+import java.util.ArrayList;
+
+ArrayList<String> names = new ArrayList<String> ();
+
+names.add ("Wayne");
+names.add ("Sangin");
+names.add ("Jarrod");
+
+Wayne
+Sangin
+Jarrod
+
+names.add (1, "Frankie");  // Insert
+
+Wayne
+Frankie
+Sangin
+Jarrod
+
+
+names.remove (2); // Delete
+
+Wayne
+Frankie
+Jarrod
+
+
+size(): length of the ArrayList
+clear(): erases everything in the ArrayList
+
+S.o.p (names.get (1) ); // Frankie
+
+
+
+
+
+ArrayList<Employee> emps = new ArrayList<Employee> ();
+
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+emps.add (new Employee (:::::::) );
+
+size(): 6
+get(0) // first employee
+
+for (int k = 0; k < emps.size(); k++)
+{
+    S.o.p (emps.get(k).getName() );
+}
+
+
+
+Q. seems to be a much easier implementation than I remember from c++
+A. yes.
+
+Q. Is it better to use a database manager like SQL for bigger arrays?
+A. Depends
+
+Just need to download, search, update, etc: Definitely local in arrays - 1000's of times faster than DB
+multiple people changing it, accessing it, etc: Definitely database
+
+
+
+ArrayList
+add, get, remove, clear, size, set
+
+
+Optimisations, tricks and traps, etc
+----> follow on course
+
+
+------------------------------------------
+* Enums (Enumerated types),
+------------------------------------------
+
+enum GameStatus {GAME_OVER, IN_PROGRESS, GAME_WON, GAME_LOST, GAME_DRAWN};
+
+
+GameStatus status = GameStatus.GAME_OVER;
+
+status = GameStatus.IN_PROGRESS;
+
+status = 5; // ERROR
+
+status = GameStatus.FINISHED; // ERROR
+
+//while (status.equals (GameStatus.GAME_OVER) == true)
+while (status != GameStatus.GAME_OVER) // Java 7 onwards
+{
+  // Get user input
+  // Move player
+  // move the monsters
+  // check for collisions
+  // etc
+}
+
+
+GameStatus.java
+add static or instance fields
+Constructors
+Mutators
+Accessors
+toString
+::::
+
+
+Advanced Enums:
+--->> Follow on course
+
+------------------------------------------
+------------------------------------------
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 09
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components	<--- YOU ARE HERE !
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision
+
+
+LAST WEEK:
+* Week 8: Advanced Array Concepts
+* COIT11222_Week8.ppt
+* UML Class Digrams
+* Sorting,
+* 2D, 3D, 4D, ... arrays,
+* Rectangular VS Ragged arrays,
+* Arrays class,
+* ArrayList class,
+* Enums (Enumerated types),
+
+THIS WEEK:
+* Week 9 : Introduction to Swing Components
+* COIT11222_Week9.ppt
+* GUI Programming
+
+
+*************************************************************
+Batch Programming  VS  Event Driven Programming
+*************************************************************
+
+Batch Programming / Console Apps
+* What we have been doing until today.
+* program runs until the end - sequence of instructions,
+* Program had full control.
+* User really has no control of what happens next.
+* If a user enters an invalid input, you display an error and ask them again (loop),
+before moving on to the next input.
+
+Event Driven Programming / GUI Programming
+* User Driven programming
+* Program sits there doing nothing until the user clicks a button, or a menu, or some event
+fires off (1st day of month processing or whatever).
+* User has full control over what happens next - they decide which button / menu / etc to click.
+(For our programs anyway).
+* If a user enters an invalid input, you display an error and stop - wait for the user to chose another action (button, menu, whatever).
+
+
+*************************************************************
+AWT / Swing / JavaFX
+*************************************************************
+
+AWT
+	Abstract Windowed Toolkit
+	basic set GUI components, few options,
+Swing
+	More components, more options, better look and feel, etc
+	Still some AWT stuff
+JavaFX
+	More again ... Charts, Graphs, ....
+	Looks like it is slowly being phased out by Oracle.
+
+
+*************************************************************
+LayoutManagers
+*************************************************************
+FlowLayout
+	like words on a page
+BorderLayout
+	5 regions: North, South, East, West, Center
+	Default LM for JFrame
+GridLayout
+	Grid of rows and columns
+BoxLayout
+GridBagLayout
+
+
+
+Q. for borderlayout wouldn't you need to group the three labels into a single Frame/group to get them to show in the same region
+im just guessing from the way it works in Python's Tkinter module
+
+
+LectureGuiExample.java
+Students TODO:
+* Add validation of inputs - display error and return if error found.
+* Move set default values code a method and call in Constructor as well.
+* Neaten up the GUI (after this week's tutorial).
+
+
+
+** Tutorial this week:
+* We are going to "Slap a GUI" on the Dog, Dogs, DogTester classes -
+so make sure you understand and are familiar with the code in these classes.
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 10
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder	<--- YOU ARE HERE !
+Week 11 File Input and Output
+Week 12 Revision
+
+
+
+LAST WEEK:
+* Week 9 : Introduction to Swing Components
+* COIT11222_Week9.ppt
+* Lots of GUI Programming - in lecture and tutorial classes
+* Virtually at the stage where you could develop assignment 2 from scratch.  :)
+
+THIS WEEK:
+* Week 10: Characters, Strings, and the StringBuilder
+* COIT11222_Week10.ppt
+* More GUI Development if you want ... :)
+
+
+
+*************************************************
+Character
+*************************************************
+
+Char: A single character enclosed in single quotes. ''
+
+Static methods = YES
+
+if (Character.isUpperCase ('m') == true)
+
+char myChar = Character.toUpperCase ('m');
+
+
+// If they were instance methods:
+Character myChar = new Character();
+char newChar = myChar.toUpperCase ('M');
+
+Math - static methods.
+Math.abs(-3);
+
+
+*************************************************
+String
+*************************************************
+zero, one or many chars enclosed in double quotes. ""
+
+Litteral Strings:
+
+String name = "Mike";
+
+JLabel headingLabel = new JLabel ("My App v1.0");
+
+// Immutable
+String name = "Mike";
+name = "Frankie"; // New memory location
+
+// LOGIC ERROR: comparing memory addresses NOT the string data
+if (name == "Frankie")
+if (name <= "Mike")
+
+compareTo
+equals
+compareToIgnoreCase
+equalsIgnoreCase
+
+if (name.equals ("Mike") == true)
+{
+   ::::
+}
+
+if (name.compareTo ("Bella") < 0)
+{
+   // name < bella
+}
+
+
+String name;
+
+S.o.p (name);  // null
+
+if (name.compareTo ("Bella") < 0)  // ERROR
+
+if ((name != null) && (name.compareTo ("Bella") < 0) ) // OK
+
+
+
+String name = "";
+
+if (name.compareTo ("Bella") < 0)  // OK
+
+name = "Mike";
+int index = name.indexOf ("ik"); // 1
+
+index = name.indexOf ("zx"); // negative number, < 0
+
+if (name.indexOf ("ik") >= 0) // name contains "ik"
+
+
+S.o.p (name.charAt (3) ); // e
+
+String city = "Rockhampton";
+
+if (city.startsWith ("Ro") == true) // True
+
+if (city.startsWith ("ro") == true)  // False
+
+if (city.toUpperCase().startsWith ("ro".toUpperCase()) == true)  // True
+
+
+city = "Rockhampton";
+city = city.replace ("ton", "vale"); // Rockhampvale
+
+city = "Rockhampton";
+city = city.replace ("ton", "");     // Rockhamp
+
+
+Employee emp = new Employee ();
+
+// if Employee class does NOT have a toString() method:
+S.o.p (emp); // Employee@32154
+
+// if Employee class does have a toString() method:
+S.o.p (emp); // name: , id:
+
+
+String outputStr = "This is my data " + 34 + emp;
+
+
+substring:  upto but excluding the endIndex
+
+      //01234567890
+city = "Rockhampton";
+S.o.p (city.substring (3, 5) ); // kh
+
+city = "Rockhampton";
+S.o.p (city.substring (3, 9999999) ); // khampton
+
+if (city.regionMatches (8, "aton", 1, 3) == true) // True
+
+ignore case --------------v
+if (city.regionMatches (false, 8, "ATON", 1, 3) == true) // True
+
+Mike OMalley
+
+Mike Winston Java Cplusplus OMalley
+
+
+
+String nameStr = "Mike,Frankie,Bella,Sam";
+
+String[] names = nameStr.split(",");
+
+
+String nameStr = "Mike\tFrankie\tBella\tSam";
+
+String[] names = nameStr.split("\t");
+
+REGEX - be careful, can get bizare results if you type in any Regex chars without knowing it.
+
+
+*************************************************
+Integer
+*************************************************
+
+Static method:
+
+int age = Integer.parseInt ("333");
+
+
+Q. Why isn't there something like Integer.isInt to test if a string is an integer before trying to parse?
+
+Exception Handling
+
+
+int age = Integer.parseInt ("abc");
+
+int age = 0;
+
+try
+{
+   age = Integer.parseInt ("abc");
+
+   :::
+
+   ::::
+}
+catch (Exception err)
+{
+   age = 0;
+   S.o.p ("Error: age was not valid integer");
+}
+
+
+Q. isn't it just try-catch
+isnt there a "then" block as well that plays regardless?
+so try-catch-then
+
+
+
+*************************************************
+Wrapper Classes / Autoboxing
+*************************************************
+Primitive types: int, double, char, ...
+Reference types: Integer, Double, Character, ....
+
+They wrap around the primitive type and provide a whole load of extra functionality.
+
+int k1 = 5;
+
+Integer k2 = 5;
+
+// Autoboxing:
+Integer k3 = k1; // OK: Java takes care of the conversion
+
+k1 = k2; // OK: Java takes care of the conversion
+
+
+
+int age = Integer.parseInt ("333");
+int age = int.parseInt ("333"); // ERROR
+
+Why ????
+
+ArrayList can only work with reference types:
+ArrayList<String> .....
+ArrayList<Employee> .....
+ArrayList<EmployeeArray> .....
+
+ArrayList<int> .....      // ERROR
+ArrayList<Integer> .....  // OK :)
+
+*************************************************
+*************************************************
+
+int age = Integer.valueOf ("abc"); // calls parseInt
+
+*************************************************
+StringBuilder / StringBuffer
+*************************************************
+
+
+StringBuilder sb = new StringBuilder ();
+StringBuilder sb = new StringBuilder ("My SB");
+
+sb.append ("\n" + "Hello World" + "\n");
+sb.append ("Hello World" + new Date() + 55 + " etxras");
+
+System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+
+append
+insert
+length
+	capacity
+
+
+// Preallocating if you know you need to store a lot of data:
+StringBuilder sb = new StringBuilder (100_000 * 60);
+
+
+
+      String city = "Rockhampton";
+      System.out.println(city.substring (3, 5) ); // kh
+
+      StringBuilder sb = new StringBuilder ("1234 Smith St, Rockahmpton");
+
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+      sb.append (" more dataa to make it resize");
+
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+
+      sb.setLength(10); // Warning: this truncates your data.
+      System.out.println (sb.length() + " used / " + sb.capacity() + " char available");
+      System.out.println (sb.toString() );
+
+StringBuilder witll
+A. 3 seconds faster
+B. 10 seconds faster
+C. 15 seconds faster
+D. more than 50 seconds faster
+E. More than 5 mins <-------- THIS !!!
+
+If you are doing a lot of String concatenation, etc
+especially if it in a loop,
+use StringBuilder
+
+textArea.setText (sb.toString() );
+
+30 second
+< 1 sec
+
+
+Q. is it too late to change my bet?
+
+LOOL !!
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 11
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
+Please feel free to join in via chat window or voice.
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output									<--- YOU ARE HERE !
+Week 12 Revision
+
+
+LAST WEEK:
+* Week 10: Characters, Strings, and the StringBuilder
+* COIT11222_Week10.ppt
+
+THIS WEEK:
+* Week 11: File Input and Output (I/O)
+* Sequential and Random Access files
+* COIT11222_Week11.ppt
+* Assignment 2: due on Friday @ 11:59 PM.
+
+NEXT WEEK:
+* Week 12 - the Final Week of term.
+* Was going to work through past exams ...
+* NO Exam.
+* Not needed.  No exam this term.
+NO:	* Revision: Past Exams
+NO:	* NO solutions given.  But we can work through the most recent past exam(s) together.
+NO:	* Attempt as many questions as possible prior to class.
+NO:	* Will be seeking your inputs to help work out the answers.
+* Next Week: we will work through any issues, questions, problems you have.
+* Please bring your issues, questions, problems to next week's classes.
+
+
+Q. Hey Mike, Im really struggling with this java programming assignment and wanted to see if i would be able to have just 15 minutes of your time after our lecture today to ask a few questions or get some advice. This is my last assessment piece, and due to this being my first time ever doing coding i am incredibly stuck and have no idea whats wrong or how to fix it. I've tried to re-watch lectures and read textbooks to no avail.
+
+Q. Mr.O'malley, about the assignment 2, what should be the maximum number of pizza a customer can order?
+10
+
+
+How to create a pizza
+How to the array
+How to check if there is still room in the array
+
+
+
+
+
+
+
+File I/O.
+
+Many ways to read and write files in Java.
+Find the way you like best and stick with that.
+
+
+Text Files
+
+Many ways to read and write files in Java.
+Find the way you like best and stick with that.
+:::
+
+Mike	415	4-May-1995	......
+:::
+
+
+
+Binary files:
+video, pictures, sounds, icons, zip,
+EXE, .class, jar,
+
+
+c:\
+
+\
+
+c:\Java\Week 11\
+
+
+Create a path if it doesn't exist
+
+
+\n   \t
+\\
+
+// Absolute path:
+c:\data\chapter 13\data.txt
+
+c:/data/chapter 13/data.txt
+
+
+// Relative path:
+"data/abc.dat"
+
+
+"c:/java/Week 11/data/abc.dat"
+
+System.out.println ("Hello");
+System.err.println ("Error");
+
+java helloworld >out.txt
+
+Error
+
+
+
+// Slide 25: Write an ArrayList of data to a file
+try
+{
+  output = new .....
+
+  for (int k = 0; k < emsArrayList.size(); k++)
+  {
+    byte[] data = emsArrayList.get(k).toString() + "\n";
+    output.write (data);
+  }
+
+  output.flush();
+  output.close();
+
+  S.o.p (emsArrayList.size() + " records written to file " + ....);
+}
+catch(......)
+{
+   e.printStackTrace();
+}
+
+
+
+// Slide 27: read an arrayList of strings from a file.
+
+try
+{
+   input = .....
+   BufferedReader reader = ......
+
+   // How do you know how much data is there ????
+   // 2 options:
+   // * keep reading until you no more data
+   // * when you write the file, write the number of records count as the 1st line
+   //   and then read that count in here to work out how long to loop.
+
+   /*
+   for (int k = 0; k < ????; k++)
+   {
+       String s = reader.readLine();
+		 ???? split
+       Employee emp = new Employee (.......);
+       arrayList.add (emp);
+   }
+   */
+
+   String s = reader.readLine();
+	while (s != null)
+   {
+		 ???? split
+       Employee emp = new Employee (.......);
+       arrayList.add (emp);
+
+       s = reader.readLine();
+   }
+
+   input.close();
+}
+catch (....)
+{
+}
+
+
+
+
+// Random Access Files
+// For what we are doing ..... Big sparse file
+
+00001,Mike,13.59
+::::
+
+::::
+00015,Frankie,19.50
+::::
+
+:::::
+00099
+
+::::::
+98999
+
+
+00001,Mike,13.59                                                                           00015,Frankie,19.50
+
+XYZ
+::::
+XYZ
+::::
+XYZ
+
+
+EOF.
+******************************************************
+COIT11122 Programming Fundamentals (2020-T1)
+Week: 12
+Course Web Page:             https://moodle.cqu.edu.au/course/view.php?id=16776
+Course Coordinator:          Bruce Mckenzie, email: b.mckenzie@cqu.edu.au, Ph. 03 9616 0609, Melbourne.
+Rocky Teacher (Part-Time):   Mike O'Malley, m.omalley@cqu.edu.au
+Mike O'Malley's GitHub:      https://github.com/MooseValley/Uni-2020-T1-COIT11122-Programming-Fundamentals
+Mike O'Malley's Java Videos: http://tinyurl.com/MikesJavaVideos
+******************************************************
+
+STARTING SOON.  :)
+
+
+Rockhampton lecture Wednesday 10 am - 12 am Mike O'Malley
+https://cqu.zoom.us/j/887844138
+Reboot PC before class.  Stop CLOUD Recording, Record video locally.
+
+
+ROAD MAP:
+Week 01 Creating Java Programs
+Week 02 Using Data
+Week 03 Making Decisions
+Week 04 Looping
+Week 05 Using Methods, Classes and Objects
+Week 06 More Object Concepts
+Week 07 Arrays
+Week 08 Advanced Array Concepts
+Week 09 Introduction to Swing Components
+Week 10 Characters, Strings, and the StringBuilder
+Week 11 File Input and Output
+Week 12 Revision		<--- YOU ARE HERE !
+
+
+
+LAST WEEK:
+* Week 11: File Input and Output (I/O)
+* Sequential and Random Access files
+* COIT11222_Week11.ppt
+* Assignment 2: due on Friday @ 11:59 PM.
+
+THIS WEEK:
+* Week 12 - the Final Week of term.
+* NO Exam.
+* Was going to work through past exams ... Not needed.  No exam this term.
+NO:	* Revision: Past Exams
+NO:	* NO solutions given.  But we can work through the most recent past exam(s) together.
+NO:	* Attempt as many questions as possible prior to class.
+NO:	* Will be seeking your inputs to help work out the answers.
+* We will work through any issues, questions, problems you have.
+* Please bring your issues, questions, problems to next week's classes.
+
+LectureGuiExample.java
+* Continue work on this ...
+
+** Tutorial this week:
+* Dog, Dogs, DogGUI classes: continue work on this ...
+
+
+DVD Collection
+Figurines
+Figurine database
+  name, type, rarity, set, condition, value
+  add, search, display all, delete, edit
+
+Favourite Movies
+Favourite TV Ads
+Music
+Video Games
+checkboxes, combobox
+Week 4
+GUI
+Cats
+Rabbits
+File I/O
+* Constructor - load from file
+* Exit -> save to file
+
+Solar Power
+Wind Energy
+Solar / Wind farm
+Solar production by day on your house roof
+-> 9 KW
+-> cloudless blue skies all daye
+Yesterday
+-> 5 KW
+-> cloudy and windy all day
+Work out the frequency and length of TV ad breaks
+* how many ads, topics, how long,
+* total length of the add break
+* start / end time for the ad break
+
+
+Q. I wanted to create a program which would allow me to store the name of a band, name of the song and song duration. I also wanted to place in a Tap Tempo. Where you could tap the spacebar along with the beat of the song. The program would save the time between each tap and divide by the amount of elements placed into the array to find the beats per minute. I would also be able to display all songs, search songs by name or bpm, sort, etc. I was wondering if this would be okay, and if that would be possible and within the scope of what we’ve learned so far?
+
+Start Tempo
+ set counter to 0
+ get datetime
+Stop Tempo
+ get datetime
+ work out seconds
+ work out bpm
+Click: Click a button repeatedly
+-> add 1 to a count
+
+LocalDateTime
+DateTime
+
+
+Q. Are we allowed to use the functions of Java which we haven't learned?
+
+A. Only limited, within reason
+Don't go way beyond what we have learnt.
+Limited time - focus on other exams as well
+LocalDateTime
+DateTime
+
+
+Q. Are we allowed to use GUI Builder applications to help build the GUI or are we required to build it manually?
+GUI Builders (Netbeans)
+-> produce horrible code.
+-> pollute your beautiful code with horrible code
+-> Build the GUI manually
+
+
+Q. In future courses do we learn about using API's to access data for our programs?
+JSON
+Web Apis
+SQL Server
+Mongo DB
+MySQL
+XML
+
+Encapsulation
+Overloading
+Polymorphism
+Inherritance
+OOP // OOD
+
+Project Work
+* Database courses: Elizabeth Tansley, Access, SQL Server
+* Connecting Java to SQL Server
+
+
+Mike's Java Videos:
+http://tinyurl.com/MikesJavaVideos
+
+
+20 year
+Could could not teach you everything
+We might have covered all of Java ...
+
+Software Development / Computer programming
+-> life-time of learning
+-> life-time of challenge
+
+
+Q. What would be helpful to me I think would be if we could spend some time covering developing the spec. After the tap-tap if you like...
+
+Systems Analysis and Design
+User specs, ...
+Everybody hated
+woffly, vague, so much buzzwords ...
+
+"I absolutely despise systems analysis".
+"Super Boring"
+"OMG I hate this class"
+everyone in my class of 1984.
+
+
+Analysis
+* ask / explore every relevant question
+* document all relevant information / answers in concise, clear notes / diagrams
+
+Design
+Development
+Testing
+
+Analysis / Business analysts / Systems Analysts
+* Trend: should not be programmers
+* Disater
+* Unless you go through the whole Systems Dev lifecycle a few times, you will not know what questions to ask, or how important it is to turn over every stone, and open every pandora's box / can of worms, this question is going to start fights ... I don't want to ask it. These are These are the questions you REALLY need to ask.
+
+
+
+Spec
+Code
+
+Spec
+Code
+
+
+The Analysis Spec
+Rocky DVD Store needs a new application to store their DVD rentals.
+Inputs:
+* Renter name
+* Rented date/time
+* cost per night
+* type of rental: classic movies, latest releases, etc
+* different prices based on type of rental ?
+* Number of nights rented
+* Scheduled Return date/time
+
+Story board in power point or similar
+Screen shots of your app
+
+Validation Rules:
+ Renter name cannot be blank
+ cost / night must be >= 2.50
+
+Late Fees Rules:
+  if returned after scheduled Return date/time
+  Late fees = extra hours * $1.25
+
+GUI
+  Screen shot
+Display late returners report
+  Screen shot
+Display all rentals report
+  Screen shot
+Marking Scheme
+GUI
+Code
+Does it work
+
+Spec length
+2-3 pages + title page
+Not 20+ pages.
+
+
+Spec + Marking Guide
+Code
+
+
+Q. Unrelated question to the assignments and stuff. But I was just wondering if you have elective suggestions for someone who wants to heavily focus on programming. I found coding fundamentals, but I wasn't sure what then even covers.
+
+	Database					Elizabeth Tansley: 	e.tansley@cqu.edu.au
+	Web Dev
+	Mobile Development	Ron Balsys:	r.balsys@cqu.edu.au
+	Games Dev
+
+	Systems Analysis and Design
+	Maths - stats, calculus, matrices and vectors, etc
+
+Operating Systems ... gone
+Basic AI ... gone
+Dev and Mobile Games Dev
+
+
+
+Lily Li 			l.li@cqu.edu.au
+Andrew Chiou	a.chiou@cqu.edu.au
+Ron Balsys		r.balsys@cqu.edu.au
+
+EOF.
